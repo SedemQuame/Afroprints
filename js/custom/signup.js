@@ -1,0 +1,1 @@
+console.log("In the signup.js file.");

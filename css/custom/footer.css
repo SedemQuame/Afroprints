@@ -1,0 +1,10 @@
+/* Footer Section. */
+footer{
+  position: relative;
+  bottom: 0;
+  background-color: #353b48;
+  color: #f5f6fa;
+  padding: 0 50px;
+  width: 100%;
+  min-height: 5rem;
+}

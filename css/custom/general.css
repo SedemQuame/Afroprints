@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+}
+
+nav{
+    background-color: #353b48;
+    height: 4rem;
+    width: 100%;
+}
+
+.site-header {
+    background-color: #353b48;
+    /* -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px); */
+}
+
+.site-header a {
+    color: #f5f6fa;
+    transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
