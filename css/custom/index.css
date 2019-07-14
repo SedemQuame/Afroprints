@@ -9,6 +9,7 @@
 
 }
 
+
 .sections{
     padding: 0 20px;
     min-height: 1300px;
@@ -61,12 +62,13 @@
   font-size: 14px;
 }
 
+
 #user-email-insertion{
-    margin: auto;
+    margin:0 auto;
     border: 1px solid black;
     text-align: center;
     min-height: 60px;
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: -25px;
 }
 

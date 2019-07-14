@@ -1,10 +1,24 @@
 /* Footer Section. */
 footer{
-  position: relative;
-  bottom: 0;
+  position: absolute;
   background-color: #353b48;
   color: #f5f6fa;
-  padding: 0 50px;
+  padding: 30px 30px;
   width: 100%;
-  min-height: 5rem;
+  /* min-height: 5rem; */
+}
+
+.row{
+  margin: 0;
+  /* padding: 0; */
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+li a{
+  color: white;
+  text-decoration: none;
 }

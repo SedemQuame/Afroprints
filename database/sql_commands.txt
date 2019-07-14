@@ -1,0 +1,20 @@
+/*
+
+* Inserting data into the database.
+INSERT INTO <tableName>
+(<column1Name>, <column2Name>, …)
+VALUES (<column1Value>, <column2Value>, …)
+
+*Selecting all the data in a given database.
+SELECT * FROM `<database>`.`<table>`;
+
+*Selecting specific data columns to view from the database.
+SELECT `<column1>`, `<column2>`, `<column3`, . . . , FROM joke
+
+NB: SQL functions can be used to format the returned data.
+
+*Specifying conditions based on which columns are returned.
+SELECT `<column1>` FROM `<table>` WHERE `<base for Condition>` LIKE "%test_case%"
+
+
+*/
