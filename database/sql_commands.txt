@@ -9,7 +9,7 @@ VALUES (<column1Value>, <column2Value>, …)
 SELECT * FROM `<database>`.`<table>`;
 
 *Selecting specific data columns to view from the database.
-SELECT `<column1>`, `<column2>`, `<column3`, . . . , FROM joke
+SELECT `<column1>`, `<column2>`, `<column3>`, . . . , FROM joke
 
 NB: SQL functions can be used to format the returned data.
 
