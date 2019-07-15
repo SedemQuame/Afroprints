@@ -8,7 +8,8 @@ header("content-type: text/xml");
 
 $response = new MessagingResponse();
 $response->message(
-    "I'm using the Twilio PHP library to respond to this SMS!"
+    "Hi sedem it's the future you and i've come to warn you about impending successes, becareful don't let it get to your head
+    try to help us many people us you can okay. and invest as much as you can remember 1.8 * 10^8"
 );
 
 echo $response;
