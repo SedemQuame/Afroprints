@@ -32,8 +32,11 @@
     header('Location: ' . $final_pwsd_page);
 
   }elseif ($caller_type == "email") {
-    $email = $_POST['email'];
-
+    // Getting email addresses for email.
+    $email_address = $_POST['email'];
+    $email_msg = "Generated random number is: " . $randomly_generated_number;
+    // include statement.
+    include __DIR__.'\send_email.php';
   }else{
     // TODO: Think of this usecase and how to account for this.
   }
