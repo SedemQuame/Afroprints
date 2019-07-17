@@ -1,67 +1,15 @@
+.header{
+  margin-bottom: 1.5rem;
+}
+
+div p{
+  margin-bottom: 0.5rem;
+}
+
 .banner-container{
-    height: 400px;
-    width: 100%;
     border: 1px solid #1d2124;
     margin-bottom: 15px;
 }
-
-.banner-img{
-
-}
-
-
-.sections{
-    padding: 0 20px;
-    min-height: 1300px;
-    width: 100%;
-}
-
-
-.category{
-    margin: 5px 0;
-}
-
-/*Product Part*/
-.product{
-  padding-top: 15px;
-  height: 400px;
-}
-
-.product-categories{
-    border:1px solid #1d2124;
-    border-radius: 5px;
-}
-
-.product-categories:hover{
-    background-color: #1d2124;
-    color: #f7f7f7;
-}
-
-.product-img{
-    height: 350px;
-    width: 90%;
-    margin: 0 5%;
-    border: 1px solid blue;
-    border-radius: 5px;
-}
-
-
-.product-info{
-    height: 20px;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.caption{
-  font-size: 20px;
-}
-
-.price{
-  font-size: 14px;
-}
-
 
 #user-email-insertion{
     margin:0 auto;
@@ -75,3 +23,35 @@
 form{
   display: inline-block;
 }
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }

@@ -10,7 +10,7 @@
           <a class="py-2 d-none d-md-inline-block" href="products.php?item=accessories">Accessories</a>
           <a class="py-2 d-none d-md-inline-block" href="products.php?item=shoes">Shoes</a>
           <a class="py-2 d-none d-md-inline-block" href="products.php?item=bags">Bags</a>
-          <a class="py-2 d-none d-md-inline-block" href="about.php">About</a>
-          <a class="py-2 d-none d-md-inline-block" href="help.php">Help</a>
+          <a class="py-2 d-none d-md-inline-block" href="#"></a>
+          <a class="py-2 d-none d-md-inline-block" href="signup.php">Sign In</a>
       </div>
   </nav>
