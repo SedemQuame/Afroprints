@@ -5,6 +5,7 @@
     <title>Login</title>
     <!--    Stylesheets.-->
     <?php
+      include '../php/custom/sessions.php';
       include '../php/custom/included_pages/common_styles.php';
     ?>
     <link rel="stylesheet" href="../css/custom/signup.css"/>
@@ -49,6 +50,12 @@
       Haven't got an account?
               <br>
       <a href="signup.php">Sign up</a>
+    </p>
+
+    <hr>
+
+    <p class="text-center">
+      Reset Password with <a href="password_reset_with_sms.php">SMS</a> or <a href="password_reset_with_email.php">Email</a>.
     </p>
 
   </form>

@@ -5,6 +5,7 @@
 <title>Password Reset</title>
   <!--    StyleSheet links.-->
   <?php
+    include '../php/custom/sessions.php';
     include '../php/custom/included_pages/common_styles.php';
   ?>
   <link rel="stylesheet" href="../css/custom/signup.css"/>

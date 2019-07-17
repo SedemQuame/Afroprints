@@ -5,6 +5,7 @@
     <title>Title</title>
     <!--    StyleSheet links.-->
     <?php
+      include '../php/custom/sessions.php';
       include '../php/custom/included_pages/common_styles.php';
     ?>
     <link rel="stylesheet" href="../css/custom/help.css">
@@ -14,6 +15,10 @@
       // Nav Bar.
       include '../php/custom/included_pages/nav.php';
   ?>
+
+  <div class="row">
+    <!-- Enter help text here. -->
+  </div>
 
   <?php
       // Footer.

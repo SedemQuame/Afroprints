@@ -5,6 +5,7 @@
     <title>Sign up</title>
     <!--    Stylesheets.-->
     <?php
+      include '../php/custom/sessions.php';
       include '../php/custom/included_pages/common_styles.php';
     ?>
     <link rel="stylesheet" href="../css/custom/signup.css"/>

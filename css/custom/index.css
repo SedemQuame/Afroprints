@@ -18,6 +18,7 @@ div p{
     min-height: 60px;
     /* width: 100%; */
     margin-bottom: -25px;
+    margin-top: 25px;
 }
 
 form{
@@ -27,8 +28,6 @@ form{
 
 /*
  * Extra utilities
- */
-
 .flex-equal > * {
   -ms-flex: 1;
   flex: 1;
@@ -54,4 +53,4 @@ form{
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
-  }
+  } */

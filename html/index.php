@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<!--    StyleSheet links.-->
+    <!--    StyleSheet links.-->
     <?php
+      include '../php/custom/sessions.php';
       include '../php/custom/included_pages/common_styles.php';
     ?>
     <link rel="stylesheet" href="../css/custom/index.css">
@@ -50,20 +51,13 @@
     <br>
 
 
-<!-- Do not remove this footer page and replace with included footer using .php file yet yet. -->
-<?php // TODO: Must fix the positioning of the footer to work universally in all templates. ?>
-    <!-- <footer>
-        <p class="text-center">footer</p>
+    <!-- Do not remove this footer page and replace with included footer using .php file yet yet. -->
+    <?php // TODO: Must fix the positioning of the footer to work universally in all templates. ?>
 
-        <div>
-            <p class="text-center">footer s2</p>
-        </div>
-    </footer> -->
     <?php
         // Footer.
         include '../php/custom/included_pages/footer.php';
     ?>
-
 
     <!--JavaScript Files.-->
     <!-- Custom JavaScript Files. -->

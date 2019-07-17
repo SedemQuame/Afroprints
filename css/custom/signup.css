@@ -9,7 +9,7 @@ form{
   margin-bottom: 10vh;
   padding: 15px 15px 5px 15px;
   width: 25%;
-  min-height: 65vh;
+  /* min-height: 25vh; */
   border: 1px solid black;
 }
 
