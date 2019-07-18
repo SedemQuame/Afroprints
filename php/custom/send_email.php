@@ -16,6 +16,10 @@
   // Email Message.
   // TODO: Write script to send dynamic mail content based on the given use case.
 
-  mail($to, $subject, $email_msg, $headers);
+  if(mail($to, $subject, $email_msg, $headers)){
+    // redirect to new page.
+  }else{
+    // display error message.
+  }
 
 ?>

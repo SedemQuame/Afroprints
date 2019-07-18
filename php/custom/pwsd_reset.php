@@ -24,22 +24,31 @@
     // Getting phone number for SMS.
     $phone_number = $_POST['phone_number'];
 
+    $_SESSION['secret_random_pin'] = $randomly_generated_number;
+
     // include statement.
     if(include __DIR__.'\send_sms.php'){
-      $_SESSION['secret_random_pin'] = $randomly_generated_number;
+      // redirect to page reset page using header.
+      $final_pwsd_page = '../../html/final_pwsd_reset.php';
+      header('Location: ' . $final_pwsd_page);
     } else {
       // return error message.
     }
 
-    // redirect to page reset page using header.
-    $final_pwsd_page = '../../html/final_pwsd_reset.php';
-    header('Location: ' . $final_pwsd_page);
   }elseif ($caller_type == "email") {
     // Getting email addresses for email.
     $email_address = $_POST['email'];
     $email_msg = "Generated random number is: " . $randomly_generated_number;
     // include statement.
-    include __DIR__.'\send_email.php';
+
+    if(include __DIR__.'\send_email.php'){
+      // redirect to page reset page using header.
+      $final_pwsd_page = '../../html/final_pwsd_reset.php';
+      header('Location: ' . $final_pwsd_page);
+    }else {
+      // return error message.
+    }
+
   }else{
     // TODO: Think of this usecase and how to account for this.
   }

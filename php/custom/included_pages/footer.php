@@ -18,7 +18,6 @@
 
     <div class="col-12 col-sm-6 col-md-3 ">
       <p class="text-center"> Contact Us </p>
-
       <ul>
         <li class=""> <a href="#">Address</a> </li>
         <li class=""> <a href="#">Email Us</a> </li>
@@ -62,7 +61,7 @@
       <ul>
         <li class=""> <a href="#">Visa</a> </li>
         <li class=""> <a href="#">Stripe</a>  </li>
-        <li class=""> <a href="#">Paypal</a> </li
+        <li class=""> <a href="#">Paypal</a> </li>
         <li class=""> <a href="#">MasterCard</a>  </li>
         <li class=""> <a href="#">Crypto Coins</a> </li>
       </ul>
