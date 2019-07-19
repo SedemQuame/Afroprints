@@ -15,8 +15,9 @@ $twilio_number = "+19166190482";
 $client = new Client($account_sid, $auth_token);
 $client->messages->create(
     // Where to send a text message (your cell phone?)
-    // '+15558675310',
-    $phone_number,
+      // '+15558675310',
+      // '+233546744163',
+     $phone_number,
     array(
         'from' => $twilio_number,
         'body' => 'Random number to validate account. '.$randomly_generated_number

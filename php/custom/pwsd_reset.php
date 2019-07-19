@@ -25,7 +25,7 @@
     $phone_number = $_POST['phone_number'];
 
     $_SESSION['secret_random_pin'] = $randomly_generated_number;
-
+    echo $randomly_generated_number;
     // include statement.
     if(include __DIR__.'\send_sms.php'){
       // redirect to page reset page using header.
@@ -37,8 +37,8 @@
 
   }elseif ($caller_type == "email") {
     // Getting email addresses for email.
-    $email_address = $_POST['email'];
-    $email_msg = "Generated random number is: " . $randomly_generated_number;
+    $to = $_POST['email'];
+    $msg = "Generated random number is: " . $randomly_generated_number;
     // include statement.
 
     if(include __DIR__.'\send_email.php'){
@@ -47,6 +47,7 @@
       header('Location: ' . $final_pwsd_page);
     }else {
       // return error message.
+      echo "Couldn't Run Email Script. Try Again In a Few Minutes";
     }
 
   }else{
