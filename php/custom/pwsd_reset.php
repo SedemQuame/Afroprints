@@ -6,9 +6,12 @@
   *  - CREATE AN EIGHT DIGIT RANDOM NUMBER.
   *  - Pass the given number to page where the user will type the given number.
   *  - Compare entered random number and the generated number passed from this controller.
-  *  - If the entered string is valid give user access to the system
-  */
+  *  - Check if entered string is valid.
+  *  - Give user access to change his password in the database and then redirect him
+  *  - to the login page
 
+  */
+  session_start();
   $caller_type = $_GET['callertype'];
   $min = 1000;
   $max = 9999;
@@ -18,6 +21,7 @@
   *2. include 'b.php';
   */
   $randomly_generated_number = random_int($min, $max);
+  $page = '../../html/final_pwsd_reset.php';
 
   if($caller_type == "sms"){
 
@@ -25,12 +29,11 @@
     $phone_number = $_POST['phone_number'];
 
     $_SESSION['secret_random_pin'] = $randomly_generated_number;
-    echo $randomly_generated_number;
+    // echo $_SESSION['secret_random_pin'];
     // include statement.
     if(include __DIR__.'\send_sms.php'){
       // redirect to page reset page using header.
-      $final_pwsd_page = '../../html/final_pwsd_reset.php';
-      header('Location: ' . $final_pwsd_page);
+      header('Location: ' . $page);
     } else {
       // return error message.
     }
@@ -43,8 +46,7 @@
 
     if(include __DIR__.'\send_email.php'){
       // redirect to page reset page using header.
-      $final_pwsd_page = '../../html/final_pwsd_reset.php';
-      header('Location: ' . $final_pwsd_page);
+      header('Location: ' . $page);
     }else {
       // return error message.
       echo "Couldn't Run Email Script. Try Again In a Few Minutes";

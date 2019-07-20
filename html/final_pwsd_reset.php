@@ -25,8 +25,7 @@
         tempor incididunt ut labore et dolore magna aliqua.
     </p>
 
-
-    <form action="" method="post" enctype="" class="">
+    <form action="../php/custom/check_reset_info.php" method="post" enctype="" class="">
       <div>
           <label for="reset_pin">Reset Pin</label>
           <br>
