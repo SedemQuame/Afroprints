@@ -5,6 +5,7 @@
   // Email Sender.
 
   // Make subject dynamic, based on use case.
+
   $subject = 'the subject';
 
   // Make headers dynamic, based on use case.
@@ -15,7 +16,7 @@
   // Email Message.
   // TODO: Write script to send dynamic mail content based on the given use case.
 
-  
+
   if(mail($to, $subject, $msg, $headers)){
     // redirect to new page.
     // echo "Success";
@@ -23,4 +24,18 @@
     // display error message.
     echo "Failure";
   }
-?>
+
+//   # Include the Autoloader (see "Libraries" for install instructions)
+// require '../../vendor/autoload.php';
+// use Mailgun\Mailgun;
+// # Instantiate the client.
+// $mgClient = new Mailgun('defbeb69b30d0851faa15bdb2644384b-fd0269a6-330973a4');
+// $domain = "sandboxcc627e3c927541b881e3578abb398416.mailgun.org";
+// # Make the call to the client.
+// $result = $mgClient->sendMessage($domain, array(
+//   'from'    => 'sandboxcc627e3c927541b881e3578abb398416.mailgun.org',
+//   'to'      => 'sedem.amekpewu.3@gmail.com',
+//   'subject' => 'Email Stuff',
+//   'text'    => 'Hey! Sedem whatsapp? Been awhile see you working hard over here.'
+// ));
+// ?>
