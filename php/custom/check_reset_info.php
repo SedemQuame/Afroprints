@@ -18,7 +18,6 @@
     /*
     * -Run database mini script to change the given users, credentials i.e passwords.
     */
-
     // -Redirect user to login page.
     $page = '../../html/login.php';
     header('Location: ' . $page);

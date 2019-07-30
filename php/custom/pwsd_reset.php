@@ -41,6 +41,7 @@
   }elseif ($caller_type == "email") {
     // Getting email addresses for email.
     $to = $_POST['email'];
+    $_SESSION['secret_random_pin'] = $randomly_generated_number;
     $msg = "Generated random number is: " . $randomly_generated_number;
     // include statement.
 
