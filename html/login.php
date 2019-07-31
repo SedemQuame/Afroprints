@@ -26,18 +26,18 @@
   </p>
 
 
-  <form action="" method="post" enctype="" class="">
+  <form action="../php/custom/loginScript.php" method="post" enctype="" class="">
     <!--This is the login page.-->
     <div>
         <label for="email_address">Email Address</label>
         <br>
-        <input class="form-control" name="email" type="text" id="email_address" placeholder="Email Address">
+        <input class="form-control" name="email" type="text" id="email_address" placeholder="Email Address" required>
     </div>
 
     <div>
         <label for="user_password">Password</label>
         <br>
-        <input class="form-control" name="password" type="password" id="user_password" placeholder="Password">
+        <input class="form-control" name="password" type="password" id="user_password" placeholder="Password" required>
     </div>
 
     <div>

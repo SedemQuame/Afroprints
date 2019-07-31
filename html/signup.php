@@ -25,47 +25,47 @@
     tempor incididunt ut labore et dolore magna aliqua.
   </p>
 
-  <form action="" method="post" enctype="" class="">
+  <form action="../php/custom/signupScript.php" method="post" enctype="" class="">
       <div>
           <label for="first_name">First Name</label>
           <br>
-          <input class="form-control" name="text" type="text" id="first_name" class="" placeholder="First Name">
+          <input class="form-control" name="first_name" type="text" id="first_name" class="" placeholder="First Name" required>
       </div>
 
       <div>
           <label for="last_name">Last Name</label>
           <br>
-          <input class="form-control" name="last_name" type="text" id="last_name" class="" placeholder="Last name">
+          <input class="form-control" name="last_name" type="text" id="last_name" class="" placeholder="Last name" required>
       </div>
 
       <div>
           <label for="email_address">Email Address</label>
           <br>
-          <input class="form-control" name="email_address" type="text" id="email_address" class="" placeholder="Email Address">
+          <input class="form-control" name="email_address" type="text" id="email_address" class="" placeholder="Email Address" required>
       </div>
 
       <div>
           <label for="users_country">Country</label>
           <br>
-          <input class="form-control" name="users_country" type="text" id="users_country" class="" placeholder="Country">
+          <input class="form-control" name="users_country" type="text" id="users_country" class="" placeholder="Country" required>
       </div>
 
       <div>
           <label for="phone_number">Phone number</label>
           <br>
-          <input class="form-control" name="phone_number" type="tel" id="phone_number" class="" placeholder="Phone Number">
+          <input class="form-control" name="phone_number" type="tel" id="phone_number" class="" placeholder="Phone Number" required>
       </div>
 
       <div>
           <label for="user_password">Password</label>
           <br>
-          <input class="form-control" name="password" type="password" id="user_password" class="" placeholder="Password">
+          <input class="form-control" name="password" type="password" id="user_password" class="" placeholder="Password" required>
       </div>
 
       <div>
           <label for="user_password_confirmation">Confirm Password</label>
           <br>
-          <input class="form-control" name="password" type="password" id="user_password_confirmation" class="" placeholder="Confirm Password">
+          <input class="form-control" name="confirm_password" type="password" id="user_password_confirmation" class="" placeholder="Confirm Password" required>
       </div>
 
       <div>
