@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <!--    StyleSheet links.-->
     <?php
+      include '../php/custom/included_pages/meta_data.php';
       include '../php/custom/sessions.php';
       include '../php/custom/included_pages/common_styles.php';
     ?>
@@ -15,14 +17,12 @@
         // Nav Bar.
         include '../php/custom/included_pages/nav.php';
     ?>
-
+<!--
     <div class="container-fluid jumbotron jumbotron-fluid banner-container">
-        <!--        This div will act as the banner.-->
-        <!-- <img class="banner-img" alt="" data-src="holder.js/1349x400"> -->
         <h1 class="display-4 text-center header">Hello, world!</h1>
         <p class="lead text-center sub-header">This is a simple hero unit, a simple jumbotron-style component for calling extra.</p>
         <p class="lead text-center sub-header">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    </div>
+    </div> -->
 
     <?php
         // Featured products.
