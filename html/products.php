@@ -20,7 +20,7 @@
 
             $page_name = $_GET['item'];
 
-            echo '<p class=""> ' . $page_name . ' </p>';
+            // echo '<p class=""> ' . $page_name . ' </p>';
 
             echo '<!-- List of contents pertaining to a given product category. -->';
 

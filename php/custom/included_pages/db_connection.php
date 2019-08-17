@@ -1,12 +1,12 @@
 <?php
 
-$db_password = "GGKL1neFeLtEr@12";
+$db_password = "PGKL1neFeLtEr@1";
 $db_username = "apsadmin";
 $host_name = "localhost";
-$db_name = "afriprints";
+$db_name = "aps";
 
 try{
-  $pdo = new PDO("mysql:host=".$host_name.";dbname=".$db_name.";charset=utf8", $db_username, $db_password);
+  $pdo = new PDO("pgsql:host=".$host_name.";dbname=".$db_name, $db_username, $db_password);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $output = 'Database connection successful.';
 }catch(PDOException $e){
@@ -17,6 +17,4 @@ try{
 }
 
 echo $output;
-
-
 ?>

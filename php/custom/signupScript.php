@@ -18,12 +18,16 @@ if ($password == $confirm_password) {
   include 'included_pages/db_connection.php';
 
   // SQL CODE.
-  $sql = "INSERT INTO `afriprints`.`customer` VALUES ('6', '$name', '$email_address', '$password', '', '$phone_number')";
+  // $sql = "CREATE SEQUENCE IF NOT EXISTS seq start 1 increment 1 minvalue 1 owned by bookstore.id";
+  $sql = "INSERT INTO customer (cust_id, cust_name, cust_email, cust_password, cust_address, cust_contact)
+          VALUES
+          (nextval('customer_seq'), '$name', '$email_address', '$password', '$country', '$phone_number');";
+  // $sql = "INSERT INTO `afriprints`.`customer` VALUES ('6', '$name', '$email_address', '$password', '', '$phone_number')";
   $pdo->exec($sql);
 
   // Storing customer's id in the sessions.
   session_start();
-  $sql2 = "SELECT `cust_id` FROM `afriprints`.`customer` WHERE `cust_email`='$email_address'";
+  $sql2 = "SELECT cust_id FROM customer WHERE cust_email='$email_address'";
   $stmt = $pdo->query($sql2);
   $stmt->setFetchMode(PDO::FETCH_NUM);
 
