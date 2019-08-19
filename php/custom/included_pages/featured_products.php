@@ -26,7 +26,7 @@
         $element = "";
         foreach ($stmt as $row) {
           $element .= '
-                        <div class="col-md-4">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                           <div class="card mb-4 shadow-sm">
                             <img class="bd-placeholder-img card-img-top" src="'.$row['brand_image'].'" alt="" ';
 
@@ -36,8 +36,8 @@
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary data-product-id="'.$row['brand_id'].'">Buy</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary data-product-id="'.$row['brand_id'].'">Add To Cart</button>
+                            <button onclick="openModal()" type="button" class="openBtn btn btn-sm btn-outline-secondary" data-number="'.$row['brand_id'].'">Buy</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-product-id="'.$row['brand_id'].'">Add To Cart</button>
                           </div>
                           <small class="text-muted">9 mins</small>
                         </div>

@@ -1,3 +1,7 @@
+<!--
+ Purpose of this page is to show the information of the founders of the site.
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +20,7 @@
       include '../php/custom/included_pages/nav.php';
   ?>
 
+  <?php // TODO: Create template, here. ?>
 
   <?php
       // Footer.

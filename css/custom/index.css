@@ -1,56 +1,29 @@
-.header{
+.header {
   margin-bottom: 1.5rem;
 }
 
-div p{
+div p {
   margin-bottom: 0.5rem;
 }
 
-.banner-container{
-    border: 1px solid #1d2124;
-    margin-bottom: 15px;
+.banner-container {
+  border: 1px solid #1d2124;
+  margin-bottom: 15px;
 }
 
-#user-email-insertion{
-    margin:0 auto;
-    border: 1px solid black;
-    text-align: center;
-    min-height: 60px;
-    /* width: 100%; */
-    margin-bottom: -25px;
-    margin-top: 25px;
+#content {
+  background-color: green;
 }
 
-form{
+#user-email-insertion {
+  margin: 0 auto;
+  border: 1px solid black;
+  text-align: center;
+  min-height: 60px;
+  margin-bottom: -25px;
+  margin-top: 25px;
+}
+
+form {
   display: inline-block;
 }
-
-
-/*
- * Extra utilities
-.flex-equal > * {
-  -ms-flex: 1;
-  flex: 1;
-}
-@media (min-width: 768px) {
-  .flex-md-equal > * {
-    -ms-flex: 1;
-    flex: 1;
-  }
-}
-
-.overflow-hidden { overflow: hidden; }
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  } */

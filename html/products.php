@@ -30,11 +30,31 @@
             include '../php/custom/included_pages/footer.php';
         ?>
 
+        <!-- Modal box for the dsiplaying selected items. -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-lg">
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">Modal with Dynamic Content</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
         <!--JavaScript Files.-->
         <!-- Custom JavaScript Files. -->
         <script src="../js/custom/products.js"></script>
 
         <!-- JavaScript Frameworks and libraries. -->
-        <script src="../js/framework/holder.js" charset="utf-8"></script>
+        <?php include '../php/custom/included_pages/common_js.php'; ?>
+
+        <script src="../js/custom/modal.js" charset="utf-8"></script>
   </body>
 </html>
