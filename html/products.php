@@ -12,22 +12,18 @@
     <link rel="stylesheet" href="../css/custom/index.css">
   </head>
   <body>
-
-
         <?php
             // Nav Bar.
             include '../php/custom/included_pages/nav.php';
 
             $page_name = $_GET['item'];
 
-            // echo '<p class=""> ' . $page_name . ' </p>';
+            echo '<p class=""> ' . $page_name . ' </p>';
 
             echo '<!-- List of contents pertaining to a given product category. -->';
 
             include '../php/custom/included_pages/featured_products.php';
         ?>
-
-
 
         <?php
             // Footer.
@@ -37,7 +33,6 @@
         <!--JavaScript Files.-->
         <!-- Custom JavaScript Files. -->
         <script src="../js/custom/products.js"></script>
-
 
         <!-- JavaScript Frameworks and libraries. -->
         <script src="../js/framework/holder.js" charset="utf-8"></script>

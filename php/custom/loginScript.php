@@ -8,7 +8,6 @@ $password = $_POST['password'];
 include 'included_pages/db_connection.php';
 
 // starting sessions.
-
 if (session_start() && ($_SESSION['user_id'] != null)){
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT cust_email, cust_password FROM customer WHERE cust_id='$user_id'";
@@ -31,7 +30,6 @@ if (session_start() && ($_SESSION['user_id'] != null)){
       header('Location: ../../html/login.php');
       // TODO: Attach error message to the header above.
     }
-
 }
 else{
     $sql =  "SELECT cust_email, cust_password FROM customer";
