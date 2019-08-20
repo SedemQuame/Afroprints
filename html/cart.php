@@ -22,48 +22,67 @@
     <div class="container">
 
           <caption>Shopping cart.</caption>
-          <table class="table table-striped table-bordered table-responsive-sm">
+          <table class="table table-hover table-responsive-sm">
 
             <thead class="thead-light">
               <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Code</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-                <th scope="col">Action</th>
+                <th class="table-items" scope="col">Items</th>
+                <th class="table-price" scope="col">Price</th>
+                <th class="table-quantity" scope="col">Quantity</th>
+                <th class="table-total" scope="col">Total</th>
+                <th class="remove" scope="col">Remove</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-<!-- 
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="table-items">Item 1</td>
+                <td class="table-price">Ghc 250.00</td>
+                <td class="table-quantity">3</td>
+                <td class="table-total">Ghc 750.00</td>
+                <td class="remove"></td>
               </tr>
 
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr> -->
+                <td class="table-items">Item 2</td>
+                <td class="table-price">Ghc 180.00</td>
+                <td class="table-quantity">2</td>
+                <td class="table-total">Ghc 360.00</td>
+                <td class="remove"></td>
+              </tr>
+
+              <tr>
+                <td class="table-items">Item 3</td>
+                <td class="table-price">Ghc 280.00</td>
+                <td class="table-quantity">6</td>
+                <td class="table-total">Ghc 1680.00</td>
+                <td class="remove"></td>
+              </tr>
+
+              <tr>
+                <td class="table-items">Item 2</td>
+                <td class="table-price">Ghc 180.00</td>
+                <td class="table-quantity">2</td>
+                <td class="table-total">Ghc 360.00</td>
+                <td class="remove"></td>
+              </tr>
+
+              <tr>
+                <td class="table-items">Item 3</td>
+                <td class="table-price">Ghc 280.00</td>
+                <td class="table-quantity">6</td>
+                <td class="table-total">Ghc 1680.00</td>
+                <td class="remove"></td>
+              </tr>
+
             </tbody>
 
 
             <tfoot>
-              <tr>
-                <td class="text-right" colspan="3">Total</td>
+              <tr class="table-footer">
+                <td colspan="2"></td>
+                <th class="text-center">Total</th>
+                <th class="text-center">Ghc 2790.00</th>
                 <td></td>
               </tr>
             </tfoot>
