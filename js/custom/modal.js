@@ -1,9 +1,3 @@
-// $(".openBtn").on("click", function() {
-//   $(".modal-body").load("../php/custom/modal.php?id=56", function() {
-//     $("#myModal").modal({show: true});
-//   });
-// });
-
 function openModal() {
   let clickedElement = event.target.getAttribute("data-number");
   console.log(clickedElement);

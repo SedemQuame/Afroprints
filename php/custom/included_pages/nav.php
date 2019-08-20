@@ -11,8 +11,6 @@
           <a class="py-2 d-none d-md-inline-block" href="products.php?item=shoes">Shoes</a>
           <a class="py-2 d-none d-md-inline-block" href="products.php?item=bags">Bags</a>
           <a class="py-2 d-none d-md-inline-block" href="signup.php">Sign In</a>
-          <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
-          <!-- <a class="py-2 d-none d-md-inline-block" href="cart.php">Cart</a> -->
-
+          <a class="py-2 d-none d-md-inline-block" href="cart.php">Cart</a>
       </div>
   </nav>
