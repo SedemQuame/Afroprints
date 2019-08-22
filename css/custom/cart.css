@@ -1,5 +1,24 @@
+
+button{
+  background-color: white;
+  width: 100%;
+}
+
+.clear-btn-container{
+  padding: 0;
+}
+
+.clear-btn-container button{
+  height: 100%;
+}
+
+.remove{
+  width: 15%;
+  padding-left: 25%;
+}
+
 .table-items{
-  width: 35%;
+  width: 30%;
 
 }
 
@@ -14,12 +33,12 @@
 }
 
 .table-total{
-  width: 15%;
+  width: 20%;
   text-align: center;
 }
 
-.remove{
-  width: 15%;
+table{
+  margin-bottom: 50px;
 }
 
 .table-footer{

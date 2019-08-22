@@ -23,23 +23,22 @@
         $stmt->execute();
         $stmt = $stmt->fetchAll();
 
+        // Instantiating variable to hold populated pages.
         $element = "";
         foreach ($stmt as $row) {
-          $element .= '
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          $element .= '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                           <div class="card mb-4 shadow-sm">
                             <img class="bd-placeholder-img card-img-top" src="'.$row['brand_image'].'" alt="" ';
 
           $element .= '" alt="" width="100%" height="225">
-                      <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
                       <div class="card-body">
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                            <button onclick="openModal()" type="button" class="openBtn btn btn-sm btn-outline-secondary" data-number="'.$row['brand_id'].'">Buy</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary" data-product-id="'.$row['brand_id'].'">Add To Cart</button>
-                          </div>
-                          <small class="text-muted">9 mins</small>
+                          <form class="btn-group" action="../php/custom/cart-processor.php?action=add&&item_id='.$row['brand_id'].'" method="post">
+                            <button onclick="openModal()" type="button" class="openBtn btn btn-sm btn-outline-secondary" data-number="'.$row['brand_id'].'">View Item</button>
+                            <button type="submit" class="btn btn-sm btn-outline-secondary" data-product-id="'.$row['brand_id'].'">Add To Cart</button>
+                          </form>
+                          <small class="text-muted">Ghc '.$row['brand_price'].'</small>
                         </div>
                       </div>
                     </div>

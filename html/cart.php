@@ -20,7 +20,26 @@
 
 
     <div class="container">
+          <?php
+            // Get array from sessions iterate through array and display
+            // in table along with price and other meta data.
 
+            include '../php/custom/included_pages/db_connection.php';
+            $cart_items = $_SESSION['cart-items'];
+
+            $placeholder = "";
+            foreach ($cart_items as $value) {
+              $placeholder .= $value.",";
+            }
+            $placeholder = trim($placeholder, ',');
+
+            $sql = "SELECT * FROM brand WHERE brand_id in ($placeholder);";
+
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();
+            $stmt = $stmt->fetchAll();
+
+          ?>
           <caption>Shopping cart.</caption>
           <table class="table table-hover table-responsive-sm">
 
@@ -35,72 +54,34 @@
             </thead>
 
             <tbody>
-              <tr>
-                <td class="table-items">Item 1</td>
-                <td class="table-price">Ghc 250.00</td>
-                <td class="table-quantity">3</td>
-                <td class="table-total">Ghc 750.00</td>
-                <td class="remove"></td>
-              </tr>
+              <?php
+              $element = "";
+              $total = 0;
+              foreach ($stmt as $row) {
+                $element .= '<tr>
+                                <td class="table-items">'.$row['brand_name'].'</td>
+                                <td class="table-price">Ghc '.$row['brand_price'].'</td>
+                                <td class="table-quantity">1</td>
+                                <td class="table-total">Ghc'.($row['brand_price']*1).'</td>
+                                <td class="remove"> <button class="btn" type="button" name="button"> <img src="../media/images/dustbin.png" alt="remove-item" width="32px" height="32px"> </button> </td>
+                              </tr>';
+                $total += $row['brand_price'];
+              }
 
-              <tr>
-                <td class="table-items">Item 2</td>
-                <td class="table-price">Ghc 180.00</td>
-                <td class="table-quantity">2</td>
-                <td class="table-total">Ghc 360.00</td>
-                <td class="remove"></td>
-              </tr>
-
-              <tr>
-                <td class="table-items">Item 3</td>
-                <td class="table-price">Ghc 280.00</td>
-                <td class="table-quantity">6</td>
-                <td class="table-total">Ghc 1680.00</td>
-                <td class="remove"></td>
-              </tr>
-
-              <tr>
-                <td class="table-items">Item 2</td>
-                <td class="table-price">Ghc 180.00</td>
-                <td class="table-quantity">2</td>
-                <td class="table-total">Ghc 360.00</td>
-                <td class="remove"></td>
-              </tr>
-
-              <tr>
-                <td class="table-items">Item 3</td>
-                <td class="table-price">Ghc 280.00</td>
-                <td class="table-quantity">6</td>
-                <td class="table-total">Ghc 1680.00</td>
-                <td class="remove"></td>
-              </tr>
-
+              echo $element;
+              ?>
             </tbody>
-
-
             <tfoot>
               <tr class="table-footer">
                 <td colspan="2"></td>
                 <th class="text-center">Total</th>
-                <th class="text-center">Ghc 2790.00</th>
-                <td></td>
+                <th class="text-center"><?php echo 'Ghc ' . $total ?></th>
+                <td class="remove clear-btn-container"> <button class="btn btn-primary" type="button" name="button">Clear Cart</button> </td>
               </tr>
             </tfoot>
           </table>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
