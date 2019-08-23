@@ -75,9 +75,11 @@
                                   <td class="table-quantity">1</td>
                                   <td class="table-total">Ghc'.($row['brand_price']*1).'</td>
                                   <td class="remove">
-                                   <button class="btn remove-btn" type="button" name="button">
-                                    <img src="../media/images/dustbin.png" alt="remove-item" width="32px" height="32px">
-                                   </button>
+                                    <form class="" action="../php/custom/cart-processor.php?action=remove&item_id='.$row['brand_id'].'" method="post">
+                                      <button class="btn remove-btn" type="submit" name="button">
+                                       <img src="../media/images/dustbin.png" alt="remove-item" width="32px" height="32px">
+                                      </button>
+                                    </form>
                                   </td>
                                 </tr>';
                   $total += $row['brand_price'];
@@ -95,7 +97,7 @@
              $element .=  '</th>
                                 <td class="remove clear-btn-container">
                                    <form class="remove-all-form" action="../php/custom/cart-processor.php?action=remove_all" method="post">
-                                     <button class="btn text-light cart-remove-button" type="submit" name="button">Clear Cart</button>
+                                     <button class="btn cart-remove-button" type="submit" name="button">Clear Cart</button>
                                    </form>
                                 </td>
                               </tr>

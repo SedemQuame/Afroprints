@@ -19,13 +19,31 @@
       }else{
           array_push($_SESSION['cart-items'], $item_id);
       }
-
-      print_r($_SESSION['cart-items']);
+      // print_r($_SESSION['cart-items']);
       header('location:../../html/cart.php');
       break;
 
     case 'remove':
         // code...
+        // remove the given id from the array or ids.
+        $cart = $_SESSION['cart-items'];
+        if(in_array($item_id, $cart)){
+          // create new array and set it to the given values
+          // except the one selected.
+          $temp_arr = [];
+          $key = array_search($item_id, $cart);
+          $arr_length = sizeof($cart);
+
+          for ($i=0; $i < $arr_length; $i++) {
+            if ($i !== $key) {
+              array_push($temp_arr, $cart[$i]);
+            }
+          }
+          $_SESSION['cart-items'] = $temp_arr;
+        }
+        unset($cart);
+        unset($temp_arr);
+        header('location:../../html/cart.php');
       break;
 
     case 'remove_all':
@@ -37,10 +55,10 @@
       // code...
       break;
   }
-
-
-  echo "action type: " . $action . "<br />";
-  echo "item id: " . $item_id;
+  //
+  //
+  // echo "action type: " . $action . "<br />";
+  // echo "item id: " . $item_id;
 
 
 ?>
