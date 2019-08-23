@@ -20,70 +20,101 @@
 
 
     <div class="container">
-          <?php
-            // Get array from sessions iterate through array and display
-            // in table along with price and other meta data.
 
-            include '../php/custom/included_pages/db_connection.php';
+          <?php
+          // Get array from sessions iterate through array and display
+          // in table along with price and other meta data.
+
+          include '../php/custom/included_pages/db_connection.php';
+
+          if(!isset($_SESSION['cart-items'])){
+            // Show empty message and encourage, users to shop.
+
+          }else{
             $cart_items = $_SESSION['cart-items'];
 
-            $placeholder = "";
-            foreach ($cart_items as $value) {
-              $placeholder .= $value.",";
+            if(empty($cart_items)){
+              echo "null";
+
+            } else{
+
+              $placeholder = "";
+              foreach ($cart_items as $value) {
+                $placeholder .= $value.",";
+              }
+              $placeholder = trim($placeholder, ',');
+
+              $sql = "SELECT * FROM brand WHERE brand_id in ($placeholder);";
+
+              $stmt = $pdo->prepare($sql);
+              $stmt->execute();
+              $stmt = $stmt->fetchAll();
+
+              $total = 0;
+
+              $element = '<div class="style-caption"><p class="lead">Shopping cart.</p></div>
+
+                          <table class="table table-hover table-responsive-sm">
+                            <thead class="thead-light">
+                              <tr>
+                                <th class="table-items" scope="col">Items</th>
+                                <th class="table-price" scope="col">Price</th>
+                                <th class="table-quantity" scope="col">Quantity</th>
+                                <th class="table-total" scope="col">Total</th>
+                                <th class="remove" scope="col">Remove</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>';
+
+              if ($stmt !== null){
+                foreach ($stmt as $row) {
+                  $element .= '<tr>
+                                  <td class="table-items">'.$row['brand_name'].'</td>
+                                  <td class="table-price">Ghc '.$row['brand_price'].'</td>
+                                  <td class="table-quantity">1</td>
+                                  <td class="table-total">Ghc'.($row['brand_price']*1).'</td>
+                                  <td class="remove">
+                                   <button class="btn remove-btn" type="button" name="button">
+                                    <img src="../media/images/dustbin.png" alt="remove-item" width="32px" height="32px">
+                                   </button>
+                                  </td>
+                                </tr>';
+                  $total += $row['brand_price'];
+                }
+
+              $element .= '</tbody>
+                            <tfoot>
+                              <tr class="table-footer">
+                                <td colspan="2"></td>
+                                <th class="text-center">Total</th>
+                                <th class="text-center">Ghc ';
+
+            $element .= $total;
+
+             $element .=  '</th>
+                                <td class="remove clear-btn-container">
+                                   <form class="remove-all-form" action="../php/custom/cart-processor.php?action=remove_all" method="post">
+                                     <button class="btn text-light cart-remove-button" type="submit" name="button">Clear Cart</button>
+                                   </form>
+                                </td>
+                              </tr>
+                            </tfoot>
+                          </table>';
             }
-            $placeholder = trim($placeholder, ',');
 
-            $sql = "SELECT * FROM brand WHERE brand_id in ($placeholder);";
+            echo $element;
+          }
 
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute();
-            $stmt = $stmt->fetchAll();
+
+
+
+          }
 
           ?>
-          <caption>Shopping cart.</caption>
-          <table class="table table-hover table-responsive-sm">
-
-            <thead class="thead-light">
-              <tr>
-                <th class="table-items" scope="col">Items</th>
-                <th class="table-price" scope="col">Price</th>
-                <th class="table-quantity" scope="col">Quantity</th>
-                <th class="table-total" scope="col">Total</th>
-                <th class="remove" scope="col">Remove</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <?php
-              $element = "";
-              $total = 0;
-              foreach ($stmt as $row) {
-                $element .= '<tr>
-                                <td class="table-items">'.$row['brand_name'].'</td>
-                                <td class="table-price">Ghc '.$row['brand_price'].'</td>
-                                <td class="table-quantity">1</td>
-                                <td class="table-total">Ghc'.($row['brand_price']*1).'</td>
-                                <td class="remove"> <button class="btn" type="button" name="button"> <img src="../media/images/dustbin.png" alt="remove-item" width="32px" height="32px"> </button> </td>
-                              </tr>';
-                $total += $row['brand_price'];
-              }
-
-              echo $element;
-              ?>
-            </tbody>
-            <tfoot>
-              <tr class="table-footer">
-                <td colspan="2"></td>
-                <th class="text-center">Total</th>
-                <th class="text-center"><?php echo 'Ghc ' . $total ?></th>
-                <td class="remove clear-btn-container"> <button class="btn btn-primary" type="button" name="button">Clear Cart</button> </td>
-              </tr>
-            </tfoot>
-          </table>
-
-    </div>
 
 
+</div>
 
 
 
