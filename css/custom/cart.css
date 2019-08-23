@@ -34,8 +34,9 @@
   color: #353b48;
 }
 
-.table td {
-   padding: 0;
+.table td:not(.table-items) {
+  padding: 0;
+  /* padding-left: 10px; */
   vertical-align: middle;
   border-top: 1px solid #dee2e6;
 }
@@ -50,9 +51,31 @@
   margin: 0;
 }
 
+.empty-cart{
+  border: 1px solid #d3d3d3;
+  border-top: 0px;
+  background-color: #f2f3f4;
+  height: 55vh;
+  padding-top: 9vh;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 25vh;
+  vertical-align: middle;
+}
+
+.empty-cart-text{
+  padding-left: 10px;
+  font-size: 30px;
+}
+
 .table-items{
   width: 30%;
-
+  padding-left: 10px;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
 }
 
 .table-price{
@@ -90,5 +113,6 @@ table{
 .style-caption p{
   margin-bottom: 0;
   height: 100%;
-  padding-left: 5%;
+  padding-left: 10px;
+  padding-top: 5px;
 }

@@ -29,13 +29,20 @@
 
           if(!isset($_SESSION['cart-items'])){
             // Show empty message and encourage, users to shop.
-
+            echo '<div class="style-caption"><p class="lead">Shopping cart.</p></div>
+                  <div class="empty-cart">
+                    <img src="../media/images/cart.svg" alt="cart-image" height="170vh" width="170vw">
+                    <p class="lead empty-cart-text">Empty Cart</p>
+                  </div>';
           }else{
             $cart_items = $_SESSION['cart-items'];
 
             if(empty($cart_items)){
-              echo "null";
-
+              echo '<div class="style-caption"><p class="lead">Shopping cart.</p></div>
+                    <div class="empty-cart">
+                      <img src="../media/images/cart.svg" alt="cart-image" height="170vh" width="170vw">
+                      <p class="lead empty-cart-text">Empty Cart</p>
+                    </div>';
             } else{
 
               $placeholder = "";
@@ -73,7 +80,7 @@
                                   <td class="table-items">'.$row['brand_name'].'</td>
                                   <td class="table-price">Ghc '.$row['brand_price'].'</td>
                                   <td class="table-quantity">1</td>
-                                  <td class="table-total">Ghc'.($row['brand_price']*1).'</td>
+                                  <td class="table-total">Ghc '.($row['brand_price']*1).'</td>
                                   <td class="remove">
                                     <form class="" action="../php/custom/cart-processor.php?action=remove&item_id='.$row['brand_id'].'" method="post">
                                       <button class="btn remove-btn" type="submit" name="button">
