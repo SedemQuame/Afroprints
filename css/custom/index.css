@@ -27,3 +27,17 @@ div p {
 form {
   display: inline-block;
 }
+
+
+/* Glitch Css Effect, and over laystuff.*/
+h1{
+  font-size: 23px;
+  text-align: left;
+}
+
+.infograph{
+  /* border: 1px solid #d3d3d3; */
+  font-size: 19px;
+  min-height: 50vh;
+  padding: 30px;
+}

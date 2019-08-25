@@ -29,3 +29,27 @@
   padding: 0 10px;
   vertical-align: middle;
 }
+
+.nav-pills{
+  margin-top: 1rem;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.nav-item{
+background-color: #353b48;
+color: #f5f6fa;
+height: 35px;
+vertical-align: middle;
+margin: 5px;
+padding-top: -10px;
+border-radius: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.pt-5, .py-5 {
+    padding-top: 0rem !important;
+}
