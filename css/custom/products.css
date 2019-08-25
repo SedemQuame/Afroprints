@@ -1,0 +1,31 @@
+
+/* Animated Messages Notification. */
+#notification-pane{
+  display: none;
+  float: right;
+  max-height: 70px;
+  margin-top: 15px;
+  padding: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  top: 50px;
+  right: 5px;
+  width: 320px;
+  z-index: 1000;
+}
+
+.notification{
+  border: 1px solid #62BF49;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #A2D989;
+}
+
+.notification p{
+  color: #011640;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0 10px;
+  vertical-align: middle;
+}

@@ -26,7 +26,7 @@
         // Instantiating variable to hold populated pages.
         $element = "";
         foreach ($stmt as $row) {
-          $element .= '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          $element .= '<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                           <div class="card mb-4 shadow-sm">
                             <img class="bd-placeholder-img card-img-top" src="'.$row['brand_image'].'" alt="" ';
 

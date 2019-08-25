@@ -8,8 +8,10 @@
       include '../php/custom/sessions.php';
       include '../php/custom/included_pages/common_styles.php';
     ?>
+    <link rel="stylesheet" href="../css/framework/animate.css">
     <link rel="stylesheet" href="../css/custom/products.css">
     <link rel="stylesheet" href="../css/custom/index.css">
+
   </head>
   <body>
         <?php
@@ -46,6 +48,11 @@
                   </div>
               </div>
           </div>
+        </div>
+
+        <!-- Container for message notifications. -->
+        <div id="notification-pane">
+          <!-- <h1>Notification</h1> -->
         </div>
 
         <!--JavaScript Files.-->
