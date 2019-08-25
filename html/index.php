@@ -26,7 +26,7 @@
 
     <div id="content">
       <!-- This page is going to hold a beautiful, and minimalist ui. -->
-        <p>this is a simple paragraph.</p>
+
     </div>
 
 

@@ -11,8 +11,8 @@ div p {
   margin-bottom: 15px;
 }
 
-#content {
-  background-color: green;
+#content{
+  min-height: 90vh;
 }
 
 #user-email-insertion {

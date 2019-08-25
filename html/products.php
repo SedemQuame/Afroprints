@@ -51,6 +51,7 @@
         <!--JavaScript Files.-->
         <!-- Custom JavaScript Files. -->
         <script src="../js/custom/products.js"></script>
+        <script src="../js/custom/cart.js" charset="utf-8"></script>
 
         <!-- JavaScript Frameworks and libraries. -->
         <?php include '../php/custom/included_pages/common_js.php'; ?>

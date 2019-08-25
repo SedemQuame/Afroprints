@@ -4,7 +4,7 @@
 <footer class="row">
 <!--        This div will act as the footer.-->
     <!-- <p class="text-center">footer</p> -->
-    <div class="col-12 col-sm-6 col-md-3 ">
+    <div class="col-12 col-sm-6 col-md-4 ">
       <p class="text-center">About Us</p>
 
       <ul>
@@ -16,7 +16,7 @@
     </div>
 
 
-    <div class="col-12 col-sm-6 col-md-3 ">
+    <div class="col-12 col-sm-6 col-md-4 ">
       <p class="text-center"> Contact Us </p>
       <ul>
         <li class=""> <a href="#">Address</a> </li>
@@ -30,7 +30,7 @@
       </ul>
     </div>
 
-    <div class="col-12 col-sm-6 col-md-3 ">
+    <!-- <div class="col-12 col-sm-6 col-md-3 ">
       <p class="text-center"> Trending Outfits </p>
 
       <ul>
@@ -40,9 +40,9 @@
         <li class=""> <a href="#">Outfit 4</a> </li>
         <li class=""> <a href="#">Outfit 5</a> </li>
       </ul>
-    </div>
+    </div> -->
 
-    <div class="col-12 col-sm-6 col-md-3 ">
+    <div class="col-12 col-sm-6 col-md-4 ">
       <p class="text-center"> Resources </p>
 
       <ul>
@@ -55,7 +55,7 @@
       </ul>
     </div>
 
-    <div class="col-12 col-sm-6 col-md-3 ">
+    <div class="col-12 col-sm-6 col-md-4 ">
       <p class="text-center"> Payment Platforms </p>
 
       <ul>
