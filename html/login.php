@@ -16,13 +16,11 @@
       include '../php/custom/included_pages/nav.php';
   ?>
 
-  <p class="login-page-header text-center"> Log In </p>
+  <p class="sign-up-page-header text-center"> Log In </p>
   <p class="text-center">
-      Lorem ipsum dolor sit amet
+      Enter your login credentials
                   <br>
-      consectetur adipiscing elit, sed do eiusmod
-                  <br>
-      tempor incididunt ut labore et dolore magna aliqua.
+      to get access to your account.
   </p>
 
 

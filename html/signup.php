@@ -18,11 +18,8 @@
 
   <p class="sign-up-page-header text-center"> Sign Up </p>
   <p class="text-center">
-    Lorem ipsum dolor sit amet
-                <br>
-    consectetur adipiscing elit, sed do eiusmod
-                <br>
-    tempor incididunt ut labore et dolore magna aliqua.
+    Get access to amazing deals <br>
+    and notifications on the latest items.
   </p>
 
   <form action="../php/custom/signupScript.php" method="post" enctype="" class="">
