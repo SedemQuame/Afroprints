@@ -17,13 +17,8 @@
         <?php
             // Nav Bar.
             include '../php/custom/included_pages/nav.php';
-
             $page_name = $_GET['item'];
-            // 
-            // echo '<p class=""> ' . $page_name . ' </p>';
-            //
-            // echo '<!-- List of contents pertaining to a given product category. -->';
-
+            // Features_products.php
             include '../php/custom/included_pages/featured_products.php';
         ?>
 

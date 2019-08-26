@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap');
 
 .remove-btn{
   /* background-color: white; */
@@ -54,20 +55,21 @@
   border: 1px solid #d3d3d3;
   border-top: 0px;
   background-color: #f2f3f4;
-  height: 55vh;
-  padding-top: 9vh;
+  height: 80vh;
   border-radius: 5px;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
   text-align: center;
-  margin-top: auto;
-  margin-bottom: 25vh;
+  padding-top: 25vh;
+  margin-bottom: 2vh;
   vertical-align: middle;
 }
 
 .empty-cart-text{
-  padding-left: 10px;
-  font-size: 30px;
+  padding-left: 15px;
+  font-size: 45px;
+  font-family: 'Pacifico', cursive;
+  color: #ee5253;
 }
 
 .table-items{
@@ -106,7 +108,7 @@ table{
   color: #fff;
   min-width: 30%;
   height: 40px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .style-caption p{

@@ -5,7 +5,7 @@
 <!--        This div will act as the footer.-->
     <!-- <p class="text-center">footer</p> -->
     <div class="col-12 col-sm-6 col-md-4 ">
-      <p class="text-center">About Us</p>
+      <h6 class="footer-section-header text-center">About Us</h6>
 
       <ul>
         <li class=""> <a href="#">About</a> <sitename> </li>
@@ -15,35 +15,46 @@
       </ul>
     </div>
 
-
     <div class="col-12 col-sm-6 col-md-4 ">
-      <p class="text-center"> Contact Us </p>
+      <h6 class="footer-section-header text-center"> Contact Us </h6>
       <ul>
-        <li class=""> <a href="#">Address</a> </li>
-        <li class=""> <a href="#">Email Us</a> </li>
+        <li class="">
+          <address>
+              Aps is registered in Ghana<br>
+              Office Number:(+233546744163)<br>
+              Madina, Accra<br>
+              Ghana
+          </address>
+        </li>
         <li class="">
           Social Media
           <!-- Replace social media text with icons connecting to the various social media accounts.
             Eg: Facebook, Twitter, Pinterest, SnapChat, Instagram, and Whatsapp business.
           -->
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="https://web.facebook.com/?_rdc=1&_rdr">
+                <img src="../media/images/facebook.svg" alt="" width="30px" height="30px">
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/accounts/login/?hl=en">
+                <img src="../media/images/instagram.svg" alt="" width="30px" height="30px">
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com">
+                <img src="../media/images/twitter.svg" alt="" width="30px" height="30px">
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
 
-    <!-- <div class="col-12 col-sm-6 col-md-3 ">
-      <p class="text-center"> Trending Outfits </p>
-
-      <ul>
-        <li class=""> <a href="#">Outfit 1</a> </li>
-        <li class=""> <a href="#">Outfit 2</a> </li>
-        <li class=""> <a href="#">Outfit 3</a> </li>
-        <li class=""> <a href="#">Outfit 4</a> </li>
-        <li class=""> <a href="#">Outfit 5</a> </li>
-      </ul>
-    </div> -->
 
     <div class="col-12 col-sm-6 col-md-4 ">
-      <p class="text-center"> Resources </p>
+      <h6 class="footer-section-header text-center"> Resources </h6>
 
       <ul>
         <li class=""> <a href="#">Help</a> </li>
@@ -55,15 +66,16 @@
       </ul>
     </div>
 
-    <div class="col-12 col-sm-6 col-md-4 ">
-      <p class="text-center"> Payment Platforms </p>
+    <div class="col-12">
+      <hr>
+      <h6 class="footer-section-header text-center"> Payment Platforms </h6>
 
-      <ul>
-        <li class=""> <a href="#">Visa</a> </li>
-        <li class=""> <a href="#">Stripe</a>  </li>
-        <li class=""> <a href="#">Paypal</a> </li>
-        <li class=""> <a href="#">MasterCard</a>  </li>
-        <li class=""> <a href="#">Crypto Coins</a> </li>
+      <ul class="list-inline">
+        <li class="list-inline-item"> <a href="#">Visa</a> </li>
+        <li class="list-inline-item"> <a href="#">Stripe</a>  </li>
+        <li class="list-inline-item"> <a href="#">Paypal</a> </li>
+        <li class="list-inline-item"> <a href="#">MasterCard</a>  </li>
+        <li class="list-inline-item"> <a href="#">Crypto Coins</a> </li>
       </ul>
     </div>
 

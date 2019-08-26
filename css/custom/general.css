@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +13,20 @@ nav{
     background-color: #353b48;
     height: 4rem;
     width: 100%;
+}
+
+hr{
+  border: none;
+  border-top: 1px solid #dedede;
+  height: 2px;
+}
+
+.footer-section-header{
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  font-weight: 100;
+  color: #ee5253;
+  margin-left: 15px;
 }
 
 .bd-placeholder-img {
