@@ -36,7 +36,6 @@
 
 .table td:not(.table-items) {
   padding: 0;
-  /* padding-left: 10px; */
   vertical-align: middle;
   border-top: 1px solid #dee2e6;
 }

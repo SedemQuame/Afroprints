@@ -15,10 +15,22 @@ nav{
     width: 100%;
 }
 
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
 hr{
   border: none;
   border-top: 1px solid #dedede;
   height: 2px;
+}
+
+ul li{
+  font-family: 'Roboto', sans-serif;
+}
+
+a{
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer-section-header{
@@ -27,6 +39,30 @@ hr{
   font-weight: 100;
   color: #ee5253;
   margin-left: 15px;
+}
+
+.modal-header-text{
+  font-family: 'Pacifico', cursive;
+  font-size: 45px;
+  color: #ee5253;
+  margin-left: 150px;
+}
+
+#modal-form-btns{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 30px;
+}
+
+.modal-btns{
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
 }
 
 .bd-placeholder-img {
@@ -110,42 +146,19 @@ hr{
   font-size: 14px;
 }
 
+.item-name{
+  margin-top: 10px;
+  font-size: 20px;
+}
 
+.description-box{
+  min-height: 70px;
+}
 
+.item-description{
+  font-size: 16px;
+}
 
-/*
-* MEDIA QUERY.
-*=============
-*
-*/
-
- /* Extra small devices (portrait phones, less than 576px) */
- /* No media query for `xs` since this is the default in Bootstrap */
-
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-    /* .product{
-      height: 400px;
-    } */
- }
-
- /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    /* .product{
-      height: 400px;
-    } */
- }
-
- /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    /* .product{
-      height: 400px;
-    } */
- }
-
- /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    /* .product{
-      height: 400px;
-    } */
- }
+.item-price{
+  font-size: 16px;
+}

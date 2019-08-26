@@ -18,9 +18,6 @@
   </div>
 
   <div class="album py-5">
-    <!-- <div class="container">
-      <h1 class="dress-section">Section Title.</h1>
-      <div class="row"> -->
       <?php
         $category = ['men', 'women', 'kids'];
         include_once 'db_connection.php';
@@ -37,7 +34,7 @@
             // Instantiating variable to hold populated pages.
             $element = "";
             $element .= '<div class="container mt-3">
-                            <h1 class="dress-section text-capitalize">'.$category[$i].'\'s Collection</h1>
+                            <h1 class="dress-section text-capitalize">'.$category[$i].'\'s Collection. </h1>
                             <hr />
                             <div class="row">';
             foreach ($stmt as $row) {

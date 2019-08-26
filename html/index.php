@@ -37,8 +37,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6 infograph">
+            <h1 class="home-page-section-header"> Sample Heading.</h1>
             <p class="text-center">
-              <h1> Sample Heading.</h1>
               Lorem Ipsum is simply dummy text of the printing and
               typesetting industry. Lorem Ipsum has been the industry's
               standard dummy text ever since the 1500s, when an unknown
@@ -60,7 +60,7 @@
             <p class="text-center">images</p>
           </div>
           <div class="col-sm-12 col-md-6 infograph">
-            <h1> Sample Heading.</h1>
+            <h1 class="home-page-section-header"> Sample Heading.</h1>
             <p class="text-center">
               Lorem Ipsum is simply dummy text of the printing and
               typesetting industry. Lorem Ipsum has been the industry's
@@ -77,7 +77,7 @@
 
         <div class="row">
           <div class="col-sm-12 col-md-6 infograph">
-            <h1> Sample Heading.</h1>
+            <h1 class="home-page-section-header"> Sample Heading.</h1>
             <p class="text-center">
               Lorem Ipsum is simply dummy text of the printing and
               typesetting industry. Lorem Ipsum has been the industry's

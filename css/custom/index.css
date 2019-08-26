@@ -35,6 +35,13 @@ h1{
   text-align: left;
 }
 
+.home-page-section-header{
+  font-family: 'Pacifico', cursive;
+  font-weight: 100;
+  color: #ee5253;
+  margin-left: 15px;
+}
+
 .infograph{
   /* border: 1px solid #d3d3d3; */
   font-size: 19px;
