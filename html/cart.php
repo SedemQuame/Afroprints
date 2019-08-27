@@ -23,7 +23,6 @@
           <?php
           // Get array from sessions iterate through array and display
           // in table along with price and other meta data.
-
           include '../php/custom/included_pages/db_connection.php';
 
           if(!isset($_SESSION['cart-items'])){
@@ -110,6 +109,10 @@
                             </tfoot>
                           </table>';
             }
+            $element .= '<p class="float-right">
+                          <a href="checkout.php" class="">Check Out &#x2192;</a>
+                        </p>
+                        <br />';
 
             echo $element;
           }

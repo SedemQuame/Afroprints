@@ -3,16 +3,13 @@
   <div class="container">
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link" href="#">All</a>
+        <a class="nav-link" href="#men">Men</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Men</a>
+        <a class="nav-link" href="#women">Women</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Women</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Kids</a>
+        <a class="nav-link" href="#kids">Kids</a>
       </li>
     </ul>
   </div>
@@ -33,7 +30,7 @@
           if (!empty($stmt)) {
             // Instantiating variable to hold populated pages.
             $element = "";
-            $element .= '<div class="container mt-3">
+            $element .= '<div id="'.$category[$i].'" class="container mt-3">
                             <h1 class="dress-section text-capitalize">'.$category[$i].'\'s Collection. </h1>
                             <hr />
                             <div class="row">';
@@ -56,7 +53,6 @@
                           </div></div></div>';
             }
             $element .= '</div></div>';
-
             echo $element;
           }
         }
