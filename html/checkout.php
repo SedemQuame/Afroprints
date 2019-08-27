@@ -14,15 +14,8 @@
     <?php
         // Nav Bar.
         include '../php/custom/included_pages/nav.php';
-
-        // Featured products.
-        // TODO: Change the outlook of the index page, to look different from the other pages.
-        // TODO: Let it feature other product types with extra saucy design and outlook.
-        // TODO: Add minimalist and sophisticated animations to the various pages.
-        // TODO: CREATE A CUSTOM LAYOUT FOR THE INDEX.PHP PAGE.
-        // include '../php/custom/included_pages/featured_products.php';
     ?>
-    
+
     <div class="container">
       <div class="accordion" id="accordionExample">
         <div class="card">
@@ -137,13 +130,12 @@
       </div>
     </div>
 
-    <!-- Do not remove this footer page and replace with included footer using .php file yet yet. -->
+    <!-- Do not remove this footer page and replace with included footer using .php file yet. -->
     <?php
         // TODO: Must fix the positioning of the footer to work universally in all templates.
         // Footer.
-        // include '../php/custom/included_pages/footer.php';
+        include '../php/custom/included_pages/footer.php';
     ?>
-
 
     <!--JavaScript Files.-->
     <!-- Custom JavaScript Files. -->
@@ -153,13 +145,13 @@
     <?php include '../php/custom/included_pages/common_js.php'; ?>
 
     <script type="text/javascript">
-      $('#collapseTwo').collapse({
+      $('#collapseOne').collapse({
         toggle: false
       })
 
       $('#collapseTwo').collapse({
         toggle: false
-      })
+      });
     </script>
   </body>
 </html>
