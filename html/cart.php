@@ -19,7 +19,7 @@
     ?>
 
 
-    <div class="container">
+    <div id="wrapper" class="container">
           <?php
           // Get array from sessions iterate through array and display
           // in table along with price and other meta data.
