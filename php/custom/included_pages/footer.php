@@ -1,6 +1,4 @@
 <!-- This is not the final version of the footer, design is subject to change. -->
-
-
 <footer class="row">
 <!--        This div will act as the footer.-->
     <!-- <p class="text-center">footer</p> -->

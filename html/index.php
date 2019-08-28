@@ -26,87 +26,86 @@
     ?>
 
 
-      <div class="glitch-wrapper">
-        <div class="glitch" data-text="fashion.">fashion.</div>
-      </div>
+    <div class="glitch-wrapper">
+      <div class="glitch" data-text="fashion.">fashion.</div>
+    </div>
 
-      <div class="bg">
-        simple
-      </div>
+    <div class="bg">
+      simple
+    </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6 infograph">
-            <h1 class="home-page-section-header"> Sample Heading.</h1>
-            <p class="text-center">
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries,
-              but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop.
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 infograph">
-            <p class="text-center">images</p>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 infograph">
+          <h1 class="home-page-section-header"> Sample Heading.</h1>
+          <p class="text-center">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop.
+          </p>
         </div>
-
-        <div class="row">
-          <div class="col-sm-12 col-md-6 infograph">
-            <p class="text-center">images</p>
-          </div>
-          <div class="col-sm-12 col-md-6 infograph">
-            <h1 class="home-page-section-header"> Sample Heading.</h1>
-            <p class="text-center">
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries,
-              but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop.
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12 col-md-6 infograph">
-            <h1 class="home-page-section-header"> Sample Heading.</h1>
-            <p class="text-center">
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a
-              type specimen book. It has survived not only five centuries,
-              but also the leap into electronic typesetting, remaining
-              essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recently with desktop.
-            </p>
-          </div>
-          <div class="col-sm-12 col-md-6 infograph">
-            <p class="text-center">images</p>
-          </div>
+        <div class="col-12 col-md-6 infograph">
+          <img class="rounded-circle design_images" src="../africanfashion/africanbags/bag (1).jpg" alt="">
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-12 col-md-6 infograph">
+          <img class="rounded-circle design_images" src="../africanfashion/africanshoes/shoe (1).jpg" alt="">
+        </div>
+        <div class="col-12 col-md-6 infograph">
+          <h1 class="home-page-section-header"> Sample Heading.</h1>
+          <p class="text-center">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop.
+          </p>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-12 col-md-6 infograph">
+          <h1 class="home-page-section-header"> Sample Heading.</h1>
+          <p class="text-center">
+            Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries,
+            but also the leap into electronic typesetting, remaining
+            essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop.
+          </p>
+        </div>
+        <div class="col-12 col-md-6 infograph">
+          <img class="rounded-circle design_images" src="../africanfashion/tops/top (2).jpg" alt="">          </div>
+      </div>
+    </div>
+
+    <p class="text-center sign-up-header">Sign Up For Our Newsletters.</p>
     <div id="user-email-insertion">
-        <p class="text-center">Sign Up For Newsletters.</p>
         <!--This div will act as place to get user email-address (reference: ohemmma ohene.)-->
         <form class="" action="" type="">
             <label for="get-user-email">
-                <input class="" id="get-user-email" type="text" placeholder="Email Address" >
+                <input class="form-control index-form-elements" id="get-user-email" type="text" placeholder="Email Address" >
             </label>
-            <input class="" type="submit" value="submit">
+            <button id="email-submission-newsletter" class="btn index-form-elements" type="submit" value="submit">Submit</button>
         </form>
     </div>
+
 
     <br>
 
