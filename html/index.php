@@ -30,10 +30,6 @@
       <div class="glitch" data-text="fashion.">fashion.</div>
     </div>
 
-    <div class="bg">
-      simple
-    </div>
-
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 infograph">
@@ -51,13 +47,13 @@
           </p>
         </div>
         <div class="col-12 col-md-6 infograph">
-          <img class="rounded-circle design_images" src="../africanfashion/africanbags/bag (1).jpg" alt="">
+          <img class="design_images" src="../africanfashion/africanbags/bag (1).jpg" alt="">
         </div>
       </div>
 
       <div class="row">
         <div class="col-12 col-md-6 infograph">
-          <img class="rounded-circle design_images" src="../africanfashion/africanshoes/shoe (1).jpg" alt="">
+          <img class="design_images" src="../africanfashion/africanshoes/shoe (1).jpg" alt="">
         </div>
         <div class="col-12 col-md-6 infograph">
           <h1 class="home-page-section-header"> Sample Heading.</h1>
@@ -91,7 +87,8 @@
           </p>
         </div>
         <div class="col-12 col-md-6 infograph">
-          <img class="rounded-circle design_images" src="../africanfashion/tops/top (2).jpg" alt="">          </div>
+          <img class="design_images" src="../africanfashion/tops/top (2).jpg" alt="">
+        </div>
       </div>
     </div>
 
