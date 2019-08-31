@@ -82,8 +82,6 @@ a{
 
 .site-header {
     background-color: #353b48;
-    /* -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px); */
 }
 
 .site-header a {
@@ -99,8 +97,6 @@ a{
 
 .sections{
     padding: 0 20px;
-    /* min-height: 1300px; */
-    /* width: 100%; */
 }
 
 .category{

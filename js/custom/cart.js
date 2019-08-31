@@ -17,7 +17,6 @@ function createNotificationElement() {
 }
 
 function animateCSS(node, animationName, callback) {
-  // var node = document.querySelector(element);
   node.classList.add("animated", animationName);
 
   function handleAnimationEnd() {
@@ -41,18 +40,27 @@ function animateCSS(node, animationName, callback) {
   node.addEventListener("animationend", handleAnimationEnd);
 }
 
+function updateNumberOfCartItems() {
+  // Update badge in navbar showing, the items added to the cart.
+  // // *Use boostrap badges*.
+
+  let badge = document.getElementById("itemsInCart");
+  console.log(badge);
+
+  let count = parseInt(badge.textContent);
+  count = count + 1;
+  badge.textContent = count;
+}
+
 function addToCart() {
-  // event.preventDefault();
   event.preventDefault();
-  console.log("starting asynchronous callbaclk.");
+  // console.log("starting asynchronous callback.");
 
   let action = event.target.parentNode.action;
 
   let xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      // document.getElementById("txtHint").innerHTML = this.responseText;
-      // Add message that product so so and so has been added to cart.
     }
   };
   xmlhttp.open("GET", action, true);
@@ -61,4 +69,5 @@ function addToCart() {
   // Starting animation.
   let node = createNotificationElement();
   animateCSS(node, "bounceInRight");
+  updateNumberOfCartItems();
 }

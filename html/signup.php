@@ -22,63 +22,65 @@
     and notifications on the latest items.
   </p>
 
-  <form action="../php/custom/signupScript.php" method="post" enctype="" class="">
-      <div>
-          <label for="first_name">First Name</label>
-          <br>
-          <input class="form-control" name="first_name" type="text" id="first_name" class="" placeholder="First Name" required>
-      </div>
+  <div class="row">
+    <form action="../php/custom/signupScript.php" method="post" enctype="" class="col-9 col-md-6 col-lg-3">
+        <div>
+            <label for="first_name">First Name</label>
+            <br>
+            <input class="form-control" name="first_name" type="text" id="first_name" class="" placeholder="First Name" required>
+        </div>
 
-      <div>
-          <label for="last_name">Last Name</label>
-          <br>
-          <input class="form-control" name="last_name" type="text" id="last_name" class="" placeholder="Last name" required>
-      </div>
+        <div>
+            <label for="last_name">Last Name</label>
+            <br>
+            <input class="form-control" name="last_name" type="text" id="last_name" class="" placeholder="Last name" required>
+        </div>
 
-      <div>
-          <label for="email_address">Email Address</label>
-          <br>
-          <input class="form-control" name="email_address" type="text" id="email_address" class="" placeholder="Email Address" required>
-      </div>
+        <div>
+            <label for="email_address">Email Address</label>
+            <br>
+            <input class="form-control" name="email_address" type="text" id="email_address" class="" placeholder="Email Address" required>
+        </div>
 
-      <div>
-          <label for="users_country">Country</label>
-          <br>
-          <input class="form-control" name="users_country" type="text" id="users_country" class="" placeholder="Country" required>
-      </div>
+        <div>
+            <label for="users_country">Country</label>
+            <br>
+            <input class="form-control" name="users_country" type="text" id="users_country" class="" placeholder="Country" required>
+        </div>
 
-      <div>
-          <label for="phone_number">Phone number</label>
-          <br>
-          <input class="form-control" name="phone_number" type="tel" id="phone_number" class="" placeholder="Phone Number" required>
-      </div>
+        <div>
+            <label for="phone_number">Phone number</label>
+            <br>
+            <input class="form-control" name="phone_number" type="tel" id="phone_number" class="" placeholder="Phone Number" required>
+        </div>
 
-      <div>
-          <label for="user_password">Password</label>
-          <br>
-          <input class="form-control" name="password" type="password" id="user_password" class="" placeholder="Password" required>
-      </div>
+        <div>
+            <label for="user_password">Password</label>
+            <br>
+            <input class="form-control" name="password" type="password" id="user_password" class="" placeholder="Password" required>
+        </div>
 
-      <div>
-          <label for="user_password_confirmation">Confirm Password</label>
-          <br>
-          <input class="form-control" name="confirm_password" type="password" id="user_password_confirmation" class="" placeholder="Confirm Password" required>
-      </div>
+        <div>
+            <label for="user_password_confirmation">Confirm Password</label>
+            <br>
+            <input class="form-control" name="confirm_password" type="password" id="user_password_confirmation" class="" placeholder="Confirm Password" required>
+        </div>
 
-      <div>
-          <input id="form-submit-btn" class="btn btn-block" name="submit" type="submit" id="submit_btn" class="" value="Submit">
-      </div>
+        <div>
+            <input id="form-submit-btn" class="btn btn-block" name="submit" type="submit" id="submit_btn" class="" value="Submit">
+        </div>
 
-      <hr>
+        <hr>
 
-      <p class="text-center">
-        Already a registered user?
-                  <br>
-        <a href="login.php">Log In</a>
-      </p>
+        <p class="text-center">
+          Already a registered user?
+                    <br>
+          <a href="login.php">Log In</a>
+        </p>
 
-  </form>
+    </form>
 
+  </div>
 
   <?php
       // Footer

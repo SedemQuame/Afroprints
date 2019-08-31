@@ -30,7 +30,6 @@
         <!-- Modal box for the dsiplaying selected items. -->
         <div class="modal fade" id="myModal" role="dialog">
           <div class="modal-dialog modal-dialog-scrollable modal-lg">
-              <!-- Modal content-->
               <div class="modal-content">
                   <div class="modal-header">
                       <h4 class="modal-title modal-header-text">Afriprints Collections.</h4>
@@ -38,26 +37,19 @@
                   </div>
                   <div class="modal-body">
                   </div>
-                  <!-- <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div> -->
               </div>
           </div>
         </div>
 
         <!-- Container for message notifications. -->
-        <div id="notification-pane">
-          <!-- <h1>Notification</h1> -->
-        </div>
+        <div id="notification-pane"></div>
 
         <!--JavaScript Files.-->
         <!-- Custom JavaScript Files. -->
-        <script src="../js/custom/products.js"></script>
         <script src="../js/custom/cart.js" charset="utf-8"></script>
 
         <!-- JavaScript Frameworks and libraries. -->
         <?php include '../php/custom/included_pages/common_js.php'; ?>
-
         <script src="../js/custom/modal.js" charset="utf-8"></script>
   </body>
 </html>
