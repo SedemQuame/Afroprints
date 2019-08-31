@@ -16,12 +16,13 @@
         include '../php/custom/included_pages/nav.php';
     ?>
 
-    <div class="container">
+    <div class="container" id="checkout">
       <div class="accordion" id="accordionExample">
+
         <div class="card">
-          <div class="card-header" id="headingOne">
+          <div class="card-header checkout-headers" id="headingOne">
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <button class="btn btn-field collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 Billing Address.
               </button>
             </h2>
@@ -32,13 +33,13 @@
               <form class="" action="" method="">
                 <!--This is the login page.-->
                 <div class="row">
-                  <div class="col-10 col-md-6">
+                  <div class="col-12 col-md-6">
                       <label for="first_name">First Name</label>
                       <br>
                       <input class="form-control" name="first_name" type="text" id="first_name" placeholder="First Name" required>
                   </div>
 
-                  <div class="col-10 col-md-6">
+                  <div class="col-12 col-md-6">
                       <label for="last_name">Last Name</label>
                       <br>
                       <input class="form-control" name="last_name" type="text" id="last_name" placeholder="Last Name" required>
@@ -62,7 +63,14 @@
                     <div>
                         <label for="phone_number">Phone Number (In international format.)</label>
                         <br>
-                        <input class="form-control" name="phone_number" type="text" id="phone_number" placeholder="+23385946152" required>
+                        <div class="row">
+                          <div class="col-3 phone_part">
+                            <input class="form-control" name="format" type="text" id="phone_format" placeholder="+233" required>
+                          </div>
+                          <div class="col-9 phone_part">
+                            <input class="form-control" name="phone_number" type="text" id="phone_number" placeholder="85946152" required>
+                          </div>
+                        </div>
                     </div>
 
                     <div>
@@ -84,9 +92,9 @@
         </div>
 
         <div class="card">
-          <div class="card-header" id="headingTwo">
+          <div class="card-header checkout-headers" id="headingTwo">
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="btn btn-field collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 Shipping Address.
               </button>
             </h2>
@@ -127,6 +135,22 @@
             </div>
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-header checkout-headers" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-field collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Check Out Review.
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <!-- Show all acquired information, in a representable formatted form. -->
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -150,6 +174,10 @@
       })
 
       $('#collapseTwo').collapse({
+        toggle: false
+      });
+
+      $('#collapseThree').collapse({
         toggle: false
       });
     </script>
