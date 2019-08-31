@@ -14,7 +14,7 @@
         <a class="py-2 d-none d-md-inline-block" href="cart.php">Cart
         <span id="itemsInCart" class="badge badge-light">
           <?php
-            if (sizeof($_SESSION['cart-items'])) {
+            if (isset($_SESSION['cart-items'])) {
               echo sizeof($_SESSION['cart-items']);
             }else {
               echo 0;
