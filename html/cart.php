@@ -117,8 +117,8 @@
             echo $element;
           }
 
-
-
+          // Storing total price in SESSIONS.
+          $_SESSION['total_price'] = $total;
 
           }
 

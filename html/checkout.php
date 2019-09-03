@@ -50,7 +50,7 @@
                           <label for="address">Specific Address/Location (Fedex Shipping)</label>
                           <br>
                           <input class="form-control" name="address" type="text" id="address" placeholder="eg. CFAO main office, opposite Aviance. Airport by-pass road, Accra." required>
-                          <input class="form-control" name="address_extra_info" type="text" id="address_extra_info" placeholder=" Enter a prominent landmark. (Optional) eg. Adjacent the Traditional Council Office." required>
+                          <input class="form-control" name="address_extra_info" type="text" id="address_extra_info" placeholder=" Enter a prominent landmark. (Optional) eg. Adjacent the Traditional Council Office.">
                       </div>
 
                       <div>
@@ -81,7 +81,7 @@
                       <div>
                           <label for="estimated_dev_date">Estimated Delivery Date</label>
                           <br>
-                          <input class="form-control" name="estimated_dev_date" type="text" id="estimated_dev_date" placeholder="" required>
+                          <input class="form-control" name="estimated_dev_date" type="text" id="estimated_dev_date" placeholder="">
                       </div>
 
                   </div>
@@ -148,7 +148,7 @@
                 
 
                 <!-- Order Submit Button. -->
-                <input class="btn btn-outline-secondary float-right" type="submit" name="processOrderBtn" value="Process Order">
+                <button class="btn btn-outline-secondary float-right" type="submit" name="processOrderBtn" type="submit">Process Order</button>
               </div>
             </div>
           </div>

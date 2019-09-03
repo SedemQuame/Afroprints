@@ -29,10 +29,37 @@ if(isset($_POST['new_destination'])){
 // Requiring connection Script.
 require_once('db_connection.php');
 
+// Getting selected items, from SESSIONS.
+session_start();
+$product_list = '{';
+
+// processing array into a form that can be entered into the database.
+for ($i=0; $i < sizeof($_SESSION['cart-items']); $i++) { 
+    $product_list .= "\"" . $_SESSION['cart-items'][$i] . "\",";
+}
+
+$product_list = rtrim($product_list);
+$product_list = rtrim($product_list, ",");
+$product_list .= '}';
+
+$product_price = $_SESSION['total_price'];
+$purchase_date = date("F j, Y, g:i a");
+
+
+// Get id of customer, by making a query using his/her email or user_id stored in SESSIONS.
+$customer_id = 2; //Setting customer id to #2, for trial purposes.
+
+// Get user address by concatenating field data.
+$address = $address . $extra_address_info . $locale;
+
 $sql = "
-       INSERT INTO 
+        INSERT INTO public.purchases(
+            product_list, total_price, purchase_date, cust_id, shipping_address)
+            VALUES
+            ('$product_list', $product_price, '$purchase_date', '$customer_id', '$address'); 
         ";
 
+$pdo->exec($sql);
 
 
 
