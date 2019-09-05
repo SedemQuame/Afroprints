@@ -26,7 +26,7 @@
       <!-- replace with text header specifying  reset password link. -->
   </p>
 
-  <form action="../php/custom/pwsd_reset.php?callertype=email" method="post" enctype="" class="">
+  <form action="../php/custom/pwsd_reset.php?callertype=email" method="post">
     <!--This is the login page.-->
     <div>
         <label for="phone_number">Email</label>
