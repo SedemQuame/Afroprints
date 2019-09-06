@@ -27,7 +27,7 @@
 
 
     <div class="glitch-wrapper">
-      <div class="glitch" data-text="fashion.">fashion.</div>
+      <p class="glitch" data-text="fashion.">fashion.</p>
     </div>
 
     <div class="container">

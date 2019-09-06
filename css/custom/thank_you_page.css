@@ -1,0 +1,19 @@
+body{
+  background-image: url('../../media/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#call_to_action{
+  color: #fff;
+  font-size: 20px;
+  /* margin-top: -100px; */
+}
+
+.glitch-container{
+  padding-top: 15%;
+  display: flex;
+  justify-content: center;
+}

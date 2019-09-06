@@ -1,7 +1,7 @@
 <?php
 /*
 *It will be prudent, to populate data of registered users into
-the text field automatically. 
+the text field automatically.
 */
 // User name.
 $first_name = $_POST['first_name'];
@@ -34,7 +34,7 @@ session_start();
 $product_list = '{';
 
 // processing array into a form that can be entered into the database.
-for ($i=0; $i < sizeof($_SESSION['cart-items']); $i++) { 
+for ($i=0; $i < sizeof($_SESSION['cart-items']); $i++) {
     $product_list .= "\"" . $_SESSION['cart-items'][$i] . "\",";
 }
 
@@ -56,7 +56,7 @@ $sql = "
         INSERT INTO public.purchases(
             product_list, total_price, purchase_date, cust_id, shipping_address)
             VALUES
-            ('$product_list', $product_price, '$purchase_date', '$customer_id', '$address'); 
+            ('$product_list', $product_price, '$purchase_date', '$customer_id', '$address');
         ";
 
 $pdo->exec($sql);
@@ -68,10 +68,14 @@ $pdo->exec($sql);
 // function displaySubmittedData($first_name, $last_name, $address, $extra_address_info, $locale, $format, $number, $email_address){
 //     echo $first_name . ' ' . $last_name . '<br/>';
 //     echo $address . ' ' . $extra_address_info . ' '. $locale . '<br/>';
-//     echo $format . ' ' . $number . '<br/> '; 
+//     echo $format . ' ' . $number . '<br/> ';
 //     echo 'email_address ' . $email_address;
 // }
 
 // displaySubmittedData($first_name, $last_name, $address, $extra_address_info, $locale, $format, $number, $email_address);
 
+
+
+// Redirect User TO Thank You Page.
+header("location: " )
 ?>
