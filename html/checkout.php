@@ -100,7 +100,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
               <div class="card-body">
                 <div class="">
-                  <input type="checkbox" name="new_destination" id="diff_shipping_destination" onclick="toogleDisablility()" value="">
+                  <input type="checkbox" name="new_destination" id="diff_shipping_destination" onclick="toogleDisablility()" value="true">
                   <label for="">Ship to different destination?</label>
                 </div>
                 <div class="row">
@@ -145,7 +145,7 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
               <div class="card-body">
                 <!-- Show all acquired information, in a representable formatted form. -->
-                
+
 
                 <!-- Order Submit Button. -->
                 <button class="btn btn-outline-secondary float-right" type="submit" name="processOrderBtn" type="submit">Process Order</button>
@@ -186,13 +186,13 @@
       function toogleDisablility(){
         console.log("Toogling Disability. High level abstraction.");
         let checked_input = document.getElementById('diff_shipping_destination');
-    
+
         let diff_first_name = document.getElementById('diff_first_name');
 
         let diff_last_name = document.getElementById('diff_last_name');
-        
+
         let diff_town = document.getElementById('diff_locale');
-        
+
         let diff_order_notes = document.getElementById('diff_optional_notes');
 
         if(checked_input.checked){

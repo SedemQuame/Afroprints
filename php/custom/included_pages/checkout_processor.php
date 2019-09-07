@@ -2,6 +2,7 @@
 /*
 *It will be prudent, to populate data of registered users into
 the text field automatically.
+// TODO: ADD country if it's an already registered user.
 */
 // User name.
 $first_name = $_POST['first_name'];
@@ -18,12 +19,17 @@ $number = $_POST['phone_number'];
 $phone_number = $format . ' ' . $number;
 $email_address = $_POST['email_address'];
 
+$recipient_address = "";
+
 if(isset($_POST['new_destination'])){
     $recipient_first_name = $_POST['diff_first_name'];
     $recipient_last_name = $_POST['diff_last_name'];
+
     $recipient_name = $recipient_first_name . ' ' . $recipient_last_name;
     $recipient_locale = $_POST['diff_locale'];
     $optional_notes = $_POST['optional_notes'];
+
+    $recipient_address = $recipient_name . '<br/>' . $recipient_locale . '<br/>' . $optional_notes;
 }
 
 // Requiring connection Script.
@@ -50,13 +56,16 @@ $purchase_date = date("F j, Y, g:i a");
 $customer_id = 2; //Setting customer id to #2, for trial purposes.
 
 // Get user address by concatenating field data.
-$address = $address . $extra_address_info . $locale;
+$ordering_address = $address . '<br/>' . $extra_address_info . '<br/>' . $locale;
+if ($recipient_address == "") {
+  $recipient_address = $ordering_address;
+}
 
 $sql = "
         INSERT INTO public.purchases(
-            product_list, total_price, purchase_date, cust_id, shipping_address)
+            product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address)
             VALUES
-            ('$product_list', $product_price, '$purchase_date', '$customer_id', '$address');
+            ('$product_list', $product_price, '$purchase_date', '$customer_id', '$ordering_address', '$recipient_address');
         ";
 
 $pdo->exec($sql);
@@ -74,8 +83,9 @@ $pdo->exec($sql);
 
 // displaySubmittedData($first_name, $last_name, $address, $extra_address_info, $locale, $format, $number, $email_address);
 
-
+// clear the shopping cart now.
+unset($_SESSION['cart-items']);
 
 // Redirect User TO Thank You Page.
-header("location: " )
+header("location: ../../../html/thank_you_page.php" );
 ?>

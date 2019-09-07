@@ -118,7 +118,9 @@
           }
 
           // Storing total price in SESSIONS.
-          $_SESSION['total_price'] = $total;
+          if (!isset($_SESSION['total_price'])) {
+            $_SESSION['total_price'] = $total;
+          }
 
           }
 
