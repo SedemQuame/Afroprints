@@ -97,7 +97,7 @@
         <!--This div will act as place to get user email-address (reference: ohemmma ohene.)-->
         <form class="" action="" type="">
             <label for="get-user-email">
-                <input class="form-control" id="get-user-email" type="text" placeholder="Email Address" >
+                <input class="form-control index-form-elements" id="get-user-email" type="text" placeholder="Email Address" >
             </label>
             <button id="email-submission-newsletter" class="btn index-form-elements" type="submit" value="submit">Submit</button>
         </form>

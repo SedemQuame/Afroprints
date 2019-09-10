@@ -19,7 +19,6 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .glitch {
   color: white;
   font-size: 9rem;
@@ -29,7 +28,7 @@ body {
   position: relative;
   margin: auto;
   display: inline-block;
-  margin-top: 3rem;
+  /* margin-top: 3.5rem; */
 }
 .glitch::before,
 .glitch::after {
@@ -319,4 +318,7 @@ body {
     100% {
       clip: rect(19px, 700px, 82px, 0);
     }
+}
+#thank_you_text{
+  margin-top: -5rem;
 }

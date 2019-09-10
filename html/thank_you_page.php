@@ -25,7 +25,7 @@
         // include '../php/custom/included_pages/featured_products.php';
     ?>
     <div class="glitch-container">
-      <div class="glitch" data-text="Thank You.">Thank You.</div>
+      <div id="thank_you_text" class="glitch" data-text="Thank You.">Thank You.</div>
     </div>
     <p id="call_to_action" class="text-center">
       Share What You Bought <br>

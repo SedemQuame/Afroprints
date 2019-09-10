@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9812e511-6e14-48b1-90ff-6d133a07da83" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/php/custom/check_reset_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/custom/check_reset_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/custom/pwsd_reset.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/custom/pwsd_reset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/custom/send_email.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/custom/send_email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/custom/glitch.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/custom/glitch.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/thank_you_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/thank_you_page.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +12,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
@@ -22,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="-1008">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -40,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+            <state relative-caret-position="1320">
+              <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -49,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/signup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+            <state relative-caret-position="2136">
+              <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -59,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/html/person.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -130,6 +131,25 @@
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP from XAMPP">
     <include_path>
       <path value="$PROJECT_DIR$/../../php/PEAR" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/clue/stream-filter" />
+      <path value="$PROJECT_DIR$/vendor/kriswallsmith/buzz" />
+      <path value="$PROJECT_DIR$/vendor/twilio/sdk" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
+      <path value="$PROJECT_DIR$/vendor/php-http/httplug" />
+      <path value="$PROJECT_DIR$/vendor/php-http/multipart-stream-builder" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/php-http/promise" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/mailgun/mailgun-php" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -144,6 +164,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,7 +197,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,16 +257,17 @@
       <workItem from="1563033571521" duration="1273000" />
       <workItem from="1563035053934" duration="328000" />
       <workItem from="1563776822415" duration="150000" />
+      <workItem from="1568146530065" duration="597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26988000" />
+    <option name="totallyTimeSpent" value="27585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2927383" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29727685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -313,9 +334,7 @@
     <entry file="file://$PROJECT_DIR$/css/custom/signup.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom/login.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom/login.css" />
     <entry file="file://$PROJECT_DIR$/css/custom/about.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -399,8 +418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="-1008">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -413,22 +432,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+        <state relative-caret-position="1320">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/signup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+        <state relative-caret-position="2136">
+          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/person.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
