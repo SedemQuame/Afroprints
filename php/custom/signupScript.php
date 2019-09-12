@@ -1,12 +1,12 @@
 <?php
 echo "in the signup script.";
 
-$name = $_POST['first_name'] . " " . $_POST['last_name'];
-$email_address = $_POST['email_address'];
-$country = $_POST['users_country'];
-$phone_number = $_POST['phone_number'];
-$password = $_POST['password'];
-$confirm_password = $_POST['confirm_password'];
+$name = htmlspecialchars($_POST['first_name'] . " " . $_POST['last_name']);
+$email_address = htmlspecialchars($_POST['email_address']);
+$country = htmlspecialchars($_POST['users_country']);
+$phone_number = htmlspecialchars($_POST['phone_number']);
+$password = htmlspecialchars($_POST['password']);
+$confirm_password = htmlspecialchars($_POST['confirm_password']);
 
 $table_name = "customer";
 
@@ -21,9 +21,11 @@ if ($password == $confirm_password) {
   // $sql = "CREATE SEQUENCE IF NOT EXISTS seq start 1 increment 1 minvalue 1 owned by bookstore.id";
   $sql = "INSERT INTO customer (cust_id, cust_name, cust_email, cust_password, cust_address, cust_contact)
           VALUES
-          (nextval('customer_seq'), '$name', '$email_address', '$password', '$country', '$phone_number');";
-  // $sql = "INSERT INTO `afriprints`.`customer` VALUES ('6', '$name', '$email_address', '$password', '', '$phone_number')";
-  $pdo->exec($sql);
+          (nextval('customer_seq'), :name, :email_address, :password, :country, :phone_number);";
+
+  $stmt = $pdo->prepare($sql);
+  // $stmt->bindParam();
+  $stmt->execute(array(':name' => $name, ':email_address' => $email_address, ':password' => $password, ':country' => $country, ':phone_number'=>$phone_number));
 
   // Storing customer's id in the sessions.
   session_start();
