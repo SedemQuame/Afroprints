@@ -5,19 +5,19 @@ the text field automatically.
 // TODO: ADD country if it's an already registered user.
 */
 // User name.
-$first_name = $_POST['first_name'];
-$last_name = $_POST['last_name'];
+$first_name = htmlspecialchars($_POST['first_name']);
+$last_name = htmlspecialchars($_POST['last_name']);
 
 // Address information.
-$address = $_POST['address'];
-$extra_address_info = $_POST['address_extra_info'];
-$locale = $_POST['locale'];
+$address = htmlspecialchars($_POST['address']);
+$extra_address_info = htmlspecialchars($_POST['address_extra_info']);
+$locale = htmlspecialchars($_POST['locale']);
 
 // User's Contact Information.
-$format = $_POST['format'];
-$number = $_POST['phone_number'];
+$format = htmlspecialchars($_POST['format']);
+$number = htmlspecialchars($_POST['phone_number']);
 $phone_number = $format . ' ' . $number;
-$email_address = $_POST['email_address'];
+$email_address = htmlspecialchars($_POST['email_address']);
 
 $recipient_address = "";
 
@@ -61,27 +61,23 @@ if ($recipient_address == "") {
   $recipient_address = $ordering_address;
 }
 
-$sql = "
-        INSERT INTO public.purchases(
+// $sql = "INSERT INTO public.purchases(
+//             product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address)
+//             VALUES
+//             ('$product_list', $product_price, '$purchase_date', '$customer_id', '$ordering_address', '$recipient_address');
+//         ";
+
+$sql = "INSERT INTO public.purchases(
             product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address)
             VALUES
-            ('$product_list', $product_price, '$purchase_date', '$customer_id', '$ordering_address', '$recipient_address');
+            (:product_list, :product_price, :purchase_date, :customer_id, :ordering_address, :recipient_address);
         ";
 
-$pdo->exec($sql);
 
-
-
-
-
-// function displaySubmittedData($first_name, $last_name, $address, $extra_address_info, $locale, $format, $number, $email_address){
-//     echo $first_name . ' ' . $last_name . '<br/>';
-//     echo $address . ' ' . $extra_address_info . ' '. $locale . '<br/>';
-//     echo $format . ' ' . $number . '<br/> ';
-//     echo 'email_address ' . $email_address;
-// }
-
-// displaySubmittedData($first_name, $last_name, $address, $extra_address_info, $locale, $format, $number, $email_address);
+$stmt = $pdo->prepare($sql);
+// $stmt->bindParam();
+$stmt->execute(array(':product_list' => $product_list, ':product_price' => $product_price, ':purchase_date' => $purchase_date,
+                      ':customer_id' => $customer_id, ':ordering_address'=>$ordering_address, ':recipient_address'=>$recipient_address));
 
 // clear the shopping cart now.
 unset($_SESSION['cart-items']);

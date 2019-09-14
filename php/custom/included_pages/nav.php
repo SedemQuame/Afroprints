@@ -10,7 +10,20 @@
         <a class="py-2 d-none d-md-inline-block" href="products.php?item=accessories">Accessories</a>
         <a class="py-2 d-none d-md-inline-block" href="products.php?item=shoes">Shoes</a>
         <a class="py-2 d-none d-md-inline-block" href="products.php?item=bags">Bags</a>
-        <a class="py-2 d-none d-md-inline-block" href="signup.php">Sign In</a>
+
+        <!-- Check if user is signed in, and if TRUE.
+            Do not display, "Sign In" link, but if user has not signed in.
+            Check if user is signed in, and if FALSE.
+            Display, "Sign In" link.
+        -->
+        <?php
+          if(isset($_SESSION['user_id'])){
+            echo '<a class="py-2 d-none d-md-inline-block" href=""></a>';
+          }else{
+            echo '<a class="py-2 d-none d-md-inline-block" href="signup.php">Sign In</a>';
+          }
+        ?>
+
         <a class="py-2 d-none d-md-inline-block" href="cart.php">Cart
         <span id="itemsInCart" class="badge badge-light">
           <?php

@@ -12,6 +12,7 @@ $table_name = "customer";
 
 // Checking passwords match.
 if ($password == $confirm_password) {
+  
   // Check the rest of user credentials.
   // Insert them into the database.
   // Including connection script.

@@ -1,6 +1,5 @@
 <?php
-echo "in the login script.";
-
+// echo "in the login script.";
 $email_address = htmlspecialchars($_POST['email']);
 $password = htmlspecialchars($_POST['password']);
 
@@ -11,17 +10,11 @@ include 'included_pages/db_connection.php';
 if (session_start() && ($_SESSION['user_id'] != null)){
     $user_id = $_SESSION['user_id'];
 
-    // Replacing sql statements, with prepared statements.
-    // $sql = "SELECT cust_email, cust_password FROM customer WHERE cust_id='$user_id'";
-    // $stmt = $pdo->query($sql);
-    // $stmt->setFetchMode(PDO::FETCH_NUM);
-
     $sql = "SELECT cust_email, cust_password FROM customer WHERE cust_id=:customer_id";
     $stmt = $pdo->prepare($sql, array(array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY)));
     $stmt->execute(array(':customer_id'=> $user_id));
     $result = $stmt->fetchAll();
-    print_r($result);
-
+    // print_r($result);
     $db_email = $result[0][0];
     $db_password = $result[0][1];
 
@@ -29,7 +22,7 @@ if (session_start() && ($_SESSION['user_id'] != null)){
     if (($email_address == $db_email) && ($password == $db_password)) {
       // Correct grant user acces to site.
       echo "<br>user authentication, successful.";
-      // header('Location: ../../html/index.php');
+      header('Location: ../../html/index.php');
     } else {
       // Redirect users, login page and display appropriate error.
       echo "<br>user authentication, failed.";
@@ -56,7 +49,7 @@ else{
       header('Location: ../../html/login.php');
       // TODO: Attach error message to the header above.
       }
-      echo "end of else condition.";
+      // echo "end of else condition.";
 }}
 
 
