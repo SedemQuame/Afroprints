@@ -22,12 +22,12 @@ $email_address = htmlspecialchars($_POST['email_address']);
 $recipient_address = "";
 
 if(isset($_POST['new_destination'])){
-    $recipient_first_name = $_POST['diff_first_name'];
-    $recipient_last_name = $_POST['diff_last_name'];
+    $recipient_first_name = htmlspecialchars($_POST['diff_first_name']);
+    $recipient_last_name = htmlspecialchars($_POST['diff_last_name']);
 
     $recipient_name = $recipient_first_name . ' ' . $recipient_last_name;
-    $recipient_locale = $_POST['diff_locale'];
-    $optional_notes = $_POST['optional_notes'];
+    $recipient_locale = htmlspecialchars($_POST['diff_locale']);
+    $optional_notes = htmlspecialchars($_POST['optional_notes']);
 
     $recipient_address = $recipient_name . '<br/>' . $recipient_locale . '<br/>' . $optional_notes;
 }
@@ -61,23 +61,29 @@ if ($recipient_address == "") {
   $recipient_address = $ordering_address;
 }
 
-// $sql = "INSERT INTO public.purchases(
-//             product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address)
-//             VALUES
-//             ('$product_list', $product_price, '$purchase_date', '$customer_id', '$ordering_address', '$recipient_address');
-//         ";
-
-$sql = "INSERT INTO public.purchases(
-            product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address)
-            VALUES
-            (:product_list, :product_price, :purchase_date, :customer_id, :ordering_address, :recipient_address);
+$sql = "INSERT INTO
+        public.purchases(  product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address)
+        VALUES
+        (:product_list, :product_price, :purchase_date, :customer_id, :ordering_address, :recipient_address);
         ";
 
+print_r(array(':product_list' => $product_list,
+                     ':product_price' => $product_price,
+                     ':purchase_date' => $purchase_date,
+                     ':customer_id' => $customer_id,
+                     ':ordering_address'=>$ordering_address,
+                     ':recipient_address'=>$recipient_address
+                   ));
 
 $stmt = $pdo->prepare($sql);
-// $stmt->bindParam();
-$stmt->execute(array(':product_list' => $product_list, ':product_price' => $product_price, ':purchase_date' => $purchase_date,
-                      ':customer_id' => $customer_id, ':ordering_address'=>$ordering_address, ':recipient_address'=>$recipient_address));
+
+$stmt->execute(array(':product_list' => $product_list,
+                     ':product_price' => intval($product_price),
+                     ':purchase_date' => $purchase_date,
+                     ':customer_id' => $customer_id,
+                     ':ordering_address'=>$ordering_address,
+                     ':recipient_address'=>$recipient_address
+                   ));
 
 // clear the shopping cart now.
 unset($_SESSION['cart-items']);
