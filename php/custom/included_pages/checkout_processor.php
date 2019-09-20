@@ -53,7 +53,8 @@ $purchase_date = date("F j, Y, g:i a");
 
 
 // Get id of customer, by making a query using his/her email or user_id stored in SESSIONS.
-$customer_id = 2; //Setting customer id to #2, for trial purposes.
+$customer_id = $_SESSION['user_id']; //Setting customer id to #2, for trial purposes.
+// TODO: IF user_id is not available, redirect user to page with message.
 
 // Get user address by concatenating field data.
 $ordering_address = $address . '<br/>' . $extra_address_info . '<br/>' . $locale;
