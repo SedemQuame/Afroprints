@@ -17,3 +17,11 @@ body{
   display: flex;
   justify-content: center;
 }
+
+.addthis_inline_share_toolbox{
+  width: 50%;
+  display: flex;
+  position: relative;
+  left: 10%;
+  right: 10%;
+}
