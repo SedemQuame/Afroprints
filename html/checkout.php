@@ -163,13 +163,14 @@
         include '../php/custom/included_pages/footer.php';
     ?>
 
-    <!--JavaScript Files.-->
-    <!-- Custom JavaScript Files. -->
-    <script src="../js/custom/index.js"></script>
 
     <!-- JavaScript Frameworks and libraries. -->
     <?php include '../php/custom/included_pages/common_js.php'; ?>
 
+    <!-- JavaScript Frameworks and libraries. -->
+    <?php include '../php/custom/included_pages/common_js.php'; ?>
+    <script src="../js/custom/modal.js" charset="utf-8"></script>
+    
     <script type="text/javascript">
       $('#collapseOne').collapse({
         toggle: false

@@ -29,5 +29,9 @@
 
   <!--JavaScript Files.-->
   <script src="../js/custom/person.js"></script>
+
+  <!-- JavaScript Frameworks and libraries. -->
+  <?php include '../php/custom/included_pages/common_js.php'; ?>
+  <script src="../js/custom/modal.js" charset="utf-8"></script>
 </body>
 </html>
