@@ -16,9 +16,13 @@
         include '../php/custom/included_pages/nav.php';
     ?>
 
+    <div id="error-alert" class="alert alert-danger" role="alert">
+      All relevant fields not filled.
+    </div>
+
     <div class="container" id="checkout">
       <div class="accordion" id="accordionExample">
-        <form class="" action="../php/custom/included_pages/checkout_processor.php" method="post">
+        <form id="checkout_form" action="../php/custom/included_pages/checkout_processor.php" method="post" onsubmit="fieldProcessor(this)">
           <div class="card">
             <div class="card-header checkout-headers" id="headingOne">
               <h2 class="mb-0">
@@ -148,7 +152,7 @@
 
 
                 <!-- Order Submit Button. -->
-                <button class="btn btn-outline-secondary float-right" type="submit" name="processOrderBtn" type="submit">Process Order</button>
+                <button id="orderProcessingBtn" class="btn btn-outline-secondary float-right" type="submit" name="processOrderBtn" type="submit">Process Order</button>
               </div>
             </div>
           </div>
@@ -166,11 +170,9 @@
 
     <!-- JavaScript Frameworks and libraries. -->
     <?php include '../php/custom/included_pages/common_js.php'; ?>
-
-    <!-- JavaScript Frameworks and libraries. -->
-    <?php include '../php/custom/included_pages/common_js.php'; ?>
     <script src="../js/custom/modal.js" charset="utf-8"></script>
-    
+    <script src="../js/custom/checkout.js" charset="utf-8"></script>
+
     <script type="text/javascript">
       $('#collapseOne').collapse({
         toggle: false

@@ -6,7 +6,8 @@
   // TODO:  Make subject dynamic, based on use case.
   $to="sedem.amekpewu.3@gmail.com";
   $subject = 'the subject';
-  $msg="hi this is an email form me to you";
+  // $msg="hi this is an email form me to you";
+  $msg="im the champion, not you.";
 
   // Make headers dynamic, based on use case.
   $headers = 'From: AfriPrints@example.com' . "\r\n" .

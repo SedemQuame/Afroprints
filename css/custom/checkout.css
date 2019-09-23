@@ -1,3 +1,7 @@
+#error-alert{
+  display: none;
+}
+
 .checkout_inputs {
     padding: 0 15px;
 }
