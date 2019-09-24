@@ -3,7 +3,6 @@
   // starting sessions.
   session_start();
 
-
   // Get all info from final_pwsd_reset pages.
   $pin = $_POST['reset_pin'];
   $password = $_POST['new_password'];

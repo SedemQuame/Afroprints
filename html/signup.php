@@ -16,6 +16,16 @@
       include '../php/custom/included_pages/nav.php';
   ?>
 
+  <?php
+    if(isset($_GET['msg'])){
+      echo '
+      <div id="error-alert" class="alert alert-danger text-center" role="alert">
+        '. $_GET['msg'] .'
+      </div>
+      ';
+    }
+  ?>
+
   <p class="sign-up-page-header text-center"> Sign Up </p>
   <p class="text-center">
     Get access to amazing deals <br>
@@ -90,7 +100,7 @@
   <!--JavaScript Files.-->
   <!-- Custom JavaScript Files. -->
   <script src="../js/custom/signup.js"></script>
-  
+
   <!-- JavaScript Frameworks and libraries. -->
   <?php include '../php/custom/included_pages/common_js.php'; ?>
   <script src="../js/custom/modal.js" charset="utf-8"></script>

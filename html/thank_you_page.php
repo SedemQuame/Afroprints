@@ -19,27 +19,19 @@
     <?php
         // Nav Bar.
         include '../php/custom/included_pages/nav.php';
-
-        // Featured products.
-        // TODO: Change the outlook of the index page, to look different from the other pages.
-        // TODO: Let it feature other product types with extra saucy design and outlook.
-        // TODO: Add minimalist and sophisticated animations to the various pages.
-        // TODO: CREATE A CUSTOM LAYOUT FOR THE INDEX.PHP PAGE.
-        // include '../php/custom/included_pages/featured_products.php';
     ?>
-
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="glitch-container">
       <div id="thank_you_text" class="glitch" data-text="Thank You.">Thank You.</div>
     </div>
     <br>
     <p id="call_to_action" class="text-center">Share What You Bought.</p>
     <br>
-    <!-- data-url, is the url that shows a link to the page in questions. -->
 
+    <!-- data-url, is the url that shows a link to the page in question. -->
     <div class="addthis_inline_share_toolbox mx-auto" data-url="https://onezero.medium.com/could-a-robot-have-a-mystical-experience-10fa374c3f86"
       data-description="THE DESCRIPTION" data-media="C:\\xampp\\htdocs\\AfricanPrintSite\\africanfashion\\tops\\top (6).jpg">
     </div>
+    
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5d851ed86afd3dce"></script>
 

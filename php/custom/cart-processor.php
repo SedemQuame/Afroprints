@@ -1,11 +1,11 @@
 <?php
+// TODO: Make code, object oriented.
   session_start();
 
   if (isset($_GET['item_id']) || isset($_GET['action'])) {
     $item_id = $_GET['item_id'];
     $action = $_GET['action'];
   }
-
 
   switch ($action) {
     case 'add':
@@ -37,8 +37,6 @@
           }
           $_SESSION['cart-items'] = $temp_arr;
         }
-        // unset($cart);
-        // unset($temp_arr);
         header('location:../../html/cart.php');
       break;
 

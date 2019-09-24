@@ -1,6 +1,5 @@
 <?php
-echo "in the signup script.";
-
+// TODO: Make object oriented.
 $name = htmlspecialchars($_POST['first_name'] . " " . $_POST['last_name']);
 $email_address = htmlspecialchars($_POST['email_address']);
 $country = htmlspecialchars($_POST['users_country']);
@@ -12,20 +11,19 @@ $table_name = "customer";
 
 // Checking passwords match.
 if ($password == $confirm_password) {
-  
-  // Check the rest of user credentials.
-  // Insert them into the database.
+  /*PSEUDO CODE.
+  *  // Check the rest of user credentials.
+  * // Insert them into the database.
+  */
+
   // Including connection script.
   include 'included_pages/db_connection.php';
 
-  // SQL CODE.
-  // $sql = "CREATE SEQUENCE IF NOT EXISTS seq start 1 increment 1 minvalue 1 owned by bookstore.id";
   $sql = "INSERT INTO customer (cust_id, cust_name, cust_email, cust_password, cust_address, cust_contact)
           VALUES
           (nextval('customer_seq'), :name, :email_address, :password, :country, :phone_number);";
 
   $stmt = $pdo->prepare($sql);
-  // $stmt->bindParam();
   $stmt->execute(array(':name' => $name, ':email_address' => $email_address, ':password' => $password, ':country' => $country, ':phone_number'=>$phone_number));
 
   // Storing customer's id in the sessions.
@@ -37,7 +35,7 @@ if ($password == $confirm_password) {
   $result = $stmt->fetch();
 
   foreach ($result as $row) {
-    echo "<br>Row number is: " . $row;
+    // echo "<br>Row number is: " . $row;
     // Storing in sessions.
     $_SESSION['user_id'] = $row;
   }
@@ -48,16 +46,13 @@ if ($password == $confirm_password) {
   $_SESSION['phone_number'] = $phone_number;
   $_SESSION['password'] = $password;
 
-
   // redirecting user to homepage.
   header('Location: ../../html/index.php');
 
   }else {
-    echo "nothing to display.";
-    // Change and place appropriate use case there.
-
     // redirecting user to signupage with appropriate error message.
-    header('Location: ../../html/signup.php');
+    $msg = "Passwords, provided don't match.";
+    header('Location: ../../html/signup.php?msg='.$msg);
 }
 
 

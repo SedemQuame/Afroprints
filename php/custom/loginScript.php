@@ -33,24 +33,27 @@ if (session_start() && isset($_SESSION['user_id'])){
 else{
     echo "in the else loop";
 
-    $sql =  "SELECT cust_email, cust_password FROM customer";
+    $sql =  "SELECT cust_email, cust_password, cust_id FROM customer";
     $stmt = $pdo->query($sql);
     $stmt->setFetchMode(PDO::FETCH_NUM);
 
     $status = false;
 
     while ($row = $stmt->fetch()){
-      if(($email_address == htmlspecialchars($row[0])) && ($password ==htmlspecialchars($row[1]))){
+      if(($email_address == htmlspecialchars($row[0])) && ($password == htmlspecialchars($row[1]))){
         $status = true;
         // Correct grant user acces to site.
         if($status){
+          session_start();
+          $_SESSION['user_id'] = htmlspecialchars($row[2]);
           echo "<br>user authentication, successful.";
           header('Location: ../../html/index.php');
         }
       } else {
       // Redirect users, login page and display appropriate error.
       echo "<br>user authentication, failed.";
-      // header('Location: ../../html/login.php');
+      $msg = "login, failed please try again.";
+      header('Location: ../../html/login.php?msg='.$msg);
       // TODO: Attach error message to the header above.
       }
       // echo "end of else condition.";

@@ -17,16 +17,26 @@
       include '../php/custom/included_pages/nav.php';
   ?>
 
-<!-- Password reset using sms. -->
-  <p class="login-page-header text-center"> Password Reset </p>
-  <p class="text-center">
-      Lorem ipsum dolor sit amet
-                  <br>
-      consectetur adipiscing elit, sed do eiusmodto
-      <!-- replace with text header specifying  reset password link. -->
-  </p>
+  <?php
+    if(isset($_GET['msg'])){
+      echo '
+      <div id="error-alert" class="alert alert-danger text-center" role="alert">
+        '. $_GET['msg'] .'
+      </div>
+      ';
+    }
+  ?>
 
-  <form action="../php/custom/pwsd_reset.php?callertype=sms" method="post" enctype="" class="">
+<!-- Password reset using sms. -->
+<p class="sign-up-page-header login-page-header text-center"> Password Reset </p>
+<p class="text-center">
+    Enter your email address<br />
+    To get a reset link.
+    <!-- replace with text header specifying  reset password link. -->
+</p>
+
+<div class="row">
+  <form action="../php/custom/pwsd_reset.php?callertype=sms" method="post" enctype="" class="col-9 col-md-6 col-lg-3">
     <!--This is the login page.-->
     <div>
         <label for="phone_number">Phone number</label>
@@ -45,6 +55,7 @@
     </p>
 
   </form>
+</div>
 
 
   <?php

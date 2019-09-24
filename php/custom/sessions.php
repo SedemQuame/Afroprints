@@ -15,15 +15,11 @@
   }
 
   // Check if visits was set.
-  if ($_SESSION['visits'] > 1) {
-    // welcome existing user.
-    // echo "WELCOME EXISTING USER.";
-  } else {
+  $bool = $_SESSION['visits'] > 1;
+  if (!$bool) {
     // welcome new user.
     // TODO: Change static text and substitute it with something fancy and more informative.
     echo "<p class='text-center'>WELCOME NEW USER. WE'RE PROUD TO HAVE YOU!!!</p>";
   }
-
   $_SESSION['visits'] = $_SESSION['visits'] + 1;
-
 ?>

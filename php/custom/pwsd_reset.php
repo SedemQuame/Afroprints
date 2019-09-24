@@ -12,7 +12,7 @@
 
   */
   session_start();
-  $caller_type = $_GET['callertype'];
+  $caller_type = htmlspecialchars($_GET['callertype']);
   $min = 1000;
   $max = 9999;
 
@@ -26,7 +26,8 @@
   if($caller_type == "sms"){
 
     // Getting phone number for SMS.
-    $phone_number = $_POST['phone_number'];
+    // TODO: Add phone number validator here, and display error message if provided number fails test.
+    $phone_number = htmlspecialchars($_POST['phone_number']);
 
     $_SESSION['secret_random_pin'] = $randomly_generated_number;
     // echo $_SESSION['secret_random_pin'];
@@ -40,17 +41,25 @@
 
   }elseif ($caller_type == "email") {
     // Getting email addresses for email.
-    $to = $_POST['email'];
+    // TODO: Add an email address validator here, and display error message if provided number fails test.
+    $to = htmlspecialchars($_POST['email']);
+
     $_SESSION['secret_random_pin'] = $randomly_generated_number;
     $msg = "Generated random number is: " . $randomly_generated_number;
-    // include statement.
 
+    // include statement.
     if(include __DIR__.'\send_email.php'){
       // redirect to page reset page using header.
       header('Location: ' . $page);
     }else {
       // return error message.
-      echo "Couldn't Run Email Script. Try Again In a Few Minutes";
+      $msg =  "Couldn't Run Email Script. Try Again In a Few Minutes";
+      if  ($caller_type == "sms"){
+        $page = "../../../password_reset_with_sms.php?msg=".$msg;
+      }else{
+        $page = "../../../password_reset_with_email.php?msg=".$msg;
+      }
+      header('Location: ' . $page);
     }
 
   }else{

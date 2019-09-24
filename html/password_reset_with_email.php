@@ -17,19 +17,29 @@
       include '../php/custom/included_pages/nav.php';
   ?>
 
+  <?php
+    if(isset($_GET['msg'])){
+      echo '
+      <div id="error-alert" class="alert alert-danger text-center" role="alert">
+        '. $_GET['msg'] .'
+      </div>
+      ';
+    }
+  ?>
+
 <!-- Password reset using email. -->
-  <p class="login-page-header text-center"> Password Reset </p>
+  <p class="sign-up-page-header login-page-header text-center"> Password Reset </p>
   <p class="text-center">
-      Lorem ipsum dolor sit amet
-                  <br>
-      consectetur adipiscing elit, sed do eiusmodto
+      Enter your email address<br />
+      To get a reset link.
       <!-- replace with text header specifying  reset password link. -->
   </p>
 
-  <form action="../php/custom/pwsd_reset.php?callertype=email" method="post">
+<div class="row">
+  <form action="../php/custom/pwsd_reset.php?callertype=email" method="post" class="col-9 col-md-6 col-lg-3">
     <!--This is the login page.-->
     <div>
-        <label for="phone_number">Email</label>
+        <label for="phone_number">Email Address</label>
         <br>
         <input class="form-control" name="email" type="email" id="phone_number" placeholder="Email Address">
     </div>
@@ -45,6 +55,7 @@
     </p>
 
   </form>
+</div>
 
 
   <?php
