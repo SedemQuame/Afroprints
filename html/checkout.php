@@ -149,7 +149,76 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
               <div class="card-body">
                 <!-- Show all acquired information, in a representable formatted form. -->
+                  <div class="row">
+                    <div class="col-12 col-sm-4">
+                      <input id="credit_card_checkbox" type="checkbox" name="credit card" value="card">
+                      <label for="">Credit Card</label>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <input type="checkbox" name="mobile money" value="mobile_money">
+                      <label for="">Mobile Money</label>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <input type="checkbox" name="cyrto currency" value="cyrto_currency">
+                      <label for="">Crypto Currency</label>
+                    </div>
+                  </div>
 
+                  <div id="credit_card_information">
+                    <div>
+                        <label for="card_number">Card Number</label>
+                        <br>
+                        <input class="form-control" name="card_number" type="text" id="card_number" placeholder="" disabled>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-4">
+                          <label for="expiration_month">Expiration Month</label>
+                          <br>
+                          <input class="form-control" name="expiration_month" type="text" id="expiration_month" placeholder="MM" disabled>
+                      </div>
+
+                      <div class="col-4">
+                          <label for="expiration_year">Expiration Year</label>
+                          <br>
+                          <input class="form-control" name="expiration_year" type="text" id="expiration_year" placeholder="YYYY" disabled>
+                      </div>
+
+                      <div class="col-3">
+                          <label for="security_code">Security Code</label>
+                          <br>
+                          <input class="form-control" name="security_code" type="text" id="security_code" placeholder="" disabled>
+                      </div>
+                    </div>
+
+                    <div>
+                        <label for="name_on_card">Name on Card</label>
+                        <br>
+                        <input class="form-control" name="name_on_card" type="text" id="name_on_card" placeholder="" disabled>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-7">
+                          <label for="country">Country</label>
+                          <br>
+                          <input class="form-control" name="country" type="text" id="country" placeholder="" disabled>
+                      </div>
+
+                      <div class="col-5">
+                          <label for="zip_or_postal_code">Zip/Postal Code</label>
+                          <br>
+                          <input class="form-control" name="zip_or_postal_code" type="text" id="zip_or_postal_code" placeholder="" disabled>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="mobile_money_information">
+
+                  </div>
+
+                  <div id="crypto_currency_information">
+
+                  </div>
 
                 <!-- Order Submit Button. -->
                 <button id="orderProcessingBtn" class="btn btn-outline-secondary float-right" type="submit" name="processOrderBtn" type="submit">Process Order</button>
