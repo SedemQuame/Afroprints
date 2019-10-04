@@ -20,8 +20,6 @@ div p {
   background-image: url('../../media/images/gradient.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
-  /* border: 1px solid black; */
   text-align: center;
   min-height: 100px;
   margin-bottom: -25px;
