@@ -19,7 +19,7 @@
 
     <div class="col-10 col-md-9 dashboard">
       <!-- Place various, tabs here. -->
-      <p>Index Page</p>
+      <p>Index Page &lt; Page for adding new products. &gt;</p>
     </div>
     <!-- JavaScript Frameworks and libraries. -->
     <?php include '../../php/custom/included_pages/common_js.php'; ?>
