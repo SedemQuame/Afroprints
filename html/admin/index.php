@@ -38,16 +38,6 @@
 
       <!-- Place various, tabs here. -->
       <p>Index Page &lt; Page for adding new products. &gt;</p>
-      <!--
-      Things to include.
-      * Brand name
-      * Brand description
-      * Brand images
-      * Item type
-      * Item Price
-      * Item category
-      -->
-
       <div class="">
         <img src="holder.js/300x200">
       </div>
