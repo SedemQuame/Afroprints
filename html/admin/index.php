@@ -18,6 +18,24 @@
     </div>
 
     <div class="col-10 col-md-9 dashboard">
+      <?php
+        if(isset($_GET['msg'])){
+          if ($_GET['msg'] == "An error occurred somewhere. Try again") {
+            echo '
+            <div id="error-alert" class="alert alert-danger text-center" role="alert">
+              '. $_GET['msg'] .'
+            </div>
+            ';
+          } else {
+            echo '
+            <div id="error-alert" class="alert alert-success text-center" role="alert">
+              '. $_GET['msg'] .'
+            </div>
+            ';
+          }
+        }
+      ?>
+
       <!-- Place various, tabs here. -->
       <p>Index Page &lt; Page for adding new products. &gt;</p>
       <!--

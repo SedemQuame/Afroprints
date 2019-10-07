@@ -57,13 +57,27 @@
      }
 
      if (empty($errors)) {
-         $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
+        $didUpload = move_uploaded_file($fileTmpName, $uploadPath);
+
+         // Including connection script.
+         include 'included_pages/db_connection.php';
+
+         $sql = "INSERT INTO brand(brand_id, brand_name, brand_description, brand_image, brand_type, brand_price, brand_category)
+       	        VALUES (nextval('item_brand_id'), :name, :description, :imageurl, :item_type, :item_price, :item_category);";
+
+         $stmt = $pdo->prepare($sql);
+
+         $stmt->execute(array(':name' => $name, ':description' => $description,
+                              ':imageurl' => $imgPath, ':item_type' => $item_type,
+                              ':item_price' => $item_price, ':item_category' => $item_category));
 
          $msg = "";
          if ($didUpload) {
-             echo "The file " . basename($fileName) . " has been uploaded";
+             $msg .= "The file " . basename($fileName) . " has been uploaded";
+             header("location: ../../html/admin/index.php?msg=".$msg);
          } else {
-             echo "An error occurred somewhere. Try again";
+             $msg .= "An error occurred somewhere. Try again";
+             header("location: ../../html/admin/index.php?msg=".$msg);
          }
      } else {
          foreach ($errors as $error) {
@@ -75,16 +89,5 @@
 
 
 
-  // Including connection script.
-  include 'included_pages/db_connection.php';
-
-  $sql = "INSERT INTO brand(brand_id, brand_name, brand_description, brand_image, brand_type, brand_price, brand_category)
-	        VALUES (nextval('item_brand_id'), :name, :description, :imageurl, :item_type, :item_price, :item_category);";
-
-  $stmt = $pdo->prepare($sql);
-
-  $stmt->execute(array(':name' => $name, ':description' => $description,
-                       ':imageurl' => $imgPath, ':item_type' => $item_type,
-                       ':item_price' => $item_price, ':item_category' => $item_category))
 
 ?>
