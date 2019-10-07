@@ -1,14 +1,11 @@
 .pane, .dashboard{
   height: 100vh;
+  overflow-y: auto;
 }
 
 .pane{
   background-color: #353b48;
   color: #ffffff;
-}
-
-.dashboard{
-
 }
 
 .site_icon_holder{
