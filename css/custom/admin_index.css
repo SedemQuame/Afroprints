@@ -44,3 +44,8 @@ hr{
 .list-group-item:last-child {
     margin-bottom: 0;
 }
+
+.admin_product_view{
+  height: 70px;
+  width: 70px;
+}

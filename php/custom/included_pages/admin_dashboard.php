@@ -13,13 +13,10 @@
       <a href="orders.php">Orders</a>
     </li>
     <li class="list-group-item">
-      <a href="product_category.php">Product Category</a>
+      <a href="product_category.php">Products</a>
     </li>
-    <li class="list-group-item">
+    <!-- <li class="list-group-item">
       <a href="product_display.php">Product Display</a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">Vestibulum at eros</a>
-    </li>
+    </li> -->
   </ul>
 </div>

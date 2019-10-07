@@ -19,12 +19,30 @@
 
     <div class="col-10 col-md-9 dashboard">
       <!-- Place various, tabs here. -->
-      <p>Product Categories Page
+      <!-- <p>Product Categories Page
          this page, will allow the admins to view the various products,
-         and perform operations such as product deletions, price updates, image changes
+         <br>and perform operations such as product deletions,
+         <br> price updates, image changes
          (<?php // TODO: adding more images, in the future ?>).
          and other changes to product meta-data.
-      </p>
+      </p> -->
+      <?php
+        if(isset($_GET['msg'])){
+          if ($_GET['msg'] == "Item deletion, failed.") {
+            echo '
+            <div id="error-alert" class="alert alert-danger text-center" role="alert">
+              '. $_GET['msg'] .'
+            </div>
+            ';
+          } else {
+            echo '
+            <div id="error-alert" class="alert alert-success text-center" role="alert">
+              '. $_GET['msg'] .'
+            </div>
+            ';
+          }
+        }
+      ?>
       <p>Orders Page.</p>
       <table class="table table-striped">
         <thead class="thead-dark">
@@ -68,18 +86,21 @@
            }
 
            $product = "";
+           $count = 0;
            foreach ($stocks as $stock) {
-
+            $count += 1;
             $product .= '<tr class="row">
-                         <th class="col-1 col-lg-1" scope="row">'."1".'</th>
+                         <th class="col-1 col-lg-1" scope="row">'.$count.'</th>
                          <td class="col-2 col-lg-2">'.htmlspecialchars($stock['name']).'</td>
                          <td class="col-2 col-lg-2">'.htmlspecialchars($stock['description']).'</td>
-                         <td class="col-2 col-lg-2">'.htmlspecialchars($stock['image']).'</td>
+                         <td class="col-2 col-lg-2">
+                           <img class="admin_product_view" src="..\\'.htmlspecialchars($stock['image']).'" alt="product_iamge" />
+                         </td>
                          <td class="col-2 col-lg-2">'.htmlspecialchars($stock['category']).'</td>
                          <td class="col-1 col-lg-1">'.htmlspecialchars($stock['type']).'</td>
                          <td class="col-1 col-lg-1">'.htmlspecialchars($stock['price']).'</td>
                          <td class="col-1 col-lg-1">
-                           <form class="" action="../../php/custom/php/custom/delete_item_from_db.php" method="post">
+                           <form class="" action="../../php/custom/delete_item_from_db.php" method="post">
                              <input class="btn btn-danger" type="submit" name="" value="Delete">
                              <input type="hidden" name="prdt_id" value="'.htmlspecialchars($stock['id']).'">
                            </form>
@@ -96,5 +117,6 @@
     <!-- JavaScript Frameworks and libraries. -->
     <?php include '../../php/custom/included_pages/common_js.php'; ?>
     <script src="../../js/custom/modal.js" charset="utf-8"></script>
+    <script src="../../js/custom/admin.js" charset="utf-8"></script>
   </body>
 </html>

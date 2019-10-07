@@ -48,8 +48,7 @@
                 <li class="text-left">Product ID</li>
                 <li class="text-left">Product Name(s)</li>
                 <li class="text-left">Product Quantity</li>
-                <!-- <li class="text-left"></li>
-                <li class="text-left"></li> -->
+
               </ul>
             </td>
             <td class="col-1 col-lg-1">Credit Card</td>

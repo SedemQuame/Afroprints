@@ -82,7 +82,7 @@
         <div class="">
           <label for="">Image Uploads </label>
           <br>
-          <input class="" type="file" id="" name="myfile" required>
+          <input onclick="getImgUrl()" class="" type="file" id="" name="myfile" required>
         </div>
         <br>
 
@@ -90,67 +90,12 @@
           <input class="btn btn-outline-secondary" type="submit" name="submit" value="Add Item">
         </div>
       </form>
-
       <br>
-      <br>
-      <p>Index Page &lt; Page for removing new products. &gt;</p>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card mb-4 shadow-sm">
-            <!-- <img class="bd-placeholder-img card-img-top" src="../../AfricanPrintSite/africanfashion/tops/top%20(9).jpg" alt="" width="100%" height="225"> -->
-            <img src="holder.js/335x250">
-            <div class="card-body">
-              <p class="card-text">Item Name</p>
-              <p class="card-text">Item description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <form class="" action="" method="post">
-                  <button type="button" class="openBtn btn btn-sm btn-outline-secondary">Delete Item</button>
-                </form>
-                <small class="text-muted">Ghc 76.74</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card mb-4 shadow-sm">
-            <!-- <img class="bd-placeholder-img card-img-top" src="../../AfricanPrintSite/africanfashion/tops/top%20(9).jpg" alt="" width="100%" height="225"> -->
-            <img src="holder.js/335x250">
-            <div class="card-body">
-              <p class="card-text">Item Name</p>
-              <p class="card-text">Item description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <form class="" action="" method="post">
-                  <button type="button" class="openBtn btn btn-sm btn-outline-secondary">Delete Item</button>
-                </form>
-                <small class="text-muted">Ghc 76.74</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card mb-4 shadow-sm">
-            <!-- <img class="bd-placeholder-img card-img-top" src="../../AfricanPrintSite/africanfashion/tops/top%20(9).jpg" alt="" width="100%" height="225"> -->
-            <img src="holder.js/335x250">
-            <div class="card-body">
-              <p class="card-text">Item Name</p>
-              <p class="card-text">Item description</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <form class="" action="" method="post">
-                  <button type="button" class="openBtn btn btn-sm btn-outline-secondary">Delete Item</button>
-                </form>
-                <small class="text-muted">Ghc 76.74</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
     <!-- JavaScript Frameworks and libraries. -->
     <script src="../../js/framework/holder.js" charset="utf-8"></script>
     <?php include '../../php/custom/included_pages/common_js.php'; ?>
     <script src="../../js/custom/modal.js" charset="utf-8"></script>
+    <script src="../../js/custom/admin.js" charset="utf-8"></script>
   </body>
 </html>
