@@ -37,59 +37,61 @@
       ?>
 
       <!-- Place various, tabs here. -->
-      <p>Index Page &lt; Page for adding new products. &gt;</p>
-      <div class="">
-        <img src="holder.js/300x200">
-      </div>
-
-      <form action="../../php/custom/upload_items.php" method="post" enctype="multipart/form-data">
+      <!-- <p>Index Page &lt; Page for adding new products. &gt;</p> -->
+      <div class="item_form_submission">
         <div class="">
-          <label for="">Item Name </label>
-          <input class="form-control" type="text" id="" name="item_name" required>
+          <img id="img_element" src="holder.js/300x200" alt="">
         </div>
 
-        <div class="">
-          <label for="">Item Price </label>
-          <input class="form-control" type="text" id="" name="item_price" required>
-        </div>
+        <form action="../../php/custom/upload_items.php" method="post" enctype="multipart/form-data">
+          <div class="">
+            <label for="">Item Name </label>
+            <input class="form-control" type="text" id="" name="item_name" required>
+          </div>
 
-        <div class="">
-          <label for="">Item Type </label>
-          <select class="custom-select" id="" name="item_type" required>
-            <option selected>Open this select menu</option>
-            <option value="tops">Tops</option>
-            <option value="shoes">Shoes</option>
-            <option value="bags">Bags</option>
-            <option value="accessories">Accessories</option>
-          </select>
-        </div>
+          <div class="">
+            <label for="">Item Price </label>
+            <input class="form-control" type="text" id="" name="item_price" required>
+          </div>
 
-        <div class="">
-          <label for="">Item Category </label>
-          <select class="custom-select" id="" name="item_category" required>
-            <option selected>Open this select menu</option>
-            <option value="men">Men</option>
-            <option value="women">Women</option>
-            <option value="kids">Kids</option>
-          </select>
-        </div>
+          <div class="">
+            <label for="">Item Type </label>
+            <select class="custom-select" id="" name="item_type" required>
+              <option selected>Open this select menu</option>
+              <option value="tops">Tops</option>
+              <option value="shoes">Shoes</option>
+              <option value="bags">Bags</option>
+              <option value="accessories">Accessories</option>
+            </select>
+          </div>
 
-        <div class="">
-          <label for="">Item Description </label>
-          <input class="form-control" type="text" id="" name="item_description" required>
-        </div>
+          <div class="">
+            <label for="">Item Category </label>
+            <select class="custom-select" id="" name="item_category" required>
+              <option selected>Open this select menu</option>
+              <option value="men">Men</option>
+              <option value="women">Women</option>
+              <option value="kids">Kids</option>
+            </select>
+          </div>
 
-        <div class="">
-          <label for="">Image Uploads </label>
+          <div class="">
+            <label for="">Item Description </label>
+            <input class="form-control" type="text" id="" name="item_description" required>
+          </div>
+
+          <div class="">
+            <label for="">Image Uploads </label>
+            <br>
+            <input class="" id="image_upload" type="file" name="myfile" required>
+          </div>
           <br>
-          <input onclick="getImgUrl()" class="" type="file" id="" name="myfile" required>
-        </div>
-        <br>
 
-        <div class="">
-          <input class="btn btn-outline-secondary" type="submit" name="submit" value="Add Item">
-        </div>
-      </form>
+          <div class="">
+            <input class="btn btn-outline-secondary btn-block" type="submit" name="submit" value="Add Item">
+          </div>
+        </form>
+      </div>
       <br>
     </div>
     <!-- JavaScript Frameworks and libraries. -->

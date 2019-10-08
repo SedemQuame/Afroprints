@@ -59,13 +59,7 @@
         </thead>
         <tbody>
 
-          <?php // TODO:
-            /*
-            *Connect to the database.
-            *Get product, details from the databae an populate them, in here.
-            *
-            */
-
+          <?php
             include '../../php/custom/included_pages/db_connection.php';
 
             $sql = "SELECT brand_id, brand_name, brand_description, brand_image, brand_type, brand_price, brand_category
@@ -110,7 +104,6 @@
 
            echo $product;
           ?>
-
         </tbody>
       </table>
     </div>

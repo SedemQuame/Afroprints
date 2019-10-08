@@ -1,5 +1,9 @@
 console.log("Js for the admin page.");
 
-function getImgUrl() {
-  console.log("Getting image url");
-}
+document
+  .getElementById("image_upload")
+  .addEventListener("click", function(event) {
+    document.getElementById("img_element").src = document.getElementById(
+      "image_upload"
+    ).value;
+  });
