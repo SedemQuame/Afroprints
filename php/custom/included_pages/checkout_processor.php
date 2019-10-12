@@ -63,9 +63,9 @@ if (isset($_SESSION['user_id'])) {
   }
 
   $sql = "INSERT INTO
-          public.purchases(  product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address)
+          public.purchases(  product_list, total_price, purchase_date, cust_id, ordering_address, recipient_address, payment_method)
           VALUES
-          (:product_list, :product_price, :purchase_date, :customer_id, :ordering_address, :recipient_address);
+          (:product_list, :product_price, :purchase_date, :customer_id, :ordering_address, :recipient_address, :payment_method);
           ";
 
   print_r(array(':product_list' => $product_list,

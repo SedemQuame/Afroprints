@@ -9,6 +9,13 @@ let phone_number = document.getElementById("phone_number");
 let email_address = document.getElementById("email_address");
 let delivery_date = document.getElementById("estimated_dev_date");
 
+// Payment Tabs.
+let CCPayment = document.getElementById("credit_card_information");
+let MomoPayment = document.getElementById("mobile_money_information");
+let CryptoPayment = document.getElementById("crypto_currency_information");
+
+let radios = document.forms.checkout_form.elements.payment_method;
+
 // Shipping Address Accordion Tab.
 // Pseudo-Code
 // 1. Check, if ship to different destination checkbox is ticked.
@@ -89,5 +96,36 @@ function fieldProcessor() {
     event.preventDefault();
     // dsiplay message of unfilled field here.
     document.getElementById("error-alert").style.display = block;
+  }
+}
+//
+// CCPayment.addEventListener("click", () => {
+//   alert("credit car payment clicked");
+// });
+//
+// MomoPayment.addEventListener("click", () => {
+//   alert("mobile money payment clicked");
+// });
+//
+// CryptoPayment.addEventListener("click", () => {
+//   alert("crypto Currency payment clicked");
+// });
+
+function displayPaymentOption(event) {
+  selectedRadioBtn = event.target;
+  if (selectedRadioBtn.value == "credit_card") {
+    CCPayment.style.display = "block";
+    MomoPayment.style.display = "none";
+    CryptoPayment.style.display = "none";
+  } else if (selectedRadioBtn.value == "mobile_money") {
+    MomoPayment.style.display = "block";
+    CCPayment.style.display = "none";
+    CryptoPayment.style.display = "none";
+  } else if (selectedRadioBtn.value == "cyrto_currency") {
+    CryptoPayment.style.display = "block";
+    CCPayment.style.display = "none";
+    MomoPayment.style.display = "none";
+  } else {
+    alert("Invalid Option.Please try again");
   }
 }

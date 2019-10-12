@@ -47,3 +47,7 @@ label{
 .phone_part:last-child{
   padding: 0;
 }
+
+#mobile_money_information, #crypto_currency_information{
+  display: none;
+}

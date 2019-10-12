@@ -22,7 +22,7 @@
 
     <div class="container" id="checkout">
       <div class="accordion" id="accordionExample">
-        <form id="checkout_form" action="../php/custom/included_pages/checkout_processor.php" method="post" onsubmit="fieldProcessor(this)">
+        <form id="checkout_form" action="../php/custom/included_pages/checkout_processor.php" method="post" onsubmit="fieldProcessor(this)" name="checkout_form">
           <div class="card">
             <div class="card-header checkout-headers" id="headingOne">
               <h2 class="mb-0">
@@ -149,22 +149,24 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
               <div class="card-body">
                 <!-- Show all acquired information, in a representable formatted form. -->
+                <p>Please Select A Payment Method.</p>
                   <div class="row">
                     <div class="col-12 col-sm-4">
-                      <input id="credit_card_checkbox" type="checkbox" name="credit card" value="card">
+                      <input id="credit_card_checkbox" type="radio" name="payment_method" value="credit_card" checked onclick="displayPaymentOption(event)">
                       <label for="">Credit Card</label>
                     </div>
                     <div class="col-12 col-sm-4">
-                      <input type="checkbox" name="mobile money" value="mobile_money">
+                      <input id="mobile_money_checkbox" type="radio" name="payment_method" value="mobile_money" onclick="displayPaymentOption(event)">
                       <label for="">Mobile Money</label>
                     </div>
                     <div class="col-12 col-sm-4">
-                      <input type="checkbox" name="cyrto currency" value="cyrto_currency">
+                      <input id="crypto_currency_checkbox" type="radio" name="payment_method" value="cyrto_currency" onclick="displayPaymentOption(event)">
                       <label for="">Crypto Currency</label>
                     </div>
                   </div>
 
                   <div id="credit_card_information">
+                    <p>Credit Card Payment</p>
                     <div>
                         <label for="card_number">Card Number</label>
                         <br>
@@ -213,11 +215,11 @@
                   </div>
 
                   <div id="mobile_money_information">
-
+                    <p>Mobile Money Payment</p>
                   </div>
 
                   <div id="crypto_currency_information">
-
+                    <p>Crypto Currency Payment</p>
                   </div>
 
                 <!-- Order Submit Button. -->
@@ -236,12 +238,10 @@
         include '../php/custom/included_pages/footer.php';
     ?>
 
-
     <!-- JavaScript Frameworks and libraries. -->
     <?php include '../php/custom/included_pages/common_js.php'; ?>
     <script src="../js/custom/modal.js" charset="utf-8"></script>
     <script src="../js/custom/checkout.js" charset="utf-8"></script>
-
     <script type="text/javascript">
       $('#collapseOne').collapse({
         toggle: false
