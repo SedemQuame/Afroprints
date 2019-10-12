@@ -21,6 +21,11 @@ $email_address = htmlspecialchars($_POST['email_address']);
 
 $recipient_address = "";
 
+// TODO: Input customer details into the database, if customer is not registered.
+      // return customer if after doing so.
+// TODO: Check if customer is registered
+        // by checking unique fields like email address, if true return customers id.
+
 if(isset($_POST['new_destination'])){
     $recipient_first_name = htmlspecialchars($_POST['diff_first_name']);
     $recipient_last_name = htmlspecialchars($_POST['diff_last_name']);
@@ -31,6 +36,11 @@ if(isset($_POST['new_destination'])){
 
     $recipient_address = $recipient_name . '<br/>' . $recipient_locale . '<br/>' . $optional_notes;
 }
+
+// Payment Method.
+$payment_method = htmlspecialchars($_POST['payment_method']);
+// TODO: Run php module for payment script here which returns a boolean value
+// TODO: such that if true continue with processes otherwise, do nothing.
 
 // Requiring connection Script.
 require_once('db_connection.php');
@@ -68,13 +78,14 @@ if (isset($_SESSION['user_id'])) {
           (:product_list, :product_price, :purchase_date, :customer_id, :ordering_address, :recipient_address, :payment_method);
           ";
 
-  print_r(array(':product_list' => $product_list,
-                       ':product_price' => $product_price,
-                       ':purchase_date' => $purchase_date,
-                       ':customer_id' => $customer_id,
-                       ':ordering_address'=>$ordering_address,
-                       ':recipient_address'=>$recipient_address
-                     ));
+  // print_r(array(':product_list' => $product_list,
+  //              ':product_price' => $product_price,
+  //              ':purchase_date' => $purchase_date,
+  //              ':customer_id' => $customer_id,
+  //              ':ordering_address'=>$ordering_address,
+  //              ':recipient_address'=>$recipient_address,
+  //              ':payment_method' => $payment_method
+  //            ));
 
   $stmt = $pdo->prepare($sql);
 
@@ -83,7 +94,8 @@ if (isset($_SESSION['user_id'])) {
                        ':purchase_date' => $purchase_date,
                        ':customer_id' => $customer_id,
                        ':ordering_address'=>$ordering_address,
-                       ':recipient_address'=>$recipient_address
+                       ':recipient_address'=>$recipient_address,
+                       ':payment_method' => $payment_method
                      ));
 
   // clear the shopping cart now.

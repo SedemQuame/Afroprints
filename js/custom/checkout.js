@@ -98,18 +98,6 @@ function fieldProcessor() {
     document.getElementById("error-alert").style.display = block;
   }
 }
-//
-// CCPayment.addEventListener("click", () => {
-//   alert("credit car payment clicked");
-// });
-//
-// MomoPayment.addEventListener("click", () => {
-//   alert("mobile money payment clicked");
-// });
-//
-// CryptoPayment.addEventListener("click", () => {
-//   alert("crypto Currency payment clicked");
-// });
 
 function displayPaymentOption(event) {
   selectedRadioBtn = event.target;
