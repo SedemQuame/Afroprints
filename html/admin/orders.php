@@ -79,7 +79,7 @@
            $count += 1;
            $order .= '<tr class="row">
                          <th class="col-1 col-lg-1" scope="row">'.$count.'</th>
-                         <td class="col-4 col-lg-4">
+                         <td class="col-3 col-lg-3">
                            <ul>
                              <li class="text-left">
                              Customer Name <br />
@@ -102,12 +102,34 @@
                              '.htmlspecialchars($customer['recipient_address']).'</li>
                            </ul>
                          </td>
-                         <td class="col-3 col-lg-3">
-                           <ul>
-                             <li class="text-left">Product ID</li>
-                             <li class="text-left">Product Name(s)</li>
-                             <li class="text-left">Product Quantity</li>
-                           </ul>
+                         <td class="col-4 col-lg-4">
+                           <table class="table table-sm">
+                             <thead>
+                               <tr>
+                                 <th class="col-1 col-lg-1" scope="col">#</th>
+                                 <th class="col-3 col-lg-2" scope="col">Name</th>
+                                 <th class="col-6 col-lg-6" scope="col">Image</th>
+                                 <th class="col-2 col-lg-2" scope="col">Type</th>
+                                 <th class="col-1 col-lg-1" scope="col">Quantity</th>
+                               </tr>
+                             </thead>
+                             <tbody>
+                               <tr>
+                                 <td class="col-1 col-lg-1" scope="col">#</td>
+                                 <td class="col-2 col-lg-2" scope="col">Item Name</td>
+                                 <td class="col-6 col-lg-6" scope="col">Item Image</td>
+                                 <td class="col-2 col-lg-2" scope="col">Item Type</td>
+                                 <td class="col-1 col-lg-1" scope="col">Item Quantity</th>
+                               </tr>
+                               <tr>
+                                 <td class="col-1 col-lg-1" scope="col">#</td>
+                                 <td class="col-2 col-lg-2" scope="col">Item Name</td>
+                                 <td class="col-6 col-lg-6" scope="col">Item Image</td>
+                                 <td class="col-2 col-lg-2" scope="col">Item Type</td>
+                                 <td class="col-1 col-lg-1" scope="col">Item Quantity</th>
+                               </tr>
+                             </tbody>
+                           </table>
                          </td>
                          <td class="col-1 col-lg-1">'.htmlspecialchars($customer['payment_method']).'</td>
                          <td class="col-1 col-lg-1">Pending</td>
