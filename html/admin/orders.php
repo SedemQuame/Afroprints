@@ -20,15 +20,15 @@
     <div class="col-10 col-md-9 dashboard">
       <!-- Place various, tabs here. -->
       <p>Orders Page.</p>
-      <table class="table table-striped">
+      <table class="table">
         <thead class="thead-dark">
           <tr class="row">
             <th class="col-1 col-lg-1" scope="col">Order Id</th>
-            <th class="col-4 col-lg-4" scope="col">Customer Info</th>
-            <th class="col-3 col-lg-3" scope="col">Order Info</th>
-            <th class="col-1 col-lg-1" scope="col">Payment Mode</th>
+            <th class="col-3 col-lg-3" scope="col">Customer Info</th>
+            <th class="col-4 col-lg-4" scope="col">Order Info</th>
+            <th class="col-2 col-lg-2" scope="col">Payment Mode</th>
             <th class="col-1 col-lg-1" scope="col">Status</th>
-            <th class="col-2 col-lg-2" scope="col">Order FulFilled</th>
+            <th class="col-1 col-lg-1" scope="col">Order FulFilled</th>
           </tr>
         </thead>
         <tbody>
@@ -60,9 +60,40 @@
          $count = 0;
 
          foreach ($customers as $customer) {
+          $list = "";
+
+          $items = [];
+          for ($i=0; $i < count($customer['product_list']); $i++) {
+            $sql_statement = "SELECT brand_name, brand_image, brand_type, brand_category
+	                            FROM public.brand;";
+
+            $stmt = $pdo->query($sql_statement);
+
+            while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+              $items = [
+               'name' => $row['brand_name'],
+               'image' => $row['brand_image'],
+               'type' => $row['brand_type'],
+               'category' => $row['brand_category'],
+             ];
+            }
+
+          $list .= '<tr>
+                     <td class="col-1 col-lg-1" scope="col">'.($i + 1).'</td>
+                     <td class="col-2 col-lg-2" scope="col">'.htmlspecialchars($items['name']).'</td>
+                     <td class="col-5 col-lg-5" scope="col">
+                       <img height="50" width="50" src="..\\'.htmlspecialchars($items['image']).'" alt=""/>
+                     </td>
+                     <td class="col-2 col-lg-2" scope="col">'.htmlspecialchars($items['type']).'</td>
+                     <td class="col-1 col-lg-1" scope="col">'.htmlspecialchars($items['category']).'</th>
+                     <td class="col-1 col-lg-1" scope="col">Quantity</th>
+                   </tr>';
+          }
+
+
           $id = $customer['customer_id'];
           $sql = "SELECT cust_name, cust_email, cust_address, cust_contact
-	                FROM public.customer WHERE cust_id = $id;";
+                  FROM public.customer WHERE cust_id = $id;";
 
           $stmt = $pdo->query($sql);
           $credentials = [];
@@ -82,23 +113,23 @@
                          <td class="col-3 col-lg-3">
                            <ul>
                              <li class="text-left">
-                             Customer Name <br />
+                             <b> Customer Name </b> <br />
                              '.htmlspecialchars($credentials['name']).'</li>
                              <hr />
                              <li class="text-left">
-                             Customer Email Address <br />
+                             <b> Customer Email Address </b> <br />
                              '.htmlspecialchars($credentials['email']).'</li>
                              <hr />
                              <li class="text-left">
-                             Customer Phone Number <br />
+                             <b> Customer Phone Number </b> <br />
                              '.htmlspecialchars($credentials['phone_number']).'</li>
                              <hr />
                              <li class="text-left">
-                             Ordering Address <br/>
+                             <b> Ordering Address </b> <br/>
                              '.htmlspecialchars($customer['ordering_address']).'</li>
                              <hr />
                              <li class="text-left">
-                             Shipping Address <br/>
+                             <b> Shipping Address </b> <br/>
                              '.htmlspecialchars($customer['recipient_address']).'</li>
                            </ul>
                          </td>
@@ -107,33 +138,21 @@
                              <thead>
                                <tr>
                                  <th class="col-1 col-lg-1" scope="col">#</th>
-                                 <th class="col-3 col-lg-2" scope="col">Name</th>
-                                 <th class="col-6 col-lg-6" scope="col">Image</th>
+                                 <th class="col-2 col-lg-2" scope="col">Name</th>
+                                 <th class="col-5 col-lg-5" scope="col">Image</th>
                                  <th class="col-2 col-lg-2" scope="col">Type</th>
+                                 <th class="col-1 col-lg-1" scope="col">Category</th>
                                  <th class="col-1 col-lg-1" scope="col">Quantity</th>
                                </tr>
                              </thead>
                              <tbody>
-                               <tr>
-                                 <td class="col-1 col-lg-1" scope="col">#</td>
-                                 <td class="col-2 col-lg-2" scope="col">Item Name</td>
-                                 <td class="col-6 col-lg-6" scope="col">Item Image</td>
-                                 <td class="col-2 col-lg-2" scope="col">Item Type</td>
-                                 <td class="col-1 col-lg-1" scope="col">Item Quantity</th>
-                               </tr>
-                               <tr>
-                                 <td class="col-1 col-lg-1" scope="col">#</td>
-                                 <td class="col-2 col-lg-2" scope="col">Item Name</td>
-                                 <td class="col-6 col-lg-6" scope="col">Item Image</td>
-                                 <td class="col-2 col-lg-2" scope="col">Item Type</td>
-                                 <td class="col-1 col-lg-1" scope="col">Item Quantity</th>
-                               </tr>
+                            '.$list.'
                              </tbody>
                            </table>
                          </td>
-                         <td class="col-1 col-lg-1">'.htmlspecialchars($customer['payment_method']).'</td>
+                         <td class="col-2 col-lg-2">'.htmlspecialchars($customer['payment_method']).'</td>
                          <td class="col-1 col-lg-1">Pending</td>
-                         <td class="col-2 col-lg-2">
+                         <td class="col-1 col-lg-1">
                            <form class="" action="index.html" method="post">
                              <label for="">Order FulFilled</label>
                              <!-- Set Value to be the order id of the given field. -->
