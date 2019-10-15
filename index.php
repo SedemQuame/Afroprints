@@ -5,24 +5,24 @@
     <title>Title</title>
     <!--    StyleSheet links.-->
     <?php
-      include '../php/custom/included_pages/meta_data.php';
-      include '../php/custom/sessions.php';
-      include '../php/custom/included_pages/common_styles.php';
+      include 'php/custom/included_pages/meta_data.php';
+      include 'php/custom/sessions.php';
+      include 'php/custom/included_pages/common_styles.php';
     ?>
-    <link rel="stylesheet" href="../css/custom/index.css">
-    <link rel="stylesheet" href="../css/custom/glitch.css">
+    <link rel="stylesheet" href="css/custom/index.css">
+    <link rel="stylesheet" href="css/custom/glitch.css">
 </head>
 <body>
     <?php
         // Nav Bar.
-        include '../php/custom/included_pages/nav.php';
+        include 'php/custom/included_pages/nav.php';
 
         // Featured products.
         // TODO: Change the outlook of the index page, to look different from the other pages.
         // TODO: Let it feature other product types with extra saucy design and outlook.
         // TODO: Add minimalist and sophisticated animations to the various pages.
         // TODO: CREATE A CUSTOM LAYOUT FOR THE INDEX.PHP PAGE.
-        // include '../php/custom/included_pages/featured_products.php';
+        // include 'php/custom/included_pages/featured_products.php';
     ?>
 
 
@@ -33,7 +33,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 infograph">
-          <img class="design_images" src="../africanfashion/africanbags/bag (1).jpg" alt="">
+          <img class="design_images" src="africanfashion/africanbags/bag (1).jpg" alt="">
         </div>
         <div class="col-12 col-md-6 infograph">
           <h1 class="home-page-section-header"> Get beautiful hand crafted Ghanaian Bags.</h1>
@@ -58,13 +58,13 @@
           </p>
         </div>
         <div class="col-12 order-1 order-md-6 col-md-6 infograph">
-          <img class="design_images" src="../africanfashion/africanshoes/shoe (1).jpg" alt="">
+          <img class="design_images" src="africanfashion/africanshoes/shoe (7).jpg" alt="">
         </div>
       </div>
 
       <div class="row">
         <div class="col-12 col-md-6 infograph">
-          <img class="design_images" src="../africanfashion/tops/top (2).jpg" alt="">
+          <img class="design_images" src="africanfashion/tops/top (4).jpg" alt="">
         </div>
         <div class="col-12 col-md-6 infograph">
           <h1 class="home-page-section-header"> Shoes and accessories.</h1>
@@ -95,11 +95,11 @@
     <?php
         // TODO: Must fix the positioning of the footer to work universally in all templates.
         // Footer.
-        include '../php/custom/included_pages/footer.php';
+        include 'php/custom/included_pages/footer.php';
     ?>
 
     <!-- JavaScript Frameworks and libraries. -->
-    <?php include '../php/custom/included_pages/common_js.php'; ?>
-    <script src="../js/custom/modal.js" charset="utf-8"></script>
+    <?php include 'php/custom/included_pages/common_js.php'; ?>
+    <script src="js/custom/modal.js" charset="utf-8"></script>
 </body>
 </html>

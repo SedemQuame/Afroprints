@@ -5,17 +5,17 @@
     <title>Title</title>
     <!--    StyleSheet links.-->
     <?php
-      include '../php/custom/included_pages/meta_data.php';
-      include '../php/custom/sessions.php';
-      include '../php/custom/included_pages/common_styles.php';
+      include 'php/custom/included_pages/meta_data.php';
+      include 'php/custom/sessions.php';
+      include 'php/custom/included_pages/common_styles.php';
     ?>
     <!-- Custom Style Sheets. -->
-    <link rel="stylesheet" href="../css/custom/cart.css">
+    <link rel="stylesheet" href="css/custom/cart.css">
 </head>
 <body>
     <?php
         // Nav Bar.
-        include '../php/custom/included_pages/nav.php';
+        include 'php/custom/included_pages/nav.php';
     ?>
 
 
@@ -23,13 +23,13 @@
           <?php
           // Get array from sessions iterate through array and display
           // in table along with price and other meta data.
-          include '../php/custom/included_pages/db_connection.php';
+          include 'php/custom/included_pages/db_connection.php';
 
           if(!isset($_SESSION['cart-items'])){
             // Show empty message and encourage, users to shop.
             echo '<div class="style-caption"><p class="lead">Shopping cart.</p></div>
                   <div class="empty-cart">
-                    <img src="../media/images/cart.svg" alt="cart-image" height="170vh" width="170vw">
+                    <img src="media/images/cart.svg" alt="cart-image" height="170vh" width="170vw">
                     <p class="lead empty-cart-text">Empty Cart</p>
                   </div>';
           }else{
@@ -38,7 +38,7 @@
             if(empty($cart_items)){
               echo '<div class="style-caption"><p class="lead">Shopping cart.</p></div>
                     <div class="empty-cart">
-                      <img src="../media/images/cart.svg" alt="cart-image" height="170vh" width="170vw">
+                      <img src="media/images/cart.svg" alt="cart-image" height="170vh" width="170vw">
                       <p class="lead empty-cart-text">Empty Cart</p>
                     </div>';
             } else{
@@ -80,9 +80,9 @@
                                   <td class="table-quantity">1</td>
                                   <td class="table-total">Ghc '.($row['brand_price']*1).'</td>
                                   <td class="remove">
-                                    <form class="" action="../php/custom/cart-processor.php?action=remove&item_id='.$row['brand_id'].'" method="post">
+                                    <form class="" action="php/custom/cart-processor.php?action=remove&item_id='.$row['brand_id'].'" method="post">
                                       <button class="btn remove-btn" type="submit" name="button">
-                                       <img src="../media/images/dustbin.png" alt="remove-item" width="32px" height="32px">
+                                       <img src="media/images/dustbin.png" alt="remove-item" width="32px" height="32px">
                                       </button>
                                     </form>
                                   </td>
@@ -101,7 +101,7 @@
 
              $element .=  '</th>
                                 <td class="remove clear-btn-container">
-                                   <form class="remove-all-form" action="../php/custom/cart-processor.php?action=remove_all" method="post">
+                                   <form class="remove-all-form" action="php/custom/cart-processor.php?action=remove_all" method="post">
                                      <button class="btn cart-remove-button" type="submit" name="button">Clear Cart</button>
                                    </form>
                                 </td>
@@ -135,16 +135,16 @@
     <?php
         // TODO: Must fix the positioning of the footer to work universally in all templates.
         // Footer.
-        include '../php/custom/included_pages/footer.php';
+        include 'php/custom/included_pages/footer.php';
     ?>
 
     <!-- JavaScript Frameworks and libraries. -->
-    <?php include '../php/custom/included_pages/common_js.php'; ?>
-    <script src="../js/custom/modal.js" charset="utf-8"></script>
+    <?php include 'php/custom/included_pages/common_js.php'; ?>
+    <script src="js/custom/modal.js" charset="utf-8"></script>
 
     <!-- JavaScript Frameworks and libraries. -->
-    <?php include '../php/custom/included_pages/common_js.php'; ?>
-    <script src="../js/custom/modal.js" charset="utf-8"></script>
+    <?php include 'php/custom/included_pages/common_js.php'; ?>
+    <script src="js/custom/modal.js" charset="utf-8"></script>
 </body>
   </body>
 </html>

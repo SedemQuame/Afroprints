@@ -22,11 +22,11 @@ if (session_start() && isset($_SESSION['user_id'])){
     if (($email_address == $db_email) && ($password == $db_password)) {
       // Correct grant user acces to site.
       echo "<br>user authentication, successful.";
-      // header('Location: ../../html/index.php');
+      // header('Location: ../../index.php');
     } else {
       // Redirect users, login page and display appropriate error.
       echo "<br>user authentication, failed.";
-      // header('Location: ../../html/login.php');
+      // header('Location: ../../login.php');
       // TODO: Attach error message to the header above.
     }
 }
@@ -47,13 +47,13 @@ else{
           session_start();
           $_SESSION['user_id'] = htmlspecialchars($row[2]);
           echo "<br>user authentication, successful.";
-          header('Location: ../../html/index.php');
+          header('Location: ../../index.php');
         }
       } else {
       // Redirect users, login page and display appropriate error.
       echo "<br>user authentication, failed.";
       $msg = "login, failed please try again.";
-      header('Location: ../../html/login.php?msg='.$msg);
+      header('Location: ../../login.php?msg='.$msg);
       // TODO: Attach error message to the header above.
       }
       // echo "end of else condition.";

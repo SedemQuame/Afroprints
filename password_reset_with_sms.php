@@ -5,16 +5,16 @@
 <title>Password Reset</title>
   <!--    StyleSheet links.-->
   <?php
-    include '../php/custom/sessions.php';
-    include '../php/custom/included_pages/common_styles.php';
+    include 'php/custom/sessions.php';
+    include 'php/custom/included_pages/common_styles.php';
   ?>
-  <link rel="stylesheet" href="../css/custom/signup.css"/>
-  <link rel="stylesheet" href="../css/custom/password_reset.css">
+  <link rel="stylesheet" href="css/custom/signup.css"/>
+  <link rel="stylesheet" href="css/custom/password_reset.css">
 </head>
 <body>
   <?php
       // Nav Bar.
-      include '../php/custom/included_pages/nav.php';
+      include 'php/custom/included_pages/nav.php';
   ?>
 
   <?php
@@ -36,7 +36,7 @@
 </p>
 
 <div class="row">
-  <form action="../php/custom/pwsd_reset.php?callertype=sms" method="post" enctype="" class="col-9 col-md-6 col-lg-3">
+  <form action="php/custom/pwsd_reset.php?callertype=sms" method="post" enctype="" class="col-9 col-md-6 col-lg-3">
     <!--This is the login page.-->
     <div>
         <label for="phone_number">Phone number</label>
@@ -60,18 +60,18 @@
 
   <?php
       // Footer.
-      include '../php/custom/included_pages/footer.php';
+      include 'php/custom/included_pages/footer.php';
   ?>
 
   <!--JavaScript Files.-->
   <!-- Custom JavaScript Files. -->
-  <script src="../js/custom/password_reset.js"></script>
+  <script src="js/custom/password_reset.js"></script>
 
   <!-- JavaScript Frameworks and libraries. -->
-  <script src="../js/framework/holder.js" charset="utf-8"></script>
+  <script src="js/framework/holder.js" charset="utf-8"></script>
 
   <!-- JavaScript Frameworks and libraries. -->
-  <?php include '../php/custom/included_pages/common_js.php'; ?>
-  <script src="../js/custom/modal.js" charset="utf-8"></script>
+  <?php include 'php/custom/included_pages/common_js.php'; ?>
+  <script src="js/custom/modal.js" charset="utf-8"></script>
   </body>
 </html>

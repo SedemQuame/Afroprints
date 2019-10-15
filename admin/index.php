@@ -5,16 +5,16 @@
     <title>Title</title>
     <!--    StyleSheet links.-->
     <?php
-      include '../../php/custom/included_pages/meta_data.php';
-      include '../../php/custom/sessions.php';
-      include '../../php/custom/included_pages/admin_common_styles.php';
+      include '../php/custom/included_pages/meta_data.php';
+      include '../php/custom/sessions.php';
+      include '../php/custom/included_pages/admin_common_styles.php';
     ?>
-    <link rel="stylesheet" href="../../css/custom/admin_index.css">
-    <link rel="stylesheet" href="../../css/custom/index.css">
+    <link rel="stylesheet" href="../css/custom/admin_index.css">
+    <link rel="stylesheet" href="../css/custom/index.css">
   </head>
   <body class="row">
     <div class="col-2 col-md-3 pane">
-      <?php include '../../php/custom/included_pages/admin_dashboard.php'; ?>
+      <?php include '../php/custom/included_pages/admin_dashboard.php'; ?>
     </div>
 
     <div class="col-10 col-md-9 dashboard">
@@ -43,7 +43,7 @@
           <img id="img_element" src="holder.js/300x200" alt="">
         </div>
 
-        <form action="../../php/custom/upload_items.php" method="post" enctype="multipart/form-data">
+        <form action="../php/custom/upload_items.php" method="post" enctype="multipart/form-data">
           <div class="">
             <label for="">Item Name </label>
             <input class="form-control" type="text" id="" name="item_name" required>
@@ -95,9 +95,9 @@
       <br>
     </div>
     <!-- JavaScript Frameworks and libraries. -->
-    <script src="../../js/framework/holder.js" charset="utf-8"></script>
-    <?php include '../../php/custom/included_pages/common_js.php'; ?>
-    <script src="../../js/custom/modal.js" charset="utf-8"></script>
-    <script src="../../js/custom/admin.js" charset="utf-8"></script>
+    <script src="../js/framework/holder.js" charset="utf-8"></script>
+    <?php include '../php/custom/included_pages/common_js.php'; ?>
+    <script src="../js/custom/modal.js" charset="utf-8"></script>
+    <script src="../js/custom/admin.js" charset="utf-8"></script>
   </body>
 </html>

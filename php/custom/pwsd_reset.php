@@ -21,7 +21,7 @@
   *2. include 'b.php';
   */
   $randomly_generated_number = random_int($min, $max);
-  $page = '../../html/final_pwsd_reset.php';
+  $page = '../../final_pwsd_reset.php';
 
   if($caller_type == "sms"){
 

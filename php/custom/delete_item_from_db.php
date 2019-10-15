@@ -18,5 +18,5 @@ if ($stmt->execute()) {
 }
 
 // Return to calling page.
-header("location: ../../html/admin/product_category.php?msg=".$msg);
+header("location: ../../admin/product_category.php?msg=".$msg);
 ?>

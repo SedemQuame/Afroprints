@@ -47,12 +47,12 @@ if ($password == $confirm_password) {
   $_SESSION['password'] = $password;
 
   // redirecting user to homepage.
-  header('Location: ../../html/index.php');
+  header('Location: ../../index.php');
 
   }else {
     // redirecting user to signupage with appropriate error message.
     $msg = "Passwords, provided don't match.";
-    header('Location: ../../html/signup.php?msg='.$msg);
+    header('Location: ../../signup.php?msg='.$msg);
 }
 
 

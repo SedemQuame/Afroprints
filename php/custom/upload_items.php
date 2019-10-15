@@ -9,8 +9,8 @@
 
   // $currentDir = getcwd();
   $currentDir = __dir__;
-  $uploadDirectory = "\..\..\africanfashion\\";
-  $imgPath = "..\\africanfashion\\";
+  $uploadDirectory = "\\..\\..\\africanfashion\\";
+  $imgPath = "africanfashion\\";
 
   if ($item_type == "tops") {
     $uploadDirectory .= "tops\\";
@@ -27,7 +27,7 @@
   } else {
     // code...
     $msg = "Invalid Product Type";
-    header("../../html/admin/index.php?msg=".$msg);
+    header("../../admin/index.php?msg=".$msg);
   }
 
 
@@ -74,10 +74,10 @@
          $msg = "";
          if ($didUpload) {
              $msg .= "The file " . basename($fileName) . " has been uploaded";
-             header("location: ../../html/admin/index.php?msg=".$msg);
+             header("location: ../../admin/index.php?msg=".$msg);
          } else {
              $msg .= "An error occurred somewhere. Try again";
-             header("location: ../../html/admin/index.php?msg=".$msg);
+             header("location: ../../admin/index.php?msg=".$msg);
          }
      } else {
          foreach ($errors as $error) {

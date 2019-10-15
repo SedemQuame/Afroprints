@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <title>Check Out</title>
     <?php
-      include '../php/custom/included_pages/meta_data.php';
-      include '../php/custom/sessions.php';
-      include '../php/custom/included_pages/common_styles.php';
+      include 'php/custom/included_pages/meta_data.php';
+      include 'php/custom/sessions.php';
+      include 'php/custom/included_pages/common_styles.php';
     ?>
-    <link rel="stylesheet" href="../css/custom/checkout.css">
+    <link rel="stylesheet" href="css/custom/checkout.css">
   </head>
   <body>
     <?php
         // Nav Bar.
-        include '../php/custom/included_pages/nav.php';
+        include 'php/custom/included_pages/nav.php';
     ?>
 
     <div id="error-alert" class="alert alert-danger" role="alert">
@@ -22,7 +22,7 @@
 
     <div class="container" id="checkout">
       <div class="accordion" id="accordionExample">
-        <form id="checkout_form" action="../php/custom/included_pages/checkout_processor.php" method="post" onsubmit="fieldProcessor(this)" name="checkout_form">
+        <form id="checkout_form" action="php/custom/included_pages/checkout_processor.php" method="post" onsubmit="fieldProcessor(this)" name="checkout_form">
           <div class="card">
             <div class="card-header checkout-headers" id="headingOne">
               <h2 class="mb-0">
@@ -235,13 +235,13 @@
     <?php
         // TODO: Must fix the positioning of the footer to work universally in all templates.
         // Footer.
-        include '../php/custom/included_pages/footer.php';
+        include 'php/custom/included_pages/footer.php';
     ?>
 
     <!-- JavaScript Frameworks and libraries. -->
-    <?php include '../php/custom/included_pages/common_js.php'; ?>
-    <script src="../js/custom/modal.js" charset="utf-8"></script>
-    <script src="../js/custom/checkout.js" charset="utf-8"></script>
+    <?php include 'php/custom/included_pages/common_js.php'; ?>
+    <script src="js/custom/modal.js" charset="utf-8"></script>
+    <script src="js/custom/checkout.js" charset="utf-8"></script>
     <script type="text/javascript">
       $('#collapseOne').collapse({
         toggle: false

@@ -5,15 +5,15 @@
     <title>Password Reset</title>
     <!--    StyleSheet links.-->
     <?php
-      include '../php/custom/sessions.php';
-      include '../php/custom/included_pages/common_styles.php';
+      include 'php/custom/sessions.php';
+      include 'php/custom/included_pages/common_styles.php';
     ?>
-    <link rel="stylesheet" href="../css/custom/signup.css"/>
+    <link rel="stylesheet" href="css/custom/signup.css"/>
   </head>
   <body>
     <?php
         // Nav Bar.
-        include '../php/custom/included_pages/nav.php';
+        include 'php/custom/included_pages/nav.php';
     ?>
 
     <p class="login-page-header text-center">Reset Password</p>
@@ -25,7 +25,7 @@
         tempor incididunt ut labore et dolore magna aliqua.
     </p>
 
-    <form action="../php/custom/check_reset_info.php" method="post">
+    <form action="php/custom/check_reset_info.php" method="post">
       <div>
           <label for="reset_pin">Reset Pin</label>
           <br>
@@ -52,6 +52,6 @@
   </body>
 
   <!-- JavaScript Frameworks and libraries. -->
-  <?php include '../php/custom/included_pages/common_js.php'; ?>
-  <script src="../js/custom/modal.js" charset="utf-8"></script>
+  <?php include 'php/custom/included_pages/common_js.php'; ?>
+  <script src="js/custom/modal.js" charset="utf-8"></script>
 </html>

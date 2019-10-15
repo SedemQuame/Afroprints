@@ -17,7 +17,7 @@
       }else{
           array_push($_SESSION['cart-items'], $item_id);
       }
-      header('location:../../html/cart.php');
+      header('location:../../cart.php');
       break;
 
     case 'remove':
@@ -37,12 +37,12 @@
           }
           $_SESSION['cart-items'] = $temp_arr;
         }
-        header('location:../../html/cart.php');
+        header('location:../../cart.php');
       break;
 
     case 'remove_all':
       unset($_SESSION['cart-items']);
-      header('location:../../html/cart.php');
+      header('location:../../cart.php');
       break;
 
     default:

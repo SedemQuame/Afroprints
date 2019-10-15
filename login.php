@@ -5,15 +5,15 @@
     <title>Login</title>
     <!--    Stylesheets.-->
     <?php
-      include '../php/custom/sessions.php';
-      include '../php/custom/included_pages/common_styles.php';
+      include 'php/custom/sessions.php';
+      include 'php/custom/included_pages/common_styles.php';
     ?>
-    <link rel="stylesheet" href="../css/custom/signup.css"/>
+    <link rel="stylesheet" href="css/custom/signup.css"/>
 </head>
 <body>
   <?php
       // Nav Bar.
-      include '../php/custom/included_pages/nav.php';
+      include 'php/custom/included_pages/nav.php';
   ?>
 
   <?php
@@ -35,7 +35,7 @@
 
 
   <div class="row">
-    <form action="../php/custom/loginScript.php" method="post" enctype="" class="col-9 col-md-6 col-lg-3">
+    <form action="php/custom/loginScript.php" method="post" enctype="" class="col-9 col-md-6 col-lg-3">
       <!--This is the login page.-->
       <div>
           <label for="email_address">Email Address</label>
@@ -73,15 +73,15 @@
 
   <?php
       // Footer.
-      include '../php/custom/included_pages/footer.php';
+      include 'php/custom/included_pages/footer.php';
   ?>
 
   <!--JavaScript Files.-->
   <!-- Custom JavaScript Files. -->
-  <script src="../js/custom/login.js"></script>
+  <script src="js/custom/login.js"></script>
 
   <!-- JavaScript Frameworks and libraries. -->
-  <?php include '../php/custom/included_pages/common_js.php'; ?>
-  <script src="../js/custom/modal.js" charset="utf-8"></script>
+  <?php include 'php/custom/included_pages/common_js.php'; ?>
+  <script src="js/custom/modal.js" charset="utf-8"></script>
 </body>
 </html>

@@ -5,27 +5,28 @@
     <title></title>
     <!--    StyleSheet links.-->
     <?php
-      include '../php/custom/sessions.php';
-      include '../php/custom/included_pages/common_styles.php';
+      include 'php/custom/sessions.php';
+      include 'php/custom/included_pages/common_styles.php';
     ?>
-    <link rel="stylesheet" href="../css/framework/animate.css">
-    <link rel="stylesheet" href="../css/custom/products.css">
-    <link rel="stylesheet" href="../css/custom/index.css">
+    <link rel="stylesheet" href="css/framework/animate.css">
+    <link rel="stylesheet" href="css/custom/products.css">
+    <link rel="stylesheet" href="css/custom/index.css">
 
   </head>
   <body>
     <?php
         // Nav Bar.
-        include '../php/custom/included_pages/nav.php';
+        include 'php/custom/included_pages/nav.php';
         $page_name = $_GET['item'];
         // Features_products.php
-        include '../php/custom/included_pages/featured_products.php';
+        include 'php/custom/included_pages/featured_products.php';
     ?>
 
     <?php
         // Footer.
-        include '../php/custom/included_pages/footer.php';
+        include 'php/custom/included_pages/footer.php';
     ?>
+
 
     <!-- Modal box for the dsiplaying selected items. -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -46,10 +47,10 @@
 
     <!--JavaScript Files.-->
     <!-- Custom JavaScript Files. -->
-    <script src="../js/custom/cart.js" charset="utf-8"></script>
+    <script src="js/custom/cart.js" charset="utf-8"></script>
 
     <!-- JavaScript Frameworks and libraries. -->
-    <?php include '../php/custom/included_pages/common_js.php'; ?>
-    <script src="../js/custom/modal.js" charset="utf-8"></script>
+    <?php include 'php/custom/included_pages/common_js.php'; ?>
+    <script src="js/custom/modal.js" charset="utf-8"></script>
   </body>
 </html>

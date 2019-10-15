@@ -5,16 +5,16 @@
     <title>Title</title>
     <!--    StyleSheet links.-->
     <?php
-      include '../../php/custom/included_pages/meta_data.php';
-      include '../../php/custom/sessions.php';
-      include '../../php/custom/included_pages/admin_common_styles.php';
+      include '../php/custom/included_pages/meta_data.php';
+      include '../php/custom/sessions.php';
+      include '../php/custom/included_pages/admin_common_styles.php';
     ?>
-    <link rel="stylesheet" href="../../css/custom/admin_index.css">
-    <link rel="stylesheet" href="../../css/custom/index.css">
+    <link rel="stylesheet" href="../css/custom/admin_index.css">
+    <link rel="stylesheet" href="../css/custom/index.css">
   </head>
   <body class="row">
     <div class="col-2 col-md-3 pane">
-      <?php include '../../php/custom/included_pages/admin_dashboard.php'; ?>
+      <?php include '../php/custom/included_pages/admin_dashboard.php'; ?>
     </div>
 
     <div class="col-10 col-md-9 dashboard">
@@ -60,7 +60,7 @@
         <tbody>
 
           <?php
-            include '../../php/custom/included_pages/db_connection.php';
+            include '../php/custom/included_pages/db_connection.php';
 
             $sql = "SELECT brand_id, brand_name, brand_description, brand_image, brand_type, brand_price, brand_category
 	                 FROM public.brand;";
@@ -94,7 +94,7 @@
                          <td class="col-1 col-lg-1">'.htmlspecialchars($stock['type']).'</td>
                          <td class="col-1 col-lg-1">'.htmlspecialchars($stock['price']).'</td>
                          <td class="col-1 col-lg-1">
-                           <form class="" action="../../php/custom/delete_item_from_db.php" method="post">
+                           <form class="" action="../php/custom/delete_item_from_db.php" method="post">
                              <input class="btn btn-danger" type="submit" name="" value="Delete">
                              <input type="hidden" name="prdt_id" value="'.htmlspecialchars($stock['id']).'">
                            </form>
@@ -108,8 +108,8 @@
       </table>
     </div>
     <!-- JavaScript Frameworks and libraries. -->
-    <?php include '../../php/custom/included_pages/common_js.php'; ?>
-    <script src="../../js/custom/modal.js" charset="utf-8"></script>
-    <script src="../../js/custom/admin.js" charset="utf-8"></script>
+    <?php include '../php/custom/included_pages/common_js.php'; ?>
+    <script src="../js/custom/modal.js" charset="utf-8"></script>
+    <script src="../js/custom/admin.js" charset="utf-8"></script>
   </body>
 </html>

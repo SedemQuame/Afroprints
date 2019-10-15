@@ -5,16 +5,16 @@
     <title>Title</title>
     <!--    StyleSheet links.-->
     <?php
-      include '../../php/custom/included_pages/meta_data.php';
-      // include '../../php/custom/sessions.php';
-      include '../../php/custom/included_pages/admin_common_styles.php';
+      include '../php/custom/included_pages/meta_data.php';
+      // include '../php/custom/sessions.php';
+      include '../php/custom/included_pages/admin_common_styles.php';
     ?>
-    <link rel="stylesheet" href="../../css/custom/admin_index.css">
-    <!-- <link rel="stylesheet" href="../../css/custom/index.css"> -->
+    <link rel="stylesheet" href="../css/custom/admin_index.css">
+    <!-- <link rel="stylesheet" href="../css/custom/index.css"> -->
   </head>
   <body class="row">
     <div class="col-2 col-md-3 pane">
-      <?php include '../../php/custom/included_pages/admin_dashboard.php'; ?>
+      <?php include '../php/custom/included_pages/admin_dashboard.php'; ?>
     </div>
 
     <div class="col-10 col-md-9 dashboard">
@@ -34,7 +34,7 @@
         <tbody>
 
           <?php
-          include '../../php/custom/included_pages/db_connection.php';
+          include '../php/custom/included_pages/db_connection.php';
 
           $sql = "SELECT purchase_id, total_price, product_list, purchase_date, cust_id,
                   ordering_address, recipient_address, payment_method

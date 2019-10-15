@@ -18,7 +18,7 @@
     * -Run database mini script to change the given users, credentials i.e passwords.
     */
     // -Redirect user to login page.
-    $page = '../../html/login.php';
+    $page = '../../login.php';
     header('Location: ' . $page);
   }else{
     echo "failure";
