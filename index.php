@@ -33,7 +33,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 infograph">
-          <img class="design_images" src="africanfashion/africanbags/bag (1).jpg" alt="">
+          <img class="design_images" src="africanfashion/africanbags/handbag.png" alt="">
         </div>
         <div class="col-12 col-md-6 infograph">
           <h1 class="home-page-section-header"> Get beautiful hand crafted Ghanaian Bags.</h1>
@@ -53,18 +53,18 @@
           <p class="text-center">
             Get the latest african tees on the market delivered right onto your door step.
             Add a color to your wordrobe, rock dresses with witty quotes,mild profanity,
-            and some of out best jokes.
+            and some of our best jokes.
             Take the african culture with you, everywhere you go.
           </p>
         </div>
         <div class="col-12 order-1 order-md-6 col-md-6 infograph">
-          <img class="design_images" src="africanfashion/africanshoes/shoe (7).jpg" alt="">
+          <img class="design_images" src="africanfashion/tops/african_top.jpg" alt="">
         </div>
       </div>
 
       <div class="row">
         <div class="col-12 col-md-6 infograph">
-          <img class="design_images" src="africanfashion/tops/top (4).jpg" alt="">
+          <img class="design_images" src="africanfashion/africanshoes/africanshoe.jpg" alt="">
         </div>
         <div class="col-12 col-md-6 infograph">
           <h1 class="home-page-section-header"> Shoes and accessories.</h1>

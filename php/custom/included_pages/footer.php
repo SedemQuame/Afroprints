@@ -69,11 +69,11 @@
       <h6 class="footer-section-header text-center"> Payment Platforms </h6>
 
       <ul class="list-inline">
-        <li class="list-inline-item"> <a href="#">Visa</a> </li>
-        <li class="list-inline-item"> <a href="#">Stripe</a>  </li>
-        <li class="list-inline-item"> <a href="#">Paypal</a> </li>
-        <li class="list-inline-item"> <a href="#">MasterCard</a>  </li>
-        <li class="list-inline-item"> <a href="#">Crypto Coins</a> </li>
+        <li class="list-inline-item"> <p>Visa</p> </li>
+        <li class="list-inline-item"> <p>Stripe</p> </li>
+        <li class="list-inline-item"> <p>Paypal</p> </li>
+        <li class="list-inline-item"> <p>MasterCard</p>  </li>
+        <li class="list-inline-item"> <p>Crypto Coins</p> </li>
       </ul>
     </div>
 
