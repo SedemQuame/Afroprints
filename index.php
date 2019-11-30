@@ -16,7 +16,6 @@
     <?php
         // Nav Bar.
         include 'php/custom/included_pages/nav.php';
-
         // Featured products.
         // TODO: Change the outlook of the index page, to look different from the other pages.
         // TODO: Let it feature other product types with extra saucy design and outlook.
@@ -80,9 +79,9 @@
     <p class="text-center sign-up-header">Sign Up For Our Newsletters.</p>
     <div id="user-email-insertion">
         <!--This div will act as place to get user email-address (reference: ohemmma ohene.)-->
-        <form class="" action="" type="">
+        <form class="" action="php\custom\included_pages\email_list.php" method="POST">
             <label for="get-user-email">
-                <input class="form-control index-form-elements" id="get-user-email" type="text" placeholder="Email Address" >
+                <input class="form-control index-form-elements" id="get-user-email" type="text" placeholder="Email Address" name="emailAddress">
             </label>
             <button id="email-submission-newsletter" class="btn index-form-elements" type="submit" value="submit">Submit</button>
         </form>
