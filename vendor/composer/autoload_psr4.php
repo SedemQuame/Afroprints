@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
-    'Twilio\\' => array($vendorDir . '/twilio/sdk/Twilio'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\OptionsResolver\\' => array($vendorDir . '/symfony/options-resolver'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
