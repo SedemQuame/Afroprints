@@ -1,53 +1,58 @@
-#error-alert{
-  display: none;
+#error-alert {
+    display: none;
 }
 
 .checkout_inputs {
     padding: 0 15px;
 }
 
-.checkout-headers{
-  background-color: #353b48;
+.checkout-headers {
+    background-color: #353b48;
 }
 
-#checkout{
-  margin-bottom: 55px;
+#checkout {
+    margin-bottom: 55px;
 }
 
-.btn-field{
-  color: #fff;
+.btn-field {
+    color: #fff;
 }
 
-.btn-field:hover{
-  color: #fff;
+.btn-field:hover {
+    color: #fff;
 }
 
-label{
-  margin-bottom: 0.1rem;
+label {
+    margin-bottom: 0.1rem;
 }
 
-.form-control{
-  margin-bottom: 1rem;
+.form-control {
+    margin-bottom: 1rem;
 }
 
-#address{
-  margin-bottom: 0rem;
-  border-bottom: 0px;
+#address {
+    margin-bottom: 0rem;
+    border-bottom: 0px;
 }
 
-.phone_part{
-  padding-left: 0;
-  padding-right: 10px;
+.phone_part {
+    padding-left: 0;
+    padding-right: 10px;
 }
 
-.phone_part input{
-  padding: 5px;
+.phone_part input {
+    padding: 5px;
 }
 
-.phone_part:last-child{
-  padding: 0;
+.phone_part:last-child {
+    padding: 0;
 }
 
-#mobile_money_information, #crypto_currency_information{
-  display: none;
+#mobile_money_information,
+#crypto_currency_information {
+    display: none;
+}
+
+.payment-section-header {
+    margin-left: 13px;
 }

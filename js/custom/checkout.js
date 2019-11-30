@@ -32,88 +32,88 @@ let order_notes = document.getElementById("diff_optional_notes");
 
 // funtion to determine state of the various input fields.
 function checkField(element) {
-  // check if field is valid.
-  console.log("Value" + element.value);
+    // check if field is valid.
+    console.log("Value" + element.value);
 }
 
 // Create an array, of the various fields.
 let arrOfBillingAddressFields = [
-  first_name,
-  last_name,
-  address,
-  locale,
-  number_format,
-  phone_number,
-  email_address
+    first_name,
+    last_name,
+    address,
+    locale,
+    number_format,
+    phone_number,
+    email_address
 ];
 
 let arrOfShippingAddressFields = [
-  diff_first_name,
-  diff_last_name,
-  diff_locale,
-  order_notes
+    diff_first_name,
+    diff_last_name,
+    diff_locale,
+    order_notes
 ];
 
 // Place fields of check reviews here.
 let arrOfCheckReviews = [];
 
 function fieldProcessor() {
-  let bool1,
-    bool2 = null;
+    let bool1,
+        bool2 = null;
 
-  // Refactor code this shit is just SO ugly an unefficient.
-  if (
-    JSON.stringify([]) ==
-    JSON.stringify(
-      arrOfBillingAddressFields.filter(element => element.value == "")
-    )
-  ) {
-    bool1 = true;
-  } else {
-    event.preventDefault();
-  }
-
-  if (document.getElementById("diff_shipping_destination").checked) {
+    // Refactor code this shit is just SO ugly an unefficient.
     if (
-      JSON.stringify([]) ==
-      JSON.stringify(
-        arrOfShippingAddressFields.filter(element => element.value == "")
-      )
+        JSON.stringify([]) ==
+        JSON.stringify(
+            arrOfBillingAddressFields.filter(element => element.value == "")
+        )
     ) {
-      bool2 = true;
+        bool1 = true;
     } else {
-      event.preventDefault();
+        event.preventDefault();
     }
-  }
 
-  // Submit from if no, problems occured
-  console.log(bool1);
-  console.log(bool2);
-  if (bool1 && (bool2 == null || bool2)) {
-    // submit form.
-    document.getElementById("checkout_form").submit();
-  } else {
-    event.preventDefault();
-    // dsiplay message of unfilled field here.
-    document.getElementById("error-alert").style.display = block;
-  }
+    if (document.getElementById("diff_shipping_destination").checked) {
+        if (
+            JSON.stringify([]) ==
+            JSON.stringify(
+                arrOfShippingAddressFields.filter(element => element.value == "")
+            )
+        ) {
+            bool2 = true;
+        } else {
+            event.preventDefault();
+        }
+    }
+
+    // Submit from if no, problems occured
+    console.log(bool1);
+    console.log(bool2);
+    if (bool1 && (bool2 == null || bool2)) {
+        // submit form.
+        document.getElementById("checkout_form").submit();
+    } else {
+        event.preventDefault();
+        // dsiplay message of unfilled field here.
+        document.getElementById("error-alert").style.display = block;
+    }
 }
 
 function displayPaymentOption(event) {
-  selectedRadioBtn = event.target;
-  if (selectedRadioBtn.value == "credit_card") {
-    CCPayment.style.display = "block";
-    MomoPayment.style.display = "none";
-    CryptoPayment.style.display = "none";
-  } else if (selectedRadioBtn.value == "mobile_money") {
-    MomoPayment.style.display = "block";
-    CCPayment.style.display = "none";
-    CryptoPayment.style.display = "none";
-  } else if (selectedRadioBtn.value == "cyrto_currency") {
-    CryptoPayment.style.display = "block";
-    CCPayment.style.display = "none";
-    MomoPayment.style.display = "none";
-  } else {
-    alert("Invalid Option.Please try again");
-  }
+    selectedRadioBtn = event.target;
+    if (selectedRadioBtn.value == "credit_card") {
+        CCPayment.style.display = "block";
+        MomoPayment.style.display = "none";
+        CryptoPayment.style.display = "none";
+    } else if (selectedRadioBtn.value == "mobile_money") {
+        MomoPayment.style.display = "block";
+        CCPayment.style.display = "none";
+        CryptoPayment.style.display = "none";
+    } else if (selectedRadioBtn.value == "cyrto_currency") {
+        CryptoPayment.style.display = "block";
+        CCPayment.style.display = "none";
+        MomoPayment.style.display = "none";
+    } else {
+        alert("Invalid Option.Please try again");
+    }
 }

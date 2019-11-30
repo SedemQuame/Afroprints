@@ -165,61 +165,73 @@
                     </div>
                   </div>
 
-                  <div id="credit_card_information">
-                    <p>Credit Card Payment</p>
-                    <div>
+                  <div id="credit_card_information" class="row">
+                    <p class="payment-section-header">Credit Card Payment</p>
+                    <br>
+                    <div class="col-12">
                         <label for="card_number">Card Number</label>
                         <br>
-                        <input class="form-control" name="card_number" type="text" id="card_number" placeholder="" disabled>
+                        <input id="card-number" class="form-control" name="card_number" type="text" id="card_number" placeholder="">
                     </div>
 
-                    <div class="row">
-                      <div class="col-4">
+                      <div class="col-12 col-md-4">
                           <label for="expiration_month">Expiration Month</label>
                           <br>
-                          <input class="form-control" name="expiration_month" type="text" id="expiration_month" placeholder="MM" disabled>
+                          <select id="expiration-month" class="form-control custom-select" name="expiration_month" type="text" id="expiration_month" placeholder="MM">
+                            <option selected>MM</option>
+                            <?php
+                            $option = '';
+                            for ($i=1; $i < 13; $i++) { 
+                              $option .= '<option value="'.$i.'">'.$i.'</option>';
+                            }
+                            echo $option;
+                            ?>
+                          </select>
                       </div>
 
-                      <div class="col-4">
-                          <label for="expiration_year">Expiration Year</label>
+                      <div class="col-12 col-md-4">
+                          <label id="expiration-year" for="expiration_year">Expiration Year</label>
                           <br>
-                          <input class="form-control" name="expiration_year" type="text" id="expiration_year" placeholder="YYYY" disabled>
+                          <select class="form-control custom-select" name="expiration_year" type="text" id="expiration_year" placeholder="YYYY">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
                       </div>
 
-                      <div class="col-3">
+                      <div class="col-12 col-md-4">
                           <label for="security_code">Security Code</label>
                           <br>
-                          <input class="form-control" name="security_code" type="text" id="security_code" placeholder="" disabled>
+                          <input id="security-code" class="form-control" name="security_code" type="text" id="security_code" placeholder="">
                       </div>
-                    </div>
 
-                    <div>
+                    <div class="col-12 col-md-4">
                         <label for="name_on_card">Name on Card</label>
                         <br>
-                        <input class="form-control" name="name_on_card" type="text" id="name_on_card" placeholder="" disabled>
+                        <input id="card-name" class="form-control" name="name_on_card" type="text" id="name_on_card" placeholder="">
                     </div>
 
-                    <div class="row">
-                      <div class="col-7">
-                          <label for="country">Country</label>
-                          <br>
-                          <input class="form-control" name="country" type="text" id="country" placeholder="" disabled>
-                      </div>
-
-                      <div class="col-5">
-                          <label for="zip_or_postal_code">Zip/Postal Code</label>
-                          <br>
-                          <input class="form-control" name="zip_or_postal_code" type="text" id="zip_or_postal_code" placeholder="" disabled>
-                      </div>
+                    <div class="col-12 col-md-4">
+                        <label for="country">Country</label>
+                        <br>
+                        <input id="country" class="form-control" name="country" type="text" id="country" placeholder="">
                     </div>
+
+                    <div class="col-12 col-md-4">
+                        <label for="zip_or_postal_code">Zip/Postal Code</label>
+                        <br>
+                        <input id="postal-code" class="form-control" name="zip_or_postal_code" type="text" id="zip_or_postal_code" placeholder="">
+                    </div>
+
                   </div>
 
                   <div id="mobile_money_information">
-                    <p>Mobile Money Payment</p>
+                    <p class="payment-section-header">Mobile Money Payment</p>
                   </div>
 
                   <div id="crypto_currency_information">
-                    <p>Crypto Currency Payment</p>
+                    <p class="payment-section-header">Crypto Currency Payment</p>
                   </div>
 
                 <!-- Order Submit Button. -->
