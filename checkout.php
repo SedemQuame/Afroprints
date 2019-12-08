@@ -226,8 +226,41 @@
 
                   </div>
 
-                  <div id="mobile_money_information">
+                  <div id="mobile_money_information" class="row">
                     <p class="payment-section-header">Mobile Money Payment</p>
+                    <p class="payment-section-header">Please select your mobile network.</p>
+
+                    <!-- List of Ghanaian Momo networks. -->
+                    <div class="row">
+                      <div class="col-12 col-sm-4">
+                        <input id="mtn_network" type="radio" name="momo_network" value="mtn" checked>
+                        <label for="">Mtn</label>
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <input id="tigo-airtel_network" type="radio" name="momo_network" value="tigo">
+                        <label for="">Tigo/Airtel</label>
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <input id="vodafone_network" type="radio" name="momo_network" value="vodafone">
+                        <label for="">Vodafone</label>
+                      </div>
+                    </div>
+
+                    <!-- form inputs to get data for triggering momo service. -->
+                    <div class="col-12">
+                      <label for="">Phone Number</label>
+                      <br>
+                      <!-- Take input from phone number field in billing address part dynamically. -->
+                      <input class="form-control" id="" type="text" placeholder="">
+                    </div>
+
+                    <!-- hide, and show if vodafone user requests to use it. -->
+                    <div class="col-12">
+                      <label for="">Voucher (for only vodafone users)</label>
+                      <br>
+                      <!-- Take input from phone number field in billing address part dynamically. -->
+                      <input class="form-control" id="" type="text" placeholder="">
+                    </div>
                   </div>
 
                   <div id="crypto_currency_information">

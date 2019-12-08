@@ -1,68 +1,68 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap');
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     position: relative;
     min-height: 100vh;
 }
 
-nav{
+nav {
     background-color: #353b48;
     height: 4rem;
     width: 100%;
 }
 
-p{
-  font-family: 'Roboto', sans-serif;
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
-hr{
-  border: none;
-  border-top: 1px solid #dedede;
-  height: 2px;
+hr {
+    border: none;
+    border-top: 1px solid #dedede;
+    height: 2px;
 }
 
-ul li{
-  font-family: 'Roboto', sans-serif;
+ul li {
+    font-family: 'Roboto', sans-serif;
 }
 
-a{
-  font-family: 'Roboto', sans-serif;
+a {
+    font-family: 'Roboto', sans-serif;
 }
 
-.footer-section-header{
-  font-family: 'Pacifico', cursive;
-  font-size: 20px;
-  font-weight: 100;
-  color: #ee5253;
-  margin-left: 15px;
+.footer-section-header {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    font-weight: 100;
+    color: #ee5253;
+    margin-left: 15px;
 }
 
-.modal-header-text{
-  font-family: 'Pacifico', cursive;
-  font-size: 45px;
-  color: #ee5253;
-  margin-left: 150px;
+.modal-header-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    color: #ee5253;
+    margin-left: 150px;
 }
 
-#modal-form-btns{
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 30px;
+#modal-form-btns {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    height: 30px;
 }
 
-.modal-btns{
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem;
+.modal-btns {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
 }
 
 .bd-placeholder-img {
@@ -72,13 +72,13 @@ a{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
 
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
-      font-size: 3.5rem;
+        font-size: 3.5rem;
     }
-  }
+}
 
 .site-header {
     background-color: #353b48;
@@ -94,30 +94,27 @@ a{
     text-decoration: none;
 }
 
-
-.sections{
+.sections {
     padding: 0 20px;
 }
 
-.category{
+.category {
     margin: 5px 0;
 }
 
-.product{
+.product {}
 
-}
-
-.product-categories{
-    border:1px solid #1d2124;
+.product-categories {
+    border: 1px solid #1d2124;
     border-radius: 5px;
 }
 
-.product-categories:hover{
+.product-categories:hover {
     background-color: #1d2124;
     color: #f7f7f7;
 }
 
-.product-img{
+.product-img {
     height: 350px;
     width: 94%;
     margin: 0 3%;
@@ -125,8 +122,7 @@ a{
     border-radius: 5px;
 }
 
-
-.product-info{
+.product-info {
     height: 20px;
     width: 100%;
     text-align: center;
@@ -134,27 +130,33 @@ a{
     padding: 0;
 }
 
-.caption{
-  font-size: 20px;
+.caption {
+    font-size: 20px;
 }
 
-.price{
-  font-size: 14px;
+.price {
+    font-size: 14px;
 }
 
-.item-name{
-  margin-top: 10px;
-  font-size: 20px;
+.item-name {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
-.description-box{
-  min-height: 70px;
+.description-box {
+    min-height: 70px;
 }
 
-.item-description{
-  font-size: 16px;
+.item-description {
+    font-size: 16px;
 }
 
-.item-price{
-  font-size: 16px;
+.item-price {
+    font-size: 16px;
+}
+
+.banner {
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    /* color: #ee5253; */
 }
