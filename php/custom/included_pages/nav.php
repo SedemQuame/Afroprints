@@ -28,6 +28,15 @@
           ?>
         </span></a>
       </li>
+      <li class="nav-item">
+        <?php
+          if(isset($_SESSION['user_id'])){
+            echo '<a class="nav-link" href="#">Logout</a>';
+          }else{
+            echo '<a class="nav-link" href="login.php">Login</a>';
+          }
+        ?>
+      </li>
     </ul>
   </div>
 </nav>

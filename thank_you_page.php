@@ -19,6 +19,14 @@
     <?php
         // Nav Bar.
         include 'php/custom/included_pages/nav.php';
+
+        if(isset($_GET['msg'])){
+          echo '
+          <div id="error-alert" class="alert alert-success text-center" role="alert">
+            '. $_GET['msg'] .'
+          </div>
+          ';
+      }
     ?>
     <div class="glitch-container">
       <div id="thank_you_text" class="glitch" data-text="Thank You.">Thank You.</div>

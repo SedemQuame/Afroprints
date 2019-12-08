@@ -81,13 +81,6 @@
                           <br>
                           <input class="form-control" name="email_address" type="text" id="email_address" placeholder="" required>
                       </div>
-
-                      <div>
-                          <label for="estimated_dev_date">Estimated Delivery Date</label>
-                          <br>
-                          <input class="form-control" name="estimated_dev_date" type="text" id="estimated_dev_date" placeholder="">
-                      </div>
-
                   </div>
               </div>
             </div>
@@ -142,7 +135,7 @@
             <div class="card-header checkout-headers" id="headingThree">
               <h2 class="mb-0">
                 <button class="btn btn-field collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Check Out Review.
+                  Payment Options
                 </button>
               </h2>
             </div>
@@ -204,7 +197,7 @@
                           <label for="security_code">Security Code</label>
                           <br>
                           <input id="security-code" class="form-control" name="security_code" type="text" id="security_code" placeholder="">
-                      </div>
+                      </
 
                     <div class="col-12 col-md-4">
                         <label for="name_on_card">Name on Card</label>
@@ -231,19 +224,21 @@
                     <p class="payment-section-header">Please select your mobile network.</p>
 
                     <!-- List of Ghanaian Momo networks. -->
-                    <div class="row">
-                      <div class="col-12 col-sm-4">
-                        <input id="mtn_network" type="radio" name="momo_network" value="mtn" checked>
-                        <label for="">Mtn</label>
-                      </div>
-                      <div class="col-12 col-sm-4">
-                        <input id="tigo-airtel_network" type="radio" name="momo_network" value="tigo">
-                        <label for="">Tigo/Airtel</label>
-                      </div>
-                      <div class="col-12 col-sm-4">
-                        <input id="vodafone_network" type="radio" name="momo_network" value="vodafone">
-                        <label for="">Vodafone</label>
-                      </div>
+                    <div >
+                      <fieldset class="row">
+                        <div class="col-12 col-sm-4">
+                          <input id="mtn_network" type="radio" name="momo_network" value="mtn" checked>
+                          <label for="">Mtn</label>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                          <input id="tigo-airtel_network" type="radio" name="momo_network" value="tigo">
+                          <label for="">Tigo/Airtel</label>
+                        </div>
+                        <div class="col-12 col-sm-4">
+                          <input id="vodafone_network" type="radio" name="momo_network" value="vodafone">
+                          <label for="">Vodafone</label>
+                        </div>
+                      </fieldset>
                     </div>
 
                     <!-- form inputs to get data for triggering momo service. -->
@@ -251,7 +246,7 @@
                       <label for="">Phone Number</label>
                       <br>
                       <!-- Take input from phone number field in billing address part dynamically. -->
-                      <input class="form-control" id="" type="text" placeholder="">
+                      <input class="form-control" id="" type="text" name="momo_phone_number" placeholder="">
                     </div>
 
                     <!-- hide, and show if vodafone user requests to use it. -->
@@ -259,7 +254,7 @@
                       <label for="">Voucher (for only vodafone users)</label>
                       <br>
                       <!-- Take input from phone number field in billing address part dynamically. -->
-                      <input class="form-control" id="" type="text" placeholder="">
+                      <input class="form-control" id="" type="text" name="momo_voucher" placeholder="">
                     </div>
                   </div>
 
