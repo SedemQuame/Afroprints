@@ -9,11 +9,12 @@ body {
     min-height: 100vh;
 }
 
-nav {
+
+/* nav {
     background-color: #353b48;
     height: 4rem;
     width: 100%;
-}
+} */
 
 p {
     font-family: 'Roboto', sans-serif;

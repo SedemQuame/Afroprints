@@ -63,7 +63,7 @@
           $list = "";
 
           $items = [];
-          for ($i=0; $i < count($customer['product_list']); $i++) {
+          for ($i=0; $i < sizeof($customer); $i++) {
             $sql_statement = "SELECT brand_name, brand_image, brand_type, brand_category
 	                            FROM public.brand;";
 

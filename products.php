@@ -5,7 +5,7 @@
     <title></title>
     <!--    StyleSheet links.-->
     <?php
-      include 'php/custom/sessions.php';
+      // include 'php/custom/sessions.php';
       include 'php/custom/included_pages/common_styles.php';
     ?>
     <link rel="stylesheet" href="css/framework/animate.css">
@@ -48,7 +48,6 @@
     <!--JavaScript Files.-->
     <!-- Custom JavaScript Files. -->
     <script src="js/custom/cart.js" charset="utf-8"></script>
-
     <!-- JavaScript Frameworks and libraries. -->
     <?php include 'php/custom/included_pages/common_js.php'; ?>
     <script src="js/custom/modal.js" charset="utf-8"></script>

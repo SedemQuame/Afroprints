@@ -1,4 +1,5 @@
 // Billing Address Accordion Tab.
+// jshint esversion:6
 let first_name = document.getElementById("first_name");
 let last_name = document.getElementById("last_name");
 let address = document.getElementById("address");

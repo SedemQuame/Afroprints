@@ -1,4 +1,4 @@
-<nav class="site-header sticky-top py-1 navbar navbar-expand-lg">
+<nav class="site-header sticky-top py-1 navbar navbar-expand-lg" role="navigation">
   <a class="navbar-brand py-2" href="index.php">
       <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false">
         <title>Product</title>
@@ -6,11 +6,12 @@
       <span class="banner">Afroprints</span>
   </a> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggler" aria-control="toggler" aria-expand="false" aria-label="Toggle navigation">
-    <!-- <span class="navbar-toggler-icon"></span>
-    <span class="navbar-toggler-icon"></span> -->
+    <span class="navbar-toggler-icon">
+      <img src="menu.png" alt="">
+    </span>
   </button>
-  <div class="collapse navbar-collapse" id="toggler">
-    <ul class="navbar-nav ml-auto">
+  <div class="collapse navbar-collapse navbar-toggleable-xs" id="toggler">
+    <ul class="nav-list nav navbar-nav ml-auto">
       <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="products.php?item=tops">T-shirts</a></li>
       <li class="nav-item"><a class="nav-link" href="products.php?item=accessories">Accessories</a></li>
@@ -29,13 +30,13 @@
         </span></a>
       </li>
       <li class="nav-item">
-        <?php
+         <?php
           if(isset($_SESSION['user_id'])){
             echo '<a class="nav-link" href="#">Logout</a>';
           }else{
             echo '<a class="nav-link" href="login.php">Login</a>';
           }
-        ?>
+        ?> 
       </li>
     </ul>
   </div>
