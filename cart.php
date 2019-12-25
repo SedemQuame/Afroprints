@@ -42,6 +42,8 @@
                   </div>';
           }else{
             $cart_items = $_SESSION['cart-items'];
+            // unset($_SESSION['cart-items']);
+            // session_destroy();
 
             if(empty($cart_items)){
               echo '<div class="style-caption"><p class="lead">Shopping cart.</p></div>
@@ -51,9 +53,12 @@
                     </div>';
             } else{
 
+
               $placeholder = "";
+              $quanties = [];
               foreach ($cart_items as $value) {
-                $placeholder .= $value.",";
+                $placeholder .= json_decode($value, true)['id'].",";
+                array_push($quanties, json_decode($value, true)['quantity']);
               }
               $placeholder = trim($placeholder, ',');
 
@@ -81,12 +86,17 @@
                             <tbody>';
 
               if ($stmt !== null){
+                $rows = [];
                 foreach ($stmt as $row) {
+                  array_push($rows, $row);
+                }
+                  for ($i=0; $i < sizeof($stmt); $i++) { 
+                    # code...
                   $element .= '<tr>
-                                  <td class="table-items">'.$row['brand_name'].'</td>
-                                  <td class="table-price">Ghc '.$row['brand_price'].'</td>
-                                  <td class="table-quantity">1</td>
-                                  <td class="table-total">Ghc '.($row['brand_price']*1).'</td>
+                                  <td class="table-items">'.$rows[$i]['brand_name'].'</td>
+                                  <td class="table-price">Ghc '.$rows[$i]['brand_price'].'</td>
+                                  <td class="table-quantity">'.$quanties[$i].'</td>
+                                  <td class="table-total">Ghc '.($rows[$i]['brand_price']*1).'</td>
                                   <td class="remove">
                                     <form class="" action="php/custom/cart-processor.php?action=remove&item_id='.$row['brand_id'].'" method="post">
                                       <button class="btn remove-btn" type="submit" name="button">
@@ -95,7 +105,7 @@
                                     </form>
                                   </td>
                                 </tr>';
-                  $total += $row['brand_price'];
+                  $total += $rows[$i]['brand_price'] * $quanties[$i];
                 }
 
               $element .= '</tbody>
@@ -105,17 +115,17 @@
                                 <th class="text-center">Total</th>
                                 <th class="text-center">Ghc ';
 
-            $element .= $total;
+              $element .= $total;
 
-             $element .=  '</th>
-                                <td class="remove clear-btn-container">
-                                   <form class="remove-all-form" action="php/custom/cart-processor.php?action=remove_all" method="post">
-                                     <button class="btn cart-remove-button" type="submit" name="button">Clear Cart</button>
-                                   </form>
-                                </td>
-                              </tr>
-                            </tfoot>
-                          </table>';
+              $element .=  '</th>
+                                  <td class="remove clear-btn-container">
+                                    <form class="remove-all-form" action="php/custom/cart-processor.php?action=remove_all" method="post">
+                                      <button class="btn cart-remove-button" type="submit" name="button">Clear Cart</button>
+                                    </form>
+                                  </td>
+                                </tr>
+                              </tfoot>
+                            </table>';
             }
             $element .= '<p class="float-right">
                           <a href="checkout.php" class="">Check Out &#x2192;</a>
