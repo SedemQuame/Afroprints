@@ -11,7 +11,6 @@
                     <img class="card-img-top" width="100%" height="450px" src="';
 
   foreach ($stmt as $row) {
-
     $template .= $row['brand_image'].'" alt="add some alternate text here"/>';
     $template .=  '</div>';
     $template .= '<div class="col-12 col-sm-12 col-lg-6">
@@ -26,7 +25,6 @@
                     </form>
                   </div>
                   </div>';
-
   }
 
   echo $template;

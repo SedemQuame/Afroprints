@@ -41,7 +41,7 @@
         
               $element .= '" alt="" width="100%" height="225">
                           <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text card-desc">'.$row['brand_description'].'</p>
                             <div class="d-flex justify-content-between align-items-center">
                               <form class="btn-group" action="php/custom/cart-processor.php?action=add&item_id='.$row['brand_id'].'" method="post">
                                 <button onclick="openModal()" type="button" class="openBtn btn btn-sm btn-outline-secondary" data-number="'.$row['brand_id'].'">View Item</button>

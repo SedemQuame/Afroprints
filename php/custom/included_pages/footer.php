@@ -31,18 +31,18 @@
           -->
           <ul class="list-inline">
             <li class="list-inline-item">
-              <a href="https://web.facebook.com/?_rdc=1&_rdr">
-                <img src="../media/images/facebook.svg" alt="" width="30px" height="30px">
+              <a href="https://www.instagram.com/afroprintsgh/">
+                <img src="media/images/instagram.svg" alt="" width="30px" height="30px">
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.instagram.com/accounts/login/?hl=en">
-                <img src="../media/images/instagram.svg" alt="" width="30px" height="30px">
+              <a href="https://twitter.com/AfroprintsG">
+                <img src="media/images/facebook.svg" alt="" width="30px" height="30px">
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://twitter.com">
-                <img src="../media/images/twitter.svg" alt="" width="30px" height="30px">
+              <a href="https://twitter.com/AfroprintsG">
+                <img src="media/images/twitter.svg" alt="" width="30px" height="30px">
               </a>
             </li>
           </ul>

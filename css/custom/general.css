@@ -161,3 +161,8 @@ a {
     font-size: 20px;
     /* color: #ee5253; */
 }
+
+.card-desc {
+    text-transform: capitalize;
+    font-weight: bolder;
+}
