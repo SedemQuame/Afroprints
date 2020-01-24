@@ -75,6 +75,25 @@ a {
     user-select: none;
 }
 
+#main_product_img {
+    height: 70vh;
+}
+
+.product_modal_main_img {
+    /* width: 100%;
+    height: 300px; */
+}
+
+#sub_img_holder {
+    height: 30vh;
+}
+
+.product_modal_sub_img {
+    height: 100px;
+    width: 112px;
+    margin-top: 10px;
+}
+
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;

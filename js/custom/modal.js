@@ -10,7 +10,7 @@ function openModal() {
 
     $(document).ready(function(){
         console.log("Document Ready");
-        $('.modal-body').load('php/custom/modal.php?id=51', function() {
+        $('.modal-body').load(modalString, function() {
             $('#myModal').modal({ show: true });
         });
      });

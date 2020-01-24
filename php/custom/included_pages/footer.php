@@ -6,10 +6,11 @@
       <h6 class="footer-section-header text-center">About Us</h6>
 
       <ul>
-        <li class=""> <a href="#">About</a> <sitename> </li>
-        <li class=""> <a href="#">Carrers</a> </li>
-        <li class=""> <a href="#">Sitemap</a> </li>
-        <li class=""> <a href="#">Affiliate Program</a> </li>
+        <li class=""> <a href="#">Help *</a> </li>
+        <li class=""> <a href="#">About *</a> <sitename> </li>
+        <li class=""> <a href="#">Sitemap *</a> </li>
+        <li class=""> <a href="#">Affiliate Program *</a> </li>
+        <li class=""> <a href="#">Terms and Condition *</a> </li>
       </ul>
     </div>
 
@@ -55,12 +56,10 @@
       <h6 class="footer-section-header text-center"> Resources </h6>
 
       <ul>
-        <li class=""> <a href="#">Help</a> </li>
-        <li class=""> <a href="#">Returns</a>  </li>
-        <li class=""> <a href="#">Size Guides</a> </li>
-        <li class=""> <a href="#">Track My Order</a> </li>
-        <li class=""> <a href="#">Whatsapp News</a>  </li>
-        <li class=""> <a href="#">Terms and Condition</a> </li>
+        <li class=""> <a href="#">Returns *</a>  </li>
+        <li class=""> <a href="#">Size Guides *</a> </li>
+        <li class=""> <a href="#">Track My Order *</a> </li>
+        <li class=""> <a href="#">Whatsapp News *</a>  </li>
       </ul>
     </div>
 
@@ -69,11 +68,11 @@
       <h6 class="footer-section-header text-center"> Payment Platforms </h6>
 
       <ul class="list-inline">
-        <li class="list-inline-item"> <p>Visa</p> </li>
-        <li class="list-inline-item"> <p>Stripe</p> </li>
-        <li class="list-inline-item"> <p>Paypal</p> </li>
-        <li class="list-inline-item"> <p>MasterCard</p>  </li>
-        <li class="list-inline-item"> <p>Crypto Coins</p> </li>
+        <li class="list-inline-item"> <p> *</p> </li>
+        <li class="list-inline-item"> <p>Stripe *</p> </li>
+        <li class="list-inline-item"> <p>Paypal *</p> </li>
+        <li class="list-inline-item"> <p>MasterCard *</p>  </li>
+        <li class="list-inline-item"> <p>Crypto Coins *</p> </li>
       </ul>
     </div>
 
