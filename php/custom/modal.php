@@ -25,6 +25,10 @@
     $template .=   '<p class="item-price"><strong> Ghc '.$row['brand_price'].' </strong><p/>
                     <!-- Designer\'s social profile -->
                     <p>
+                      <span class="font-weight-bold">Designer:</span>
+                      Sedem Quame Amekpewu
+                     </>
+                    <p>
                       <span class="font-weight-bold">Social Media: </span>
                       <a class="text-info" href="#">Facebook</a>,
                       <a class="text-info" href="#">Instagram</a>,

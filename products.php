@@ -5,7 +5,7 @@
     <title></title>
     <!--    StyleSheet links.-->
     <?php
-      // include 'php/custom/sessions.php';
+      include 'php/custom/sessions.php';
       include 'php/custom/included_pages/common_styles.php';
     ?>
     <link rel="stylesheet" href="css/framework/animate.css">
@@ -33,7 +33,7 @@
       <div class="modal-dialog modal-dialog-scrollable modal-lg">
           <div class="modal-content">
               <div class="modal-header">
-                  <h4 class="modal-title modal-header-text">Afriprints Collections.</h4>
+                  <h4 class="modal-title modal-header-text">Afroprints Collections.</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body">

@@ -21,8 +21,8 @@
       <a class="nav-link" href="cart.php">Cart
         <span id="itemsInCart" class="badge badge-light">
           <?php
-            if (isset($_SESSION['cart-items'])) {
-              echo sizeof($_SESSION['cart-items']);
+            if (isset($_SESSION['cart-items']) && ($_SESSION['itemNumber'] != null)) {
+              echo ($_SESSION['itemNumber'] );
             }else {
               echo 0;
             }
