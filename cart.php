@@ -96,7 +96,7 @@
                                   <td class="table-items">'.$rows[$i]['brand_name'].'</td>
                                   <td class="table-price">Ghc '.$rows[$i]['brand_price'].'</td>
                                   <td class="table-quantity">'.$quanties[$i].'</td>
-                                  <td class="table-total">Ghc '.($rows[$i]['brand_price']*1).'</td>
+                                  <td class="table-total">Ghc '.($rows[$i]['brand_price']*$quanties[$i]).'</td>
                                   <td class="remove">
                                     <form class="" action="php/custom/cart-processor.php?action=remove&item_id='.$row['brand_id'].'" method="post">
                                       <button class="btn remove-btn" type="submit" name="button">

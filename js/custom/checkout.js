@@ -14,6 +14,7 @@ let delivery_date = document.getElementById("estimated_dev_date");
 let CCPayment = document.getElementById("credit_card_information");
 let MomoPayment = document.getElementById("mobile_money_information");
 let CryptoPayment = document.getElementById("crypto_currency_information");
+let ManualPayment = document.getElementById("manual_information");
 
 let radios = document.forms.checkout_form.elements.payment_method;
 
@@ -96,7 +97,7 @@ function fieldProcessor() {
     } else {
         event.preventDefault();
         // dsiplay message of unfilled field here.
-        document.getElementById("error-alert").style.display = block;
+        document.getElementById("error-alert").style.display = "block";
     }
 }
 
@@ -106,15 +107,24 @@ function displayPaymentOption(event) {
         CCPayment.style.display = "block";
         MomoPayment.style.display = "none";
         CryptoPayment.style.display = "none";
+        ManualPayment.style.display = "none";
     } else if (selectedRadioBtn.value == "mobile_money") {
         MomoPayment.style.display = "block";
         CCPayment.style.display = "none";
         CryptoPayment.style.display = "none";
+        ManualPayment.style.display = "none";
     } else if (selectedRadioBtn.value == "cyrto_currency") {
         CryptoPayment.style.display = "block";
         CCPayment.style.display = "none";
         MomoPayment.style.display = "none";
+        ManualPayment.style.display = "none";
+    } else if (selectedRadioBtn.value == "manual") {
+        ManualPayment.style.display = "block"; 
+        CryptoPayment.style.display = "none";
+        CCPayment.style.display = "none";
+        MomoPayment.style.display = "none";
     } else {
-        alert("Invalid Option.Please try again");
+        ManualPayment.style.display = "block"; 
+        alert("Invalid Option.Please try again.");
     }
 }

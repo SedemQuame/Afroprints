@@ -49,7 +49,8 @@ label {
 }
 
 #mobile_money_information,
-#crypto_currency_information {
+#crypto_currency_information,
+#manual_information {
     display: none;
 }
 

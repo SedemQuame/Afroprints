@@ -144,29 +144,35 @@
                 <!-- Show all acquired information, in a representable formatted form. -->
                 <p>Please Select A Payment Method.</p>
                   <div class="row">
-                    <div class="col-12 col-sm-4">
+                    <div class="col-12 col-sm-3">
                       <input id="credit_card_checkbox" type="radio" name="payment_method" value="credit_card" checked onclick="displayPaymentOption(event)">
                       <label for="">Credit Card</label>
                     </div>
-                    <div class="col-12 col-sm-4">
+                    <div class="col-12 col-sm-3">
                       <input id="mobile_money_checkbox" type="radio" name="payment_method" value="mobile_money" onclick="displayPaymentOption(event)">
                       <label for="">Mobile Money</label>
                     </div>
-                    <div class="col-12 col-sm-4">
+                    <div class="col-12 col-sm-3">
                       <input id="crypto_currency_checkbox" type="radio" name="payment_method" value="cyrto_currency" onclick="displayPaymentOption(event)">
                       <label for="">Crypto Currency</label>
                     </div>
+                    <div class="col-12 col-sm-3">
+                      <input id="manual_checkbox" type="radio" name="payment_method" value="manual" onclick="displayPaymentOption(event)">
+                      <label for="">Manual</label>
+                    </div>
                   </div>
 
-                  <div id="credit_card_information" class="row">
+                  <div id="credit_card_information">
                     <p class="payment-section-header">Credit Card Payment</p>
                     <br>
-                    <div class="col-12">
-                        <label for="card_number">Card Number</label>
-                        <br>
-                        <input id="card-number" class="form-control" name="card_number" type="text" id="card_number" placeholder="">
-                    </div>
 
+
+                    <div class="row">
+                      <div class="col-12">
+                          <label for="card_number">Card Number</label>
+                          <br>
+                          <input id="card-number" class="form-control" name="card_number" type="text" id="card_number" placeholder="">
+                      </div>
                       <div class="col-12 col-md-4">
                           <label for="expiration_month">Expiration Month</label>
                           <br>
@@ -197,7 +203,7 @@
                           <label for="security_code">Security Code</label>
                           <br>
                           <input id="security-code" class="form-control" name="security_code" type="text" id="security_code" placeholder="">
-                      </
+                      </div>
 
                     <div class="col-12 col-md-4">
                         <label for="name_on_card">Name on Card</label>
@@ -217,6 +223,7 @@
                         <input id="postal-code" class="form-control" name="zip_or_postal_code" type="text" id="zip_or_postal_code" placeholder="">
                     </div>
 
+                    </div>
                   </div>
 
                   <div id="mobile_money_information" class="row">
@@ -262,6 +269,9 @@
                     <p class="payment-section-header">Crypto Currency Payment</p>
                   </div>
 
+                  <div id="manual_information">
+                    <p class="payment-section-header">Manual Payment</p>
+                  </div>
                 <!-- Order Submit Button. -->
                 <button id="orderProcessingBtn" class="btn btn-outline-secondary float-right" type="submit" name="processOrderBtn" type="submit">Process Order</button>
               </div>

@@ -35,25 +35,30 @@
             $obJson = json_encode($obj);
             array_push($_SESSION['cart-items'], $obJson);
             $_SESSION['itemNumber'] += 1;
+          break;
           }
         }
       }
+      $item_id = null;
       break;
     case 'remove':
 
       if(empty($_SESSION['cart-items'])){
       break;
       }else{        
-        for ($i=0; $i < sizeof($_SESSION['cart-items']); $i++) {
-          $arr = json_decode($_SESSION['cart-items'][$i], true);
+        for ($x=0; $x < sizeof($_SESSION['cart-items']); $x++) {
+          $arr = json_decode($_SESSION['cart-items'][$x], true);
           // checking item id.
           if((int)$arr['id'] == (int)$item_id){
-            $_SESSION['itemNumber'] -= (int)$arr['quantity'];
             array_splice($_SESSION['cart-items'], $i, 1);  
-          break;
+            // unset($_SESSION['cart-items'][$x]);
+            // $_SESSION['cart-items'] = array_values($_SESSION['cart-items']);
+            $_SESSION['itemNumber'] -= (int)$arr['quantity'];
+          // break;
           }
         }
       }
+      $item_id = null;
       header('location:../../cart.php');
       break;
 

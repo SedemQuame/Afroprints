@@ -46,9 +46,11 @@ function updateNumberOfCartItems() {
     // // *Use boostrap badges*.
 
     let badge = document.getElementById("itemsInCart");
-    console.log(badge);
+    // console.log(badge);
 
     let count = parseInt(badge.textContent);
+    // let count = parseInt(sessionStorage.getItem("itemNumber"));
+
     count = count + 1;
     badge.textContent = count;
 }
